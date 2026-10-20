@@ -1,0 +1,27 @@
+# Raspberry Pi 5 (scripts 15 and 32, Level C of README.md).
+#
+# Recorded in the measurement files (Supplemental Data S11):
+#   Raspberry Pi 5 Model B Rev 1.1
+#   Linux-6.18.33+rpt-rpi-2712-aarch64-with-glibc2.41
+#   Python 3.13.5
+#   torch 2.12.0+cpu
+#
+# The versions of the remaining packages on the device were not recorded; they are listed
+# without pins. Install the CPU build of PyTorch for aarch64:
+#   pip install torch==2.12.0 torchvision --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements-pi5.txt
+
+torch==2.12.0
+torchvision
+numpy
+pandas
+scipy
+scikit-learn
+librosa
+soundfile
+matplotlib
+tqdm
+psutil
+ptflops
+thop
+torchlibrosa

@@ -1,0 +1,22 @@
+2026-06-14 01:38:27,406 | INFO | ======================================================================
+2026-06-14 01:38:27,407 | INFO | ZERO-SHOT ICBHI→SPRSound ON inter_test (paired comparison with script 26)
+2026-06-14 01:38:27,407 | INFO | Date: 2026-06-14 01:38:27 | Device: cuda
+2026-06-14 01:38:27,407 | INFO | ======================================================================
+2026-06-14 01:38:43,801 | INFO | inter_test: 1271 events
+2026-06-14 01:38:43,801 | INFO |     Normal: 970 (76.3%)
+2026-06-14 01:38:43,802 | INFO |     Crackle: 76 (6.0%)
+2026-06-14 01:38:43,802 | INFO |     Wheeze: 224 (17.6%)
+2026-06-14 01:38:43,802 | INFO |     Both: 1 (0.1%)
+2026-06-14 01:38:45,126 | INFO | seed  42: ICBHI=0.4374 | BIN Se=0.316 Sp=0.642 AUC=0.360
+2026-06-14 01:38:45,566 | INFO | seed 123: ICBHI=0.5667 | BIN Se=0.724 Sp=0.486 AUC=0.709
+2026-06-14 01:38:45,993 | INFO | seed   7: ICBHI=0.4962 | BIN Se=0.512 Sp=0.534 AUC=0.608
+2026-06-14 01:38:46,427 | INFO | seed  99: ICBHI=0.3649 | BIN Se=0.492 Sp=0.314 AUC=0.521
+2026-06-14 01:38:46,854 | INFO | seed 314: ICBHI=0.3659 | BIN Se=0.196 Sp=0.569 AUC=0.323
+2026-06-14 01:38:46,854 | INFO | ----------------------------------------------------------------------
+2026-06-14 01:38:46,854 | INFO | ZERO-SHOT on inter_test (n=1271, 5 seeds):
+2026-06-14 01:38:46,855 | INFO |   binary AUC = 0.504 ± 0.146
+2026-06-14 01:38:46,855 | INFO |   Binary Se  = 0.448 ± 0.181
+2026-06-14 01:38:46,855 | INFO |   Binary Sp  = 0.509 ± 0.110
+2026-06-14 01:38:46,856 | INFO |   ICBHI 4-cl. = 0.446 ± 0.078
+2026-06-14 01:38:46,856 | INFO |   (compare with the in-domain run of script 26 on the SAME inter_test)
+2026-06-14 01:38:46,857 | INFO | Results saved to D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\scripts\sprsound_zeroshot_intertest_results.json

@@ -1,0 +1,140 @@
+2026-09-17 19:24:52,303 - INFO - ==============================================================================
+2026-09-17 19:24:52,304 - INFO - SCRIPT 38 — Per-seed fit to training
+2026-09-17 19:24:52,304 - INFO - ==============================================================================
+2026-09-17 19:24:52,304 - INFO -   BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-17 19:24:52,361 - INFO - 
+[1/3] Runs with at least one source: 37
+2026-09-17 19:24:52,362 - INFO -   CNN         seed  42: [csv] cnn_seed42_history.csv, [log] cnn_official_seed42_log.txt
+2026-09-17 19:24:52,362 - INFO -   CNN         seed 123: [csv] cnn_seed123_history.csv, [log] cnn_official_seed123_log.txt
+2026-09-17 19:24:52,362 - INFO -   CNN         seed   7: [csv] cnn_seed7_history.csv, [log] cnn_official_seed7_log.txt
+2026-09-17 19:24:52,362 - INFO -   CNN         seed  99: [csv] cnn_seed99_history.csv, [log] cnn_official_seed99_log.txt
+2026-09-17 19:24:52,362 - INFO -   CNN         seed 314: [csv] cnn_seed314_history.csv, [log] cnn_official_seed314_log.txt
+2026-09-17 19:24:52,362 - INFO -   CfC         seed  42: [log] hybrid_official_seed42_log.txt
+2026-09-17 19:24:52,362 - INFO -   CfC         seed 123: [log] hybrid_official_seed123_log.txt
+2026-09-17 19:24:52,362 - INFO -   CfC         seed   7: [log] hybrid_official_seed7_log.txt
+2026-09-17 19:24:52,362 - INFO -   CfC         seed  99: [log] hybrid_official_seed99_log.txt
+2026-09-17 19:24:52,362 - INFO -   CfC         seed 314: [log] hybrid_official_seed314_log.txt
+2026-09-17 19:24:52,362 - INFO -   MNv3_IN     seed  42: [log] tl_mobilenet_v3_small_pretrained_official_seed42_log.txt
+2026-09-17 19:24:52,362 - INFO -   PANNs       seed  42: [log] panns_cnn6_official_seed42_log.txt
+2026-09-17 19:24:52,362 - INFO -   LSTM        seed  42: [log] lstm_official_seed42_log.txt
+2026-09-17 19:24:52,362 - INFO -   LSTM        seed 123: [log] lstm_official_seed123_log.txt
+2026-09-17 19:24:52,362 - INFO -   LSTM        seed   7: [log] lstm_official_seed7_log.txt
+2026-09-17 19:24:52,362 - INFO -   LSTM        seed  99: [log] lstm_official_seed99_log.txt
+2026-09-17 19:24:52,362 - INFO -   LSTM        seed 314: [log] lstm_official_seed314_log.txt
+2026-09-17 19:24:52,362 - INFO -   GRU         seed  42: [log] gru_official_seed42_log.txt
+2026-09-17 19:24:52,362 - INFO -   GRU         seed 123: [log] gru_official_seed123_log.txt
+2026-09-17 19:24:52,362 - INFO -   GRU         seed   7: [log] gru_official_seed7_log.txt
+2026-09-17 19:24:52,363 - INFO -   GRU         seed  99: [log] gru_official_seed99_log.txt
+2026-09-17 19:24:52,363 - INFO -   GRU         seed 314: [log] gru_official_seed314_log.txt
+2026-09-17 19:24:52,363 - INFO -   CfC_pure    seed  42: [log] cfcpure_official_seed42_log.txt
+2026-09-17 19:24:52,363 - INFO -   CfC_pure    seed 123: [log] cfcpure_official_seed123_log.txt
+2026-09-17 19:24:52,363 - INFO -   CfC_pure    seed   7: [log] cfcpure_official_seed7_log.txt
+2026-09-17 19:24:52,363 - INFO -   CfC_pure    seed  99: [log] cfcpure_official_seed99_log.txt
+2026-09-17 19:24:52,363 - INFO -   CfC_pure    seed 314: [log] cfcpure_official_seed314_log.txt
+2026-09-17 19:24:52,363 - INFO -   CNN_aug     seed  42: [csv] cnn_aug_official_seed42_history.csv, [log] cnn_aug_official_seed42_log.txt
+2026-09-17 19:24:52,363 - INFO -   CNN_aug     seed 123: [csv] cnn_aug_official_seed123_history.csv, [log] cnn_aug_official_seed123_log.txt
+2026-09-17 19:24:52,363 - INFO -   CNN_aug     seed   7: [csv] cnn_aug_official_seed7_history.csv, [log] cnn_aug_official_seed7_log.txt
+2026-09-17 19:24:52,363 - INFO -   CNN_aug     seed  99: [csv] cnn_aug_official_seed99_history.csv, [log] cnn_aug_official_seed99_log.txt
+2026-09-17 19:24:52,363 - INFO -   CNN_aug     seed 314: [csv] cnn_aug_official_seed314_history.csv, [log] cnn_aug_official_seed314_log.txt
+2026-09-17 19:24:52,363 - INFO -   MNv3_noaug  seed  42: [log] tl_mobilenet_v3_small_pretrained_noaug_official_seed42_log.txt
+2026-09-17 19:24:52,364 - INFO -   MNv3_noaug  seed 123: [log] tl_mobilenet_v3_small_pretrained_noaug_official_seed123_log.txt
+2026-09-17 19:24:52,364 - INFO -   MNv3_noaug  seed   7: [log] tl_mobilenet_v3_small_pretrained_noaug_official_seed7_log.txt
+2026-09-17 19:24:52,364 - INFO -   MNv3_noaug  seed  99: [log] tl_mobilenet_v3_small_pretrained_noaug_official_seed99_log.txt
+2026-09-17 19:24:52,364 - INFO -   MNv3_noaug  seed 314: [log] tl_mobilenet_v3_small_pretrained_noaug_official_seed314_log.txt
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [csv] best_model_history.csv
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [csv] cfc_v7_mel_hybrid_training_log.csv
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [csv] cfc_v7_mel_transposed_training_log.csv
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [csv] cnn_ce_seed42_history.csv
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [csv] training_log.csv
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [csv] best_model_history.csv
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [csv] cfc_v7_mel_hybrid_official_training_log.csv
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [log] dataset_dataloader_log.txt
+2026-09-17 19:24:52,364 - INFO -   (unclassified) [log] full_reeval_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] lstm_lr5e4_official_seed42_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] reanalysis_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] rodri5_pareto_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script30_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script31_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script33_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script34_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script35_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script36_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script37_dryrun_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script37_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] script38_log.txt
+2026-09-17 19:24:52,365 - INFO -   (unclassified) [log] training_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] transfer_learning_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] 25_sprsound_zeroshot_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] 26_sprsound_indomain_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] 27_sprsound_zeroshot_intertest_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] dataset_dataloader_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] feature_extraction_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] panns_transfer_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] quantize_cnn_int8_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] rodri5_pareto_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] segmentation_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] training_log.txt
+2026-09-17 19:24:52,367 - INFO -   (unclassified) [log] transfer_learning_log.txt
+2026-09-17 19:24:52,367 - WARNING -   no source: MNv3_IN/123, MNv3_IN/7, MNv3_IN/99, MNv3_IN/314, MNv3_SC/42, MNv3_SC/123, MNv3_SC/7, MNv3_SC/99, MNv3_SC/314, PANNs/123, PANNs/7, PANNs/99, PANNs/314, PANNs_tune/42, PANNs_tune/123, PANNs_tune/7, PANNs_tune/99, PANNs_tune/314
+2026-09-17 19:24:52,370 - INFO - 
+[2/3] Reading and source selection
+2026-09-17 19:24:52,370 - INFO -   Rule: among the sources of a run, the one that reproduces the epoch
+2026-09-17 19:24:52,370 - INFO -   chosen by the checkpoint is taken (full_reeval_results.json). Without a reference, the CSV.
+2026-09-17 19:24:52,386 - INFO -   CNN         seed  42 [log]:  17 ep., chosen   2, final train acc  23.8 %, test AUC 0.6046   <- degenerate
+2026-09-17 19:24:52,396 - INFO -   CNN         seed 123 [log]:  40 ep., chosen  25, final train acc  70.6 %, test AUC 0.5451
+2026-09-17 19:24:52,406 - INFO -   CNN         seed   7 [log]:  80 ep., chosen  69, final train acc  69.2 %, test AUC 0.5480
+2026-09-17 19:24:52,415 - INFO -   CNN         seed  99 [log]:  43 ep., chosen  28, final train acc  76.9 %, test AUC 0.5922
+2026-09-17 19:24:52,424 - INFO -   CNN         seed 314 [log]:  64 ep., chosen  49, final train acc  80.2 %, test AUC 0.5688
+2026-09-17 19:24:52,426 - INFO -   CfC         seed  42 [log]:  59 ep., chosen  39, final train acc  44.8 %, test AUC 0.5257
+2026-09-17 19:24:52,427 - INFO -   CfC         seed 123 [log]:  80 ep., chosen  66, final train acc  60.2 %, test AUC 0.5148
+2026-09-17 19:24:52,429 - INFO -   CfC         seed   7 [log]:  53 ep., chosen  33, final train acc  48.0 %, test AUC 0.4806
+2026-09-17 19:24:52,430 - INFO -   CfC         seed  99 [log]:  64 ep., chosen  44, final train acc  54.6 %, test AUC 0.5054
+2026-09-17 19:24:52,431 - INFO -   CfC         seed 314 [log]:  80 ep., chosen  66, final train acc  47.0 %, test AUC 0.4780
+2026-09-17 19:24:52,433 - INFO -   MNv3_IN/42: discarding tl_mobilenet_v3_small_pretrained_official_seed42_log.txt: tl_mobilenet_v3_small_pretrained_official_seed42_log.txt: no per-epoch lines (probably the log of an --eval_only run)
+2026-09-17 19:24:52,433 - INFO -   PANNs/42: discarding panns_cnn6_official_seed42_log.txt: panns_cnn6_official_seed42_log.txt: no per-epoch lines (probably the log of an --eval_only run)
+2026-09-17 19:24:52,435 - INFO -   LSTM        seed  42 [log]:  72 ep., chosen  52, final train acc  45.9 %, test AUC nan
+2026-09-17 19:24:52,436 - INFO -   LSTM        seed 123 [log]:  76 ep., chosen  56, final train acc  52.8 %, test AUC nan
+2026-09-17 19:24:52,437 - INFO -   LSTM        seed   7 [log]:  71 ep., chosen  51, final train acc  49.7 %, test AUC nan
+2026-09-17 19:24:52,439 - INFO -   LSTM        seed  99 [log]:  74 ep., chosen  54, final train acc  49.0 %, test AUC nan
+2026-09-17 19:24:52,440 - INFO -   LSTM        seed 314 [log]:  80 ep., chosen  62, final train acc  46.1 %, test AUC nan
+2026-09-17 19:24:52,442 - INFO -   GRU         seed  42 [log]:  70 ep., chosen  50, final train acc  48.5 %, test AUC nan
+2026-09-17 19:24:52,443 - INFO -   GRU         seed 123 [log]:  80 ep., chosen  64, final train acc  47.8 %, test AUC nan
+2026-09-17 19:24:52,445 - INFO -   GRU         seed   7 [log]:  80 ep., chosen  70, final train acc  46.9 %, test AUC nan
+2026-09-17 19:24:52,447 - INFO -   GRU         seed  99 [log]:  77 ep., chosen  57, final train acc  57.3 %, test AUC nan
+2026-09-17 19:24:52,449 - INFO -   GRU         seed 314 [log]:  79 ep., chosen  59, final train acc  44.1 %, test AUC nan
+2026-09-17 19:24:52,450 - INFO -   CfC_pure    seed  42 [log]:  25 ep., chosen   5, final train acc  25.5 %, test AUC nan
+2026-09-17 19:24:52,452 - INFO -   CfC_pure    seed 123 [log]:  21 ep., chosen   1, final train acc  26.7 %, test AUC nan
+2026-09-17 19:24:52,452 - INFO -   CfC_pure    seed   7 [log]:  36 ep., chosen  16, final train acc  23.2 %, test AUC nan   <- degenerate
+2026-09-17 19:24:52,454 - INFO -   CfC_pure    seed  99 [log]:  34 ep., chosen  14, final train acc  23.3 %, test AUC nan   <- degenerate
+2026-09-17 19:24:52,455 - INFO -   CfC_pure    seed 314 [log]:  29 ep., chosen   9, final train acc  24.2 %, test AUC nan   <- degenerate
+2026-09-17 19:24:52,467 - INFO -   CNN_aug     seed  42 [csv]:  16 ep., chosen   1, final train acc  25.2 %, test AUC nan
+2026-09-17 19:24:52,475 - INFO -   CNN_aug     seed 123 [csv]:  16 ep., chosen   1, final train acc  30.0 %, test AUC nan
+2026-09-17 19:24:52,488 - INFO -   CNN_aug     seed   7 [csv]:  26 ep., chosen  11, final train acc  24.0 %, test AUC nan   <- degenerate
+2026-09-17 19:24:52,499 - INFO -   CNN_aug     seed  99 [csv]:  17 ep., chosen   2, final train acc  26.3 %, test AUC nan
+2026-09-17 19:24:52,509 - INFO -   CNN_aug     seed 314 [csv]:  32 ep., chosen  17, final train acc  29.3 %, test AUC nan
+2026-09-17 19:24:52,511 - INFO -   MNv3_noaug  seed  42 [log]:  19 ep., chosen   4, final train acc  98.4 %, test AUC nan
+2026-09-17 19:24:52,511 - INFO -   MNv3_noaug/123: discarding tl_mobilenet_v3_small_pretrained_noaug_official_seed123_log.txt: tl_mobilenet_v3_small_pretrained_noaug_official_seed123_log.txt: no per-epoch lines (probably the log of an --eval_only run)
+2026-09-17 19:24:52,511 - INFO -   MNv3_noaug/7: discarding tl_mobilenet_v3_small_pretrained_noaug_official_seed7_log.txt: tl_mobilenet_v3_small_pretrained_noaug_official_seed7_log.txt: no per-epoch lines (probably the log of an --eval_only run)
+2026-09-17 19:24:52,513 - INFO -   MNv3_noaug/99: discarding tl_mobilenet_v3_small_pretrained_noaug_official_seed99_log.txt: tl_mobilenet_v3_small_pretrained_noaug_official_seed99_log.txt: no per-epoch lines (probably the log of an --eval_only run)
+2026-09-17 19:24:52,514 - INFO -   MNv3_noaug/314: discarding tl_mobilenet_v3_small_pretrained_noaug_official_seed314_log.txt: tl_mobilenet_v3_small_pretrained_noaug_official_seed314_log.txt: no per-epoch lines (probably the log of an --eval_only run)
+2026-09-17 19:24:52,514 - WARNING - 
+  Runs without a verified source:
+2026-09-17 19:24:52,514 - WARNING -     MNv3_IN/42: no readable source
+2026-09-17 19:24:52,514 - WARNING -     PANNs/42: no readable source
+2026-09-17 19:24:52,514 - WARNING -     MNv3_noaug/123: no readable source
+2026-09-17 19:24:52,514 - WARNING -     MNv3_noaug/7: no readable source
+2026-09-17 19:24:52,514 - WARNING -     MNv3_noaug/99: no readable source
+2026-09-17 19:24:52,514 - WARNING -     MNv3_noaug/314: no readable source
+2026-09-17 19:24:52,515 - INFO - 
+[3/3] Summary per model
+2026-09-17 19:24:52,521 - INFO -   CNN         train acc 23.8-80.2 % | test AUC 0.545-0.605 | Pearson -0.58 (p 0.31, n=5) | degenerate 1
+2026-09-17 19:24:52,522 - INFO -   CfC         train acc 44.8-60.2 % | test AUC 0.478-0.526 | Pearson +0.27 (p 0.66, n=5) | degenerate 0
+2026-09-17 19:24:52,524 - INFO -   LSTM        train acc 45.9-52.8 % | test AUC nan-nan | Pearson +nan (p nan, n=0) | degenerate 0
+2026-09-17 19:24:52,525 - INFO -   GRU         train acc 44.1-57.3 % | test AUC nan-nan | Pearson +nan (p nan, n=0) | degenerate 0
+2026-09-17 19:24:52,526 - INFO -   CfC_pure    train acc 23.2-26.7 % | test AUC nan-nan | Pearson +nan (p nan, n=0) | degenerate 3
+2026-09-17 19:24:52,527 - INFO -   CNN_aug     train acc 24.0-30.0 % | test AUC nan-nan | Pearson +nan (p nan, n=0) | degenerate 1
+2026-09-17 19:24:52,528 - INFO -   MNv3_noaug  train acc 98.4-98.4 % | test AUC nan-nan | Pearson +nan (p nan, n=0) | degenerate 0
+2026-09-17 19:24:52,536 - INFO - 
+Outputs in D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\reanalysis
+2026-09-17 19:24:52,536 - INFO - Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script38_log.txt
+2026-09-17 19:24:52,536 - INFO - Done.

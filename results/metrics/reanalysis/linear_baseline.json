@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-09-06T22:45:20",
+  "features": "mel 128 bands: temporal mean, sd, max (384 dims), StandardScaler(train)",
+  "C_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "selection": "official ICBHI on validation",
+  "rows": [
+    {
+      "model": "logreg",
+      "C": 10.0,
+      "val_icbhi": 0.4195382907396926,
+      "val_auc": 0.5829814097261526,
+      "test_icbhi": 0.34477086393230594,
+      "test_se_off": 0.328448275862069,
+      "test_sp_off": 0.3610934520025429,
+      "test_bin_se": 0.7146551724137931,
+      "test_bin_sp": 0.3610934520025429,
+      "test_auc": 0.5495130653046013,
+      "test_icbhi_ci_lo": 0.29794491527684147,
+      "test_icbhi_ci_hi": 0.3999437841853978,
+      "test_auc_ci_lo": 0.4896685421034778,
+      "test_auc_ci_hi": 0.6166155811784227,
+      "AKGC417L_icbhi": 0.3620622032531614,
+      "AKGC417L_auc": 0.59194797475231,
+      "Litt3200_icbhi": 0.27349547511312217,
+      "Litt3200_auc": 0.5058031674208144,
+      "Meditron_icbhi": 0.39349879200527127,
+      "Meditron_auc": 0.5849769382824511
+    },
+    {
+      "model": "linsvm",
+      "C": 10.0,
+      "val_icbhi": 0.43381296530105795,
+      "val_auc": 0.5794113805564021,
+      "test_icbhi": 0.37234336979634786,
+      "test_se_off": 0.30603448275862066,
+      "test_sp_off": 0.438652256834075,
+      "test_bin_se": 0.6508620689655172,
+      "test_bin_sp": 0.438652256834075,
+      "test_auc": 0.5545805291886796,
+      "test_icbhi_ci_lo": 0.3249972994594015,
+      "test_icbhi_ci_hi": 0.4279080075326408,
+      "test_auc_ci_lo": 0.4945072563332548,
+      "test_auc_ci_hi": 0.6206201375767794,
+      "AKGC417L_icbhi": 0.3859170558328644,
+      "AKGC417L_auc": 0.583711537102947,
+      "Litt3200_icbhi": 0.30092760180995476,
+      "Litt3200_auc": 0.5185294117647059,
+      "Meditron_icbhi": 0.43808477926641776,
+      "Meditron_auc": 0.5995607291895454
+    }
+  ]
+}

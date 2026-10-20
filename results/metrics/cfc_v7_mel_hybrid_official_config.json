@@ -1,0 +1,59 @@
+{
+  "config": {
+    "architecture": "hybrid",
+    "model_name": "CfC_HybridDeep_mmRNN_v7reg",
+    "backbone_activation": "silu",
+    "backbone_units": 128,
+    "backbone_layers": 2,
+    "backbone_dr": 0.4,
+    "init": 0.6,
+    "use_mixed": true,
+    "no_gate": false,
+    "minimal": false,
+    "hidden_size": 64,
+    "optimizer": "adamw",
+    "base_lr": 0.0002,
+    "decay_lr": 0.97,
+    "weight_decay": 0.0001,
+    "clipnorm": 1.0,
+    "batch_size": 64,
+    "epochs": 80,
+    "early_stopping_patience": 20,
+    "early_stopping_min_delta": 0.0001,
+    "random_seed": 314,
+    "num_workers": 0,
+    "use_weighted_sampling": true,
+    "split_strategy": "strategy1_official",
+    "class_mode": "4class",
+    "n_classes": 4,
+    "class_names": [
+      "Normal",
+      "Crackle",
+      "Wheeze",
+      "Both"
+    ],
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "conv_kernel": 3,
+    "conv_pool": 2,
+    "conv_dropout": 0.3,
+    "temporal_strides": [
+      2,
+      2,
+      2
+    ],
+    "cfc_in_features": 1024,
+    "seq_length": 31
+  },
+  "run_name": "cfc_v7_mel_hybrid_official",
+  "model_name": "CfC_HybridDeep_mmRNN_v7reg",
+  "architecture": "hybrid",
+  "total_params": 491492,
+  "best_epoch": 66,
+  "best_val_loss": 1.0808997948338666,
+  "best_val_icbhi": 0.6561468371527672,
+  "timestamp": "2026-06-08T10:50:15.986340"
+}

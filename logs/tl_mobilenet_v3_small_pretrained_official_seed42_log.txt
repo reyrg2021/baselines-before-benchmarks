@@ -1,0 +1,63 @@
+2026-06-10 23:24:22,076 - INFO - ======================================================================
+2026-06-10 23:24:22,076 - INFO - EVAL-ONLY MODE — per-cycle probability dump (for ROC)
+2026-06-10 23:24:22,077 - INFO - ======================================================================
+2026-06-10 23:24:22,077 - INFO -   Checkpoint: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\tl_mobilenet_v3_small_pretrained_official_seed99.pth
+2026-06-10 23:24:22,077 - INFO -   Run tag:    tl_mobilenet_v3_small_pretrained_official_seed99
+2026-06-10 23:24:22,544 - INFO - ======================================================================
+2026-06-10 23:24:22,544 - INFO - CREATING DATALOADERS
+2026-06-10 23:24:22,546 - INFO - ======================================================================
+2026-06-10 23:24:22,546 - INFO -   Split strategy: strategy1_official
+2026-06-10 23:24:22,546 - INFO -   Class mode:      4class
+2026-06-10 23:24:22,546 - INFO -   Augmentation:        none
+2026-06-10 23:24:22,546 - INFO -   Batch size:          32
+2026-06-10 23:24:22,546 - INFO -   Num workers:         0
+2026-06-10 23:24:22,546 - INFO -   Weighted sampling:   False
+2026-06-10 23:24:22,547 - INFO - 
+[TRAIN] Creating training dataset...
+2026-06-10 23:24:22,833 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-06-10 23:24:22,834 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-06-10 23:24:22,834 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-06-10 23:24:22,834 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-06-10 23:24:22,834 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-06-10 23:24:22,835 - INFO - 
+[VAL] Creating validation dataset...
+2026-06-10 23:24:22,892 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-06-10 23:24:22,892 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-06-10 23:24:22,892 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-06-10 23:24:22,892 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-06-10 23:24:22,893 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-06-10 23:24:22,893 - INFO - 
+[TEST] Creating test dataset...
+2026-06-10 23:24:23,126 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-06-10 23:24:23,126 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-06-10 23:24:23,126 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-06-10 23:24:23,126 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-06-10 23:24:23,127 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-06-10 23:24:23,127 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-06-10 23:24:23,128 - INFO - 
+  Class weights for loss:
+2026-06-10 23:24:23,128 - INFO -       Normal: 0.3647
+2026-06-10 23:24:23,128 - INFO -      Crackle: 0.5661
+2026-06-10 23:24:23,128 - INFO -       Wheeze: 1.3826
+2026-06-10 23:24:23,129 - INFO -         Both: 1.6866
+2026-06-10 23:24:23,129 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-06-10 23:24:23,166 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-06-10 23:24:23,167 - INFO -   Labels shape: torch.Size([32])
+2026-06-10 23:24:23,167 - INFO -   Spec dtype: torch.float32
+2026-06-10 23:24:23,167 - INFO -   Spec range: [0.0000, 1.0000]
+2026-06-10 23:24:23,168 - INFO -   Labels in batch: Counter({1: 15, 0: 12, 2: 3, 3: 2})
+2026-06-10 23:24:23,168 - INFO - 
+======================================================================
+2026-06-10 23:24:23,168 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-06-10 23:24:23,168 - INFO - ======================================================================
+2026-06-10 23:24:23,168 - INFO -   Train:   3350 samples →  104 batches
+2026-06-10 23:24:23,168 - INFO -   Val:      635 samples →   20 batches
+2026-06-10 23:24:23,169 - INFO -   Test:    2733 samples →   86 batches
+2026-06-10 23:24:23,169 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-06-10 23:24:23,169 - INFO - ======================================================================
+2026-06-10 23:24:25,013 - INFO -   ✓ Probabilities:  D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\arrays\tl_mobilenet_v3_small_pretrained_official_seed99_probs.npy  shape=(2733, 4)
+2026-06-10 23:24:25,014 - INFO -   ✓ Labels/preds: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\arrays\tl_mobilenet_v3_small_pretrained_official_seed99_labels_preds.npz
+2026-06-10 23:24:25,727 - INFO -   [verification] ICBHI=0.4690 (Se=0.076 Sp=0.862) | AUC bin=0.5264
+2026-06-10 23:24:25,727 - INFO -   → Compare with your Table 4: these numbers must match.

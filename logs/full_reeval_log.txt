@@ -1,0 +1,216 @@
+2026-06-10 23:39:14,775 - INFO - ======================================================================
+2026-06-10 23:39:14,775 - INFO - FONIS 2026 — Script 18: Full Re-Evaluation Multi-Seed
+2026-06-10 23:39:14,775 - INFO - ======================================================================
+2026-06-10 23:39:14,775 - INFO -   BASE_DIR:      D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP
+2026-06-10 23:39:14,776 - INFO -   Checkpoints:   D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints
+2026-06-10 23:39:14,776 - INFO -   Outputs:       D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval
+2026-06-10 23:39:14,776 - INFO -   Split:         strategy1_official  (patterns *_official_seed*.pth)
+2026-06-10 23:39:14,776 - INFO -   Arrays:        D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\arrays
+2026-06-10 23:39:14,776 - INFO -   Log file:      D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\full_reeval_log.txt
+2026-06-10 23:39:14,776 - INFO -   Models:       ['cnn', 'hybrid']
+2026-06-10 23:39:14,790 - INFO -   Device:        cuda
+2026-06-10 23:39:14,792 - INFO -   GPU:           NVIDIA GeForce RTX 3060 Laptop GPU
+2026-06-10 23:39:14,792 - INFO - 
+[Importing project modules]
+2026-06-10 23:39:15,417 - INFO -   ✓ Script 09 (RespiratoryNet) imported
+2026-06-10 23:39:15,419 - INFO -   ✓ Script 11a (CfC Hybrid/Transposed) imported
+2026-06-10 23:39:15,421 - INFO -   ✓ Script 08 (DataLoaders) imported
+2026-06-10 23:39:15,421 - INFO - 
+[Creating test DataLoader]
+2026-06-10 23:39:15,421 - INFO - ======================================================================
+2026-06-10 23:39:15,421 - INFO - CREATING DATALOADERS
+2026-06-10 23:39:15,421 - INFO - ======================================================================
+2026-06-10 23:39:15,421 - INFO -   Split strategy: strategy1_official
+2026-06-10 23:39:15,421 - INFO -   Class mode:      4class
+2026-06-10 23:39:15,422 - INFO -   Augmentation:        none
+2026-06-10 23:39:15,422 - INFO -   Batch size:          32
+2026-06-10 23:39:15,422 - INFO -   Num workers:         0
+2026-06-10 23:39:15,422 - INFO -   Weighted sampling:   False
+2026-06-10 23:39:15,422 - INFO - 
+[TRAIN] Creating training dataset...
+2026-06-10 23:39:15,762 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-06-10 23:39:15,762 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-06-10 23:39:15,762 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-06-10 23:39:15,762 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-06-10 23:39:15,762 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-06-10 23:39:15,763 - INFO - 
+[VAL] Creating validation dataset...
+2026-06-10 23:39:15,821 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-06-10 23:39:15,821 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-06-10 23:39:15,821 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-06-10 23:39:15,822 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-06-10 23:39:15,822 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-06-10 23:39:15,822 - INFO - 
+[TEST] Creating test dataset...
+2026-06-10 23:39:16,065 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-06-10 23:39:16,066 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-06-10 23:39:16,066 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-06-10 23:39:16,066 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-06-10 23:39:16,066 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-06-10 23:39:16,067 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-06-10 23:39:16,068 - INFO - 
+  Class weights for loss:
+2026-06-10 23:39:16,068 - INFO -       Normal: 0.3647
+2026-06-10 23:39:16,068 - INFO -      Crackle: 0.5661
+2026-06-10 23:39:16,069 - INFO -       Wheeze: 1.3826
+2026-06-10 23:39:16,069 - INFO -         Both: 1.6866
+2026-06-10 23:39:16,069 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-06-10 23:39:16,481 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-06-10 23:39:16,481 - INFO -   Labels shape: torch.Size([32])
+2026-06-10 23:39:16,481 - INFO -   Spec dtype: torch.float32
+2026-06-10 23:39:16,481 - INFO -   Spec range: [0.0000, 1.0000]
+2026-06-10 23:39:16,481 - INFO -   Labels in batch: Counter({1: 11, 0: 10, 3: 6, 2: 5})
+2026-06-10 23:39:16,482 - INFO - 
+======================================================================
+2026-06-10 23:39:16,482 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-06-10 23:39:16,482 - INFO - ======================================================================
+2026-06-10 23:39:16,482 - INFO -   Train:   3350 samples →  104 batches
+2026-06-10 23:39:16,482 - INFO -   Val:      635 samples →   20 batches
+2026-06-10 23:39:16,482 - INFO -   Test:    2733 samples →   86 batches
+2026-06-10 23:39:16,482 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-06-10 23:39:16,482 - INFO - ======================================================================
+2026-06-10 23:39:16,482 - INFO -   Test set: 2733 samples, 86 batches
+2026-06-10 23:39:16,483 - INFO - 
+======================================================================
+2026-06-10 23:39:16,483 - INFO - MODEL: CNN-RespiratoryNet  (5 seeds)
+2026-06-10 23:39:16,483 - INFO - ======================================================================
+2026-06-10 23:39:16,483 - INFO - 
+[1/5] CNN-RespiratoryNet seed=123: cnn_official_seed123.pth
+2026-06-10 23:39:16,551 - INFO -     Params: 556,500  |  best_epoch(train): 24
+2026-06-10 23:39:19,022 - INFO -     OFFICIAL:  ICBHI=0.4429  Se=0.3181  Sp=0.5677
+2026-06-10 23:39:19,023 - INFO -     Macro:    ICBHI=0.5803  (old; inflation vs official = +0.1374)
+2026-06-10 23:39:19,023 - INFO -     Accuracy: 46.18%
+2026-06-10 23:39:19,023 - INFO -     Binary:  Se=0.5233  Sp=0.5677  AUC=0.5451
+2026-06-10 23:39:19,023 - INFO -     Precision per class: Normal=0.618, Crackle=0.374, Wheeze=0.239, Both=0.173
+2026-06-10 23:39:19,025 - INFO - 
+[2/5] CNN-RespiratoryNet seed=314: cnn_official_seed314.pth
+2026-06-10 23:39:19,076 - INFO -     Params: 556,500  |  best_epoch(train): 48
+2026-06-10 23:39:20,618 - INFO -     OFFICIAL:  ICBHI=0.4772  Se=0.4172  Sp=0.5372
+2026-06-10 23:39:20,618 - INFO -     Macro:    ICBHI=0.5832  (old; inflation vs official = +0.1060)
+2026-06-10 23:39:20,619 - INFO -     Accuracy: 48.63%
+2026-06-10 23:39:20,619 - INFO -     Binary:  Se=0.6121  Sp=0.5372  AUC=0.5688
+2026-06-10 23:39:20,619 - INFO -     Precision per class: Normal=0.653, Crackle=0.384, Wheeze=0.240, Both=0.189
+2026-06-10 23:39:20,624 - INFO - 
+[3/5] CNN-RespiratoryNet seed=42: cnn_official_seed42.pth
+2026-06-10 23:39:20,674 - INFO -     Params: 556,500  |  best_epoch(train): 1
+2026-06-10 23:39:22,194 - INFO -     OFFICIAL:  ICBHI=0.4523  Se=0.4819  Sp=0.4228
+2026-06-10 23:39:22,196 - INFO -     Macro:    ICBHI=0.5612  (old; inflation vs official = +0.1089)
+2026-06-10 23:39:22,196 - INFO -     Accuracy: 44.79%
+2026-06-10 23:39:22,196 - INFO -     Binary:  Se=0.7733  Sp=0.4228  AUC=0.6046
+2026-06-10 23:39:22,196 - INFO -     Precision per class: Normal=0.717, Crackle=0.315, Wheeze=0.146, Both=0.200
+2026-06-10 23:39:22,200 - INFO - 
+[4/5] CNN-RespiratoryNet seed=7: cnn_official_seed7.pth
+2026-06-10 23:39:22,260 - INFO -     Params: 556,500  |  best_epoch(train): 68
+2026-06-10 23:39:23,789 - INFO -     OFFICIAL:  ICBHI=0.4474  Se=0.4466  Sp=0.4482
+2026-06-10 23:39:23,789 - INFO -     Macro:    ICBHI=0.5834  (old; inflation vs official = +0.1360)
+2026-06-10 23:39:23,790 - INFO -     Accuracy: 44.75%
+2026-06-10 23:39:23,790 - INFO -     Binary:  Se=0.6267  Sp=0.4482  AUC=0.5480
+2026-06-10 23:39:23,790 - INFO -     Precision per class: Normal=0.620, Crackle=0.380, Wheeze=0.248, Both=0.195
+2026-06-10 23:39:23,795 - INFO - 
+[5/5] CNN-RespiratoryNet seed=99: cnn_official_seed99.pth
+2026-06-10 23:39:23,849 - INFO -     Params: 556,500  |  best_epoch(train): 27
+2026-06-10 23:39:25,383 - INFO -     OFFICIAL:  ICBHI=0.4782  Se=0.3784  Sp=0.5779
+2026-06-10 23:39:25,384 - INFO -     Macro:    ICBHI=0.5944  (old; inflation vs official = +0.1163)
+2026-06-10 23:39:25,384 - INFO -     Accuracy: 49.32%
+2026-06-10 23:39:25,384 - INFO -     Binary:  Se=0.5733  Sp=0.5779  AUC=0.5922
+2026-06-10 23:39:25,384 - INFO -     Precision per class: Normal=0.647, Crackle=0.401, Wheeze=0.242, Both=0.221
+2026-06-10 23:39:25,389 - INFO - 
+======================================================================
+2026-06-10 23:39:25,389 - INFO - MODEL: CfC-Hybrid  (5 seeds)
+2026-06-10 23:39:25,389 - INFO - ======================================================================
+2026-06-10 23:39:25,389 - INFO - 
+[1/5] CfC-Hybrid seed=123: hybrid_official_seed123.pth
+2026-06-10 23:39:25,458 - INFO -     Params: 491,492  |  best_epoch(train): 65
+2026-06-10 23:39:29,126 - INFO -     OFFICIAL:  ICBHI=0.3926  Se=0.3534  Sp=0.4317
+2026-06-10 23:39:29,126 - INFO -     Macro:    ICBHI=0.5640  (old; inflation vs official = +0.1714)
+2026-06-10 23:39:29,127 - INFO -     Accuracy: 39.85%
+2026-06-10 23:39:29,127 - INFO -     Binary:  Se=0.5845  Sp=0.4317  AUC=0.5148
+2026-06-10 23:39:29,127 - INFO -     Precision per class: Normal=0.585, Crackle=0.309, Wheeze=0.247, Both=0.151
+2026-06-10 23:39:29,129 - INFO - 
+[2/5] CfC-Hybrid seed=314: hybrid_official_seed314.pth
+2026-06-10 23:39:29,186 - INFO -     Params: 491,492  |  best_epoch(train): 65
+2026-06-10 23:39:32,800 - INFO -     OFFICIAL:  ICBHI=0.3480  Se=0.3069  Sp=0.3891
+2026-06-10 23:39:32,800 - INFO -     Macro:    ICBHI=0.5322  (old; inflation vs official = +0.1843)
+2026-06-10 23:39:32,801 - INFO -     Accuracy: 35.42%
+2026-06-10 23:39:32,801 - INFO -     Binary:  Se=0.5474  Sp=0.3891  AUC=0.4780
+2026-06-10 23:39:32,801 - INFO -     Precision per class: Normal=0.538, Crackle=0.244, Wheeze=0.215, Both=0.160
+2026-06-10 23:39:32,803 - INFO - 
+[3/5] CfC-Hybrid seed=42: hybrid_official_seed42.pth
+2026-06-10 23:39:32,870 - INFO -     Params: 491,492  |  best_epoch(train): 38
+2026-06-10 23:39:36,514 - INFO -     OFFICIAL:  ICBHI=0.3109  Se=0.3371  Sp=0.2848
+2026-06-10 23:39:36,515 - INFO -     Macro:    ICBHI=0.5263  (old; inflation vs official = +0.2154)
+2026-06-10 23:39:36,515 - INFO -     Accuracy: 30.70%
+2026-06-10 23:39:36,515 - INFO -     Binary:  Se=0.6793  Sp=0.2848  AUC=0.5257
+2026-06-10 23:39:36,515 - INFO -     Precision per class: Normal=0.546, Crackle=0.234, Wheeze=0.199, Both=0.114
+2026-06-10 23:39:36,517 - INFO - 
+[4/5] CfC-Hybrid seed=7: hybrid_official_seed7.pth
+2026-06-10 23:39:36,583 - INFO -     Params: 491,492  |  best_epoch(train): 32
+2026-06-10 23:39:40,188 - INFO -     OFFICIAL:  ICBHI=0.3386  Se=0.2552  Sp=0.4221
+2026-06-10 23:39:40,189 - INFO -     Macro:    ICBHI=0.5163  (old; inflation vs official = +0.1776)
+2026-06-10 23:39:40,189 - INFO -     Accuracy: 35.13%
+2026-06-10 23:39:40,189 - INFO -     Binary:  Se=0.5397  Sp=0.4221  AUC=0.4806
+2026-06-10 23:39:40,189 - INFO -     Precision per class: Normal=0.554, Crackle=0.226, Wheeze=0.180, Both=0.113
+2026-06-10 23:39:40,191 - INFO - 
+[5/5] CfC-Hybrid seed=99: hybrid_official_seed99.pth
+2026-06-10 23:39:40,253 - INFO -     Params: 491,492  |  best_epoch(train): 43
+2026-06-10 23:39:43,844 - INFO -     OFFICIAL:  ICBHI=0.3649  Se=0.2690  Sp=0.4609
+2026-06-10 23:39:43,845 - INFO -     Macro:    ICBHI=0.5311  (old; inflation vs official = +0.1662)
+2026-06-10 23:39:43,845 - INFO -     Accuracy: 37.94%
+2026-06-10 23:39:43,845 - INFO -     Binary:  Se=0.4802  Sp=0.4609  AUC=0.5054
+2026-06-10 23:39:43,845 - INFO -     Precision per class: Normal=0.546, Crackle=0.234, Wheeze=0.230, Both=0.156
+2026-06-10 23:39:43,847 - INFO - 
+======================================================================
+2026-06-10 23:39:43,848 - INFO - STATISTICAL AGGREGATION (mean ± std)
+2026-06-10 23:39:43,848 - INFO - ======================================================================
+2026-06-10 23:39:43,849 - INFO - 
+CNN-RespiratoryNet (5 seeds):
+2026-06-10 23:39:43,849 - INFO -   ICBHI OFFICIAL: 0.4596 ± 0.0169   ← paper number
+2026-06-10 23:39:43,849 - INFO -   ICBHI Macro:   0.5805 ± 0.0121   (inflation +0.1209)
+2026-06-10 23:39:43,849 - INFO -   Official Se:    0.4084 ± 0.0632
+2026-06-10 23:39:43,849 - INFO -   Official Sp:    0.5107 ± 0.0709
+2026-06-10 23:39:43,849 - INFO -   Binary AUC:   0.5717 ± 0.0263
+2026-06-10 23:39:43,850 - INFO -   Binary Se:    0.6217 ± 0.0937
+2026-06-10 23:39:43,850 - INFO -   Binary Sp:    0.5107 ± 0.0709
+2026-06-10 23:39:43,850 - INFO -   Precision per class (mean):
+2026-06-10 23:39:43,850 - INFO -     Normal    : Se=0.511  PPV=0.651  F1=0.569
+2026-06-10 23:39:43,850 - INFO -     Crackle   : Se=0.570  PPV=0.371  F1=0.436
+2026-06-10 23:39:43,850 - INFO -     Wheeze    : Se=0.213  PPV=0.223  F1=0.207
+2026-06-10 23:39:43,850 - INFO -     Both      : Se=0.191  PPV=0.196  F1=0.170
+2026-06-10 23:39:43,852 - INFO - 
+CfC-Hybrid (5 seeds):
+2026-06-10 23:39:43,852 - INFO -   ICBHI OFFICIAL: 0.3510 ± 0.0304   ← paper number
+2026-06-10 23:39:43,852 - INFO -   ICBHI Macro:   0.5340 ± 0.0179   (inflation +0.1830)
+2026-06-10 23:39:43,852 - INFO -   Official Se:    0.3043 ± 0.0423
+2026-06-10 23:39:43,852 - INFO -   Official Sp:    0.3977 ± 0.0681
+2026-06-10 23:39:43,852 - INFO -   Binary AUC:   0.5009 ± 0.0210
+2026-06-10 23:39:43,853 - INFO -   Binary Se:    0.5662 ± 0.0735
+2026-06-10 23:39:43,853 - INFO -   Binary Sp:    0.3977 ± 0.0681
+2026-06-10 23:39:43,853 - INFO -   Precision per class (mean):
+2026-06-10 23:39:43,853 - INFO -     Normal    : Se=0.398  PPV=0.554  F1=0.460
+2026-06-10 23:39:43,853 - INFO -     Crackle   : Se=0.313  PPV=0.250  F1=0.276
+2026-06-10 23:39:43,853 - INFO -     Wheeze    : Se=0.315  PPV=0.214  F1=0.254
+2026-06-10 23:39:43,853 - INFO -     Both      : Se=0.236  PPV=0.139  F1=0.173
+2026-06-10 23:39:43,853 - INFO - 
+======================================================================
+2026-06-10 23:39:43,854 - INFO - PAIRED McNEMAR: CNN vs CfC-Hybrid
+2026-06-10 23:39:43,854 - INFO - ======================================================================
+2026-06-10 23:39:43,859 - INFO -   Aggregate: b(CNN)=3287, c(Hybrid)=1794, χ²=438.115
+2026-06-10 23:39:43,859 - INFO -   p-value (χ², Edwards): 0.0000 (SIGNIFICANT)
+2026-06-10 23:39:43,860 - INFO - 
+======================================================================
+2026-06-10 23:39:43,860 - INFO - SAVING RESULTS
+2026-06-10 23:39:43,860 - INFO - ======================================================================
+2026-06-10 23:39:43,866 - INFO -   JSON:          D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\full_reeval_results.json
+2026-06-10 23:39:43,867 - INFO -   CSV runs:      D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\full_reeval_runs.csv
+2026-06-10 23:39:43,867 - INFO -   CSV per-class: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\full_reeval_perclass.csv
+2026-06-10 23:39:43,868 - INFO -   CSV binary:    D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\full_reeval_binary.csv
+2026-06-10 23:39:43,868 - INFO -   MD summary:    D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\full_reeval_summary.md
+2026-06-10 23:39:43,869 - INFO - 
+======================================================================
+2026-06-10 23:39:43,869 - INFO - ✅ FULL RE-EVALUATION FINISHED
+2026-06-10 23:39:43,869 - INFO - ======================================================================
+2026-06-10 23:39:43,869 - INFO -   Report for paper: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\full_reeval_summary.md
+2026-06-10 23:39:43,869 - INFO -   Arrays (.npy/.npz) in: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\arrays
+2026-06-10 23:39:43,869 - INFO -   All outputs in: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval

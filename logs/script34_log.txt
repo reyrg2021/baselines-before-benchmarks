@@ -1,0 +1,272 @@
+2026-09-16 10:17:24,231 - INFO - ==============================================================================
+2026-09-16 10:17:24,231 - INFO - SCRIPT 34 — Training-recipe ablation
+2026-09-16 10:17:24,231 - INFO - ==============================================================================
+2026-09-16 10:17:24,231 - INFO - BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-16 10:17:24,231 - INFO - Arm A preset: moderate   |   Arm B: augment=none, mixup=0
+2026-09-16 10:17:24,231 - INFO - 
+[1/1] CNN-RespiratoryNet + augmentation — seed 42
+2026-09-16 10:17:24,231 - INFO -   subprocess Script 09 (augment_preset=moderate, seed 42)
+2026-09-16 10:18:01,664 - INFO - 
+Evaluation
+2026-09-16 10:18:03,773 - INFO - ======================================================================
+2026-09-16 10:18:03,773 - INFO - CREATING DATALOADERS
+2026-09-16 10:18:03,773 - INFO - ======================================================================
+2026-09-16 10:18:03,775 - INFO -   Split strategy: strategy1_official
+2026-09-16 10:18:03,775 - INFO -   Class mode:      4class
+2026-09-16 10:18:03,775 - INFO -   Augmentation:        none
+2026-09-16 10:18:03,775 - INFO -   Batch size:          32
+2026-09-16 10:18:03,775 - INFO -   Num workers:         0
+2026-09-16 10:18:03,775 - INFO -   Weighted sampling:   True
+2026-09-16 10:18:03,776 - INFO - 
+[TRAIN] Creating training dataset...
+2026-09-16 10:18:04,086 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-09-16 10:18:04,086 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-09-16 10:18:04,086 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-09-16 10:18:04,086 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-09-16 10:18:04,086 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-09-16 10:18:04,088 - INFO - 
+[VAL] Creating validation dataset...
+2026-09-16 10:18:04,165 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-09-16 10:18:04,166 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-09-16 10:18:04,166 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-09-16 10:18:04,167 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-09-16 10:18:04,167 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-09-16 10:18:04,168 - INFO - 
+[TEST] Creating test dataset...
+2026-09-16 10:18:04,418 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-09-16 10:18:04,418 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-09-16 10:18:04,419 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-09-16 10:18:04,419 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-09-16 10:18:04,419 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-09-16 10:18:04,420 - INFO - 
+[SAMPLER] Configuring WeightedRandomSampler for train...
+2026-09-16 10:18:04,420 - INFO -   Weighted sampling enabled: 3350 samples/epoch
+2026-09-16 10:18:04,420 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-09-16 10:18:04,421 - INFO - 
+  Class weights for loss:
+2026-09-16 10:18:04,421 - INFO -       Normal: 0.3647
+2026-09-16 10:18:04,421 - INFO -      Crackle: 0.5661
+2026-09-16 10:18:04,421 - INFO -       Wheeze: 1.3826
+2026-09-16 10:18:04,422 - INFO -         Both: 1.6866
+2026-09-16 10:18:04,422 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-09-16 10:18:04,556 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-09-16 10:18:04,557 - INFO -   Labels shape: torch.Size([32])
+2026-09-16 10:18:04,557 - INFO -   Spec dtype: torch.float32
+2026-09-16 10:18:04,558 - INFO -   Spec range: [0.0000, 1.0000]
+2026-09-16 10:18:04,558 - INFO -   Labels in batch: Counter({0: 10, 1: 8, 2: 7, 3: 7})
+2026-09-16 10:18:04,558 - INFO - 
+======================================================================
+2026-09-16 10:18:04,558 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-09-16 10:18:04,559 - INFO - ======================================================================
+2026-09-16 10:18:04,559 - INFO -   Train:   3350 samples →  104 batches
+2026-09-16 10:18:04,559 - INFO -   Val:      635 samples →   20 batches
+2026-09-16 10:18:04,559 - INFO -   Test:    2733 samples →   86 batches
+2026-09-16 10:18:04,560 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-09-16 10:18:04,560 - INFO - ======================================================================
+2026-09-16 10:18:04,560 - INFO -   [split] strategy1_official → test set = 2733 cycles (OK strategy1_official)
+2026-09-16 10:18:04,897 - INFO -   CNN FP32 loaded from cnn_aug_official_seed42.pth (val_icbhi=None)
+2026-09-16 10:18:20,306 - INFO -   cnn_aug_official_seed42                              ICBHI 0.3084 (Se 0.547/Sp 0.069)  AUC 0.5153
+2026-09-16 10:18:20,306 - INFO - 
+Paired comparison against the original recipe
+2026-09-16 10:18:20,320 - WARNING -   cnn_aug: only 1 paired seeds; test skipped
+2026-09-16 10:18:20,324 - INFO -   ✓ Summary: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\recipe_ablation\recipe_ablation_summary.md
+2026-09-16 10:18:20,327 - INFO - Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script34_log.txt
+2026-09-16 10:18:20,328 - INFO - Done.
+2026-09-16 10:18:44,173 - INFO - ==============================================================================
+2026-09-16 10:18:44,173 - INFO - SCRIPT 34 — Training-recipe ablation
+2026-09-16 10:18:44,173 - INFO - ==============================================================================
+2026-09-16 10:18:44,173 - INFO - BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-16 10:18:44,173 - INFO - Arm A preset: moderate   |   Arm B: augment=none, mixup=0
+2026-09-16 10:18:44,174 - INFO - 
+[1/1] MobileNetV3-ImageNet without augmentation or mixup — seed 42
+2026-09-16 10:18:44,174 - INFO -   subprocess Script 21 (augment=none, mixup=0, seed 42)
+2026-09-16 10:19:00,444 - INFO - 
+Evaluation
+2026-09-16 10:19:02,360 - INFO - ======================================================================
+2026-09-16 10:19:02,360 - INFO - CREATING DATALOADERS
+2026-09-16 10:19:02,360 - INFO - ======================================================================
+2026-09-16 10:19:02,360 - INFO -   Split strategy: strategy1_official
+2026-09-16 10:19:02,360 - INFO -   Class mode:      4class
+2026-09-16 10:19:02,360 - INFO -   Augmentation:        none
+2026-09-16 10:19:02,360 - INFO -   Batch size:          32
+2026-09-16 10:19:02,360 - INFO -   Num workers:         0
+2026-09-16 10:19:02,360 - INFO -   Weighted sampling:   True
+2026-09-16 10:19:02,361 - INFO - 
+[TRAIN] Creating training dataset...
+2026-09-16 10:19:02,661 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-09-16 10:19:02,662 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-09-16 10:19:02,662 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-09-16 10:19:02,662 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-09-16 10:19:02,662 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-09-16 10:19:02,663 - INFO - 
+[VAL] Creating validation dataset...
+2026-09-16 10:19:02,726 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-09-16 10:19:02,727 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-09-16 10:19:02,727 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-09-16 10:19:02,727 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-09-16 10:19:02,728 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-09-16 10:19:02,728 - INFO - 
+[TEST] Creating test dataset...
+2026-09-16 10:19:02,970 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-09-16 10:19:02,970 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-09-16 10:19:02,970 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-09-16 10:19:02,971 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-09-16 10:19:02,971 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-09-16 10:19:02,971 - INFO - 
+[SAMPLER] Configuring WeightedRandomSampler for train...
+2026-09-16 10:19:02,972 - INFO -   Weighted sampling enabled: 3350 samples/epoch
+2026-09-16 10:19:02,972 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-09-16 10:19:02,972 - INFO - 
+  Class weights for loss:
+2026-09-16 10:19:02,973 - INFO -       Normal: 0.3647
+2026-09-16 10:19:02,973 - INFO -      Crackle: 0.5661
+2026-09-16 10:19:02,973 - INFO -       Wheeze: 1.3826
+2026-09-16 10:19:02,973 - INFO -         Both: 1.6866
+2026-09-16 10:19:02,973 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-09-16 10:19:03,086 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-09-16 10:19:03,086 - INFO -   Labels shape: torch.Size([32])
+2026-09-16 10:19:03,086 - INFO -   Spec dtype: torch.float32
+2026-09-16 10:19:03,087 - INFO -   Spec range: [0.0000, 1.0000]
+2026-09-16 10:19:03,087 - INFO -   Labels in batch: Counter({3: 10, 2: 9, 1: 8, 0: 5})
+2026-09-16 10:19:03,087 - INFO - 
+======================================================================
+2026-09-16 10:19:03,087 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-09-16 10:19:03,087 - INFO - ======================================================================
+2026-09-16 10:19:03,088 - INFO -   Train:   3350 samples →  104 batches
+2026-09-16 10:19:03,088 - INFO -   Val:      635 samples →   20 batches
+2026-09-16 10:19:03,088 - INFO -   Test:    2733 samples →   86 batches
+2026-09-16 10:19:03,088 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-09-16 10:19:03,088 - INFO - ======================================================================
+2026-09-16 10:19:03,089 - INFO -   [split] strategy1_official → test set = 2733 cycles (OK strategy1_official)
+2026-09-16 10:19:10,607 - INFO -   tl_mobilenet_v3_small_pretrained_noaug_official_seed42 ICBHI 0.3534 (Se 0.109/Sp 0.598)  AUC 0.4659
+2026-09-16 10:19:10,608 - INFO - 
+Paired comparison against the original recipe
+2026-09-16 10:19:10,617 - WARNING -   mnv3_noaug: only 1 paired seeds; test skipped
+2026-09-16 10:19:10,622 - INFO -   ✓ Summary: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\recipe_ablation\recipe_ablation_summary.md
+2026-09-16 10:19:10,624 - INFO - Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script34_log.txt
+2026-09-16 10:19:10,624 - INFO - Done.
+2026-09-16 10:23:25,033 - INFO - ==============================================================================
+2026-09-16 10:23:25,033 - INFO - SCRIPT 34 — Training-recipe ablation
+2026-09-16 10:23:25,033 - INFO - ==============================================================================
+2026-09-16 10:23:25,033 - INFO - BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-16 10:23:25,033 - INFO - Arm A preset: moderate   |   Arm B: augment=none, mixup=0
+2026-09-16 10:23:25,033 - INFO - 
+[1/10] CNN-RespiratoryNet + augmentation — seed 42
+2026-09-16 10:23:25,033 - INFO -   subprocess Script 09 (augment_preset=moderate, seed 42)
+2026-09-16 10:25:22,645 - INFO - 
+[2/10] CNN-RespiratoryNet + augmentation — seed 123
+2026-09-16 10:25:22,645 - INFO -   subprocess Script 09 (augment_preset=moderate, seed 123)
+2026-09-16 10:27:33,350 - INFO - 
+[3/10] CNN-RespiratoryNet + augmentation — seed 7
+2026-09-16 10:27:33,350 - INFO -   subprocess Script 09 (augment_preset=moderate, seed 7)
+2026-09-16 10:30:57,113 - INFO - 
+[4/10] CNN-RespiratoryNet + augmentation — seed 99
+2026-09-16 10:30:57,113 - INFO -   subprocess Script 09 (augment_preset=moderate, seed 99)
+2026-09-16 10:33:16,716 - INFO - 
+[5/10] CNN-RespiratoryNet + augmentation — seed 314
+2026-09-16 10:33:16,717 - INFO -   subprocess Script 09 (augment_preset=moderate, seed 314)
+2026-09-16 10:37:29,071 - INFO - 
+[6/10] MobileNetV3-ImageNet without augmentation or mixup — seed 42
+2026-09-16 10:37:29,072 - INFO -   subprocess Script 21 (augment=none, mixup=0, seed 42)
+2026-09-16 10:39:27,258 - INFO - 
+[7/10] MobileNetV3-ImageNet without augmentation or mixup — seed 123
+2026-09-16 10:39:27,258 - INFO -   subprocess Script 21 (augment=none, mixup=0, seed 123)
+2026-09-16 10:41:15,829 - INFO - 
+[8/10] MobileNetV3-ImageNet without augmentation or mixup — seed 7
+2026-09-16 10:41:15,829 - INFO -   subprocess Script 21 (augment=none, mixup=0, seed 7)
+2026-09-16 10:42:59,003 - INFO - 
+[9/10] MobileNetV3-ImageNet without augmentation or mixup — seed 99
+2026-09-16 10:42:59,004 - INFO -   subprocess Script 21 (augment=none, mixup=0, seed 99)
+2026-09-16 10:44:52,617 - INFO - 
+[10/10] MobileNetV3-ImageNet without augmentation or mixup — seed 314
+2026-09-16 10:44:52,619 - INFO -   subprocess Script 21 (augment=none, mixup=0, seed 314)
+2026-09-16 10:46:38,517 - INFO - 
+Evaluation
+2026-09-16 10:46:41,155 - INFO - ======================================================================
+2026-09-16 10:46:41,156 - INFO - CREATING DATALOADERS
+2026-09-16 10:46:41,157 - INFO - ======================================================================
+2026-09-16 10:46:41,157 - INFO -   Split strategy: strategy1_official
+2026-09-16 10:46:41,157 - INFO -   Class mode:      4class
+2026-09-16 10:46:41,157 - INFO -   Augmentation:        none
+2026-09-16 10:46:41,157 - INFO -   Batch size:          32
+2026-09-16 10:46:41,157 - INFO -   Num workers:         0
+2026-09-16 10:46:41,157 - INFO -   Weighted sampling:   True
+2026-09-16 10:46:41,158 - INFO - 
+[TRAIN] Creating training dataset...
+2026-09-16 10:46:41,513 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-09-16 10:46:41,514 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-09-16 10:46:41,514 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-09-16 10:46:41,514 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-09-16 10:46:41,514 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-09-16 10:46:41,516 - INFO - 
+[VAL] Creating validation dataset...
+2026-09-16 10:46:41,667 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-09-16 10:46:41,667 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-09-16 10:46:41,667 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-09-16 10:46:41,667 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-09-16 10:46:41,667 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-09-16 10:46:41,668 - INFO - 
+[TEST] Creating test dataset...
+2026-09-16 10:46:41,944 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-09-16 10:46:41,944 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-09-16 10:46:41,945 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-09-16 10:46:41,945 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-09-16 10:46:41,945 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-09-16 10:46:41,946 - INFO - 
+[SAMPLER] Configuring WeightedRandomSampler for train...
+2026-09-16 10:46:41,946 - INFO -   Weighted sampling enabled: 3350 samples/epoch
+2026-09-16 10:46:41,946 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-09-16 10:46:41,947 - INFO - 
+  Class weights for loss:
+2026-09-16 10:46:41,948 - INFO -       Normal: 0.3647
+2026-09-16 10:46:41,948 - INFO -      Crackle: 0.5661
+2026-09-16 10:46:41,948 - INFO -       Wheeze: 1.3826
+2026-09-16 10:46:41,948 - INFO -         Both: 1.6866
+2026-09-16 10:46:41,948 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-09-16 10:46:42,101 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-09-16 10:46:42,101 - INFO -   Labels shape: torch.Size([32])
+2026-09-16 10:46:42,102 - INFO -   Spec dtype: torch.float32
+2026-09-16 10:46:42,102 - INFO -   Spec range: [0.0000, 1.0000]
+2026-09-16 10:46:42,103 - INFO -   Labels in batch: Counter({3: 10, 1: 9, 2: 8, 0: 5})
+2026-09-16 10:46:42,103 - INFO - 
+======================================================================
+2026-09-16 10:46:42,103 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-09-16 10:46:42,103 - INFO - ======================================================================
+2026-09-16 10:46:42,103 - INFO -   Train:   3350 samples →  104 batches
+2026-09-16 10:46:42,103 - INFO -   Val:      635 samples →   20 batches
+2026-09-16 10:46:42,103 - INFO -   Test:    2733 samples →   86 batches
+2026-09-16 10:46:42,103 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-09-16 10:46:42,104 - INFO - ======================================================================
+2026-09-16 10:46:42,104 - INFO -   [split] strategy1_official → test set = 2733 cycles (OK strategy1_official)
+2026-09-16 10:46:42,540 - INFO -   CNN FP32 loaded from cnn_aug_official_seed42.pth (val_icbhi=None)
+2026-09-16 10:47:01,326 - INFO -   cnn_aug_official_seed42                              ICBHI 0.0869 (Se 0.127/Sp 0.047)  AUC 0.4796
+2026-09-16 10:47:01,374 - INFO -   CNN FP32 loaded from cnn_aug_official_seed123.pth (val_icbhi=None)
+2026-09-16 10:47:20,137 - INFO -   cnn_aug_official_seed123                             ICBHI 0.2778 (Se 0.234/Sp 0.321)  AUC 0.5836
+2026-09-16 10:47:20,183 - INFO -   CNN FP32 loaded from cnn_aug_official_seed7.pth (val_icbhi=None)
+2026-09-16 10:47:38,825 - INFO -   cnn_aug_official_seed7                               ICBHI 0.4209 (Se 0.497/Sp 0.345)  AUC 0.5903
+2026-09-16 10:47:38,882 - INFO -   CNN FP32 loaded from cnn_aug_official_seed99.pth (val_icbhi=None)
+2026-09-16 10:47:57,783 - INFO -   cnn_aug_official_seed99                              ICBHI 0.0920 (Se 0.120/Sp 0.064)  AUC 0.5083
+2026-09-16 10:47:57,827 - INFO -   CNN FP32 loaded from cnn_aug_official_seed314.pth (val_icbhi=None)
+2026-09-16 10:48:16,894 - INFO -   cnn_aug_official_seed314                             ICBHI 0.3572 (Se 0.041/Sp 0.674)  AUC 0.4500
+2026-09-16 10:48:16,899 - INFO -   tl_mobilenet_v3_small_pretrained_noaug_official_seed42 ICBHI 0.3534 (Se 0.109/Sp 0.598)  AUC 0.4659
+2026-09-16 10:48:27,097 - INFO -   tl_mobilenet_v3_small_pretrained_noaug_official_seed123 ICBHI 0.4607 (Se 0.078/Sp 0.843)  AUC 0.4993
+2026-09-16 10:48:36,890 - INFO -   tl_mobilenet_v3_small_pretrained_noaug_official_seed7 ICBHI 0.4785 (Se 0.030/Sp 0.927)  AUC 0.5308
+2026-09-16 10:48:46,520 - INFO -   tl_mobilenet_v3_small_pretrained_noaug_official_seed99 ICBHI 0.4538 (Se 0.103/Sp 0.804)  AUC 0.5100
+2026-09-16 10:48:56,018 - INFO -   tl_mobilenet_v3_small_pretrained_noaug_official_seed314 ICBHI 0.4489 (Se 0.059/Sp 0.839)  AUC 0.5547
+2026-09-16 10:48:56,021 - INFO - 
+Paired comparison against the original recipe
+2026-09-16 10:48:56,048 - INFO -   CNN-RespiratoryNet + augmentation
+2026-09-16 10:48:56,050 - INFO -     icbhi  0.460 → 0.247  Δ=-0.2126  CI90 [-0.3626, -0.0627]  t p=0.039  TOST p=0.974 → not equivalent (±0.02)
+2026-09-16 10:48:56,050 - INFO -     auc    0.572 → 0.522  Δ=-0.0494  CI90 [-0.1289, +0.0302]  t p=0.256  TOST p=0.762 → not equivalent (±0.02)
+2026-09-16 10:48:56,065 - INFO -   MobileNetV3-ImageNet without augmentation or mixup
+2026-09-16 10:48:56,065 - INFO -     icbhi  0.462 → 0.439  Δ=-0.0232  CI90 [-0.0628, +0.0164]  t p=0.280  TOST p=0.564 → not equivalent (±0.02)
+2026-09-16 10:48:56,067 - INFO -     auc    0.543 → 0.512  Δ=-0.0310  CI90 [-0.0588, -0.0031]  t p=0.077  TOST p=0.775 → not equivalent (±0.02)
+2026-09-16 10:48:56,071 - INFO -   ✓ Summary: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\recipe_ablation\recipe_ablation_summary.md
+2026-09-16 10:48:56,073 - INFO - Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script34_log.txt
+2026-09-16 10:48:56,074 - INFO - Done.

@@ -1,0 +1,76 @@
+2026-09-17 09:39:47,214 - INFO - ==============================================================================
+2026-09-17 09:39:47,214 - INFO - SCRIPT 37 — Traceable re-run of the event-based CfC study
+2026-09-17 09:39:47,214 - INFO - ==============================================================================
+2026-09-17 09:39:47,215 - INFO -   events: .\data\events\events.pkl
+2026-09-17 09:39:47,215 - INFO -   split : D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\data\splits\strategy1_official
+2026-09-17 09:39:47,215 - INFO -   seeds [42] · epochs 2 · patience 15 · batch 32 · hidden 64 · lr 0.001
+2026-09-17 09:39:47,215 - INFO -   output: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\events_rerun_dryrun
+2026-09-17 09:39:47,215 - WARNING -   --dry-run: results NOT citable
+2026-09-17 09:39:50,753 - INFO -   torch 2.12.0+cu130 | device cuda
+2026-09-17 09:39:50,753 - INFO -   HPARAMS from Script 20: {'backbone_activation': 'gelu', 'backbone_units': 64, 'backbone_layers': 2, 'backbone_dr': 0.1, 'init': 1.0}
+2026-09-17 09:39:50,753 - INFO - 
+[1/3] Data
+2026-09-17 09:39:50,831 - INFO -   train: 3350 cycles used (0 missing in events.pkl)
+2026-09-17 09:39:50,845 - INFO -   val  : 635 cycles used (0 missing in events.pkl)
+2026-09-17 09:39:50,861 - INFO -   test : 2733 cycles used (0 missing in events.pkl)
+2026-09-17 09:39:51,046 - INFO -   F (features per event) = 21
+2026-09-17 09:39:51,046 - INFO -   events per cycle: median 3 (p5 1, p95 9)
+2026-09-17 09:39:51,046 - INFO -   Δt (s): median 0.384 (p5 0.072, p95 2.428)
+2026-09-17 09:39:51,067 - INFO -   ✓ Labels in events.pkl match test_cycles.csv
+2026-09-17 09:39:51,075 - INFO - 
+[2/3] Training
+2026-09-17 09:39:59,483 - INFO -   [1/6] events_dur_real_seed42: 2 ep. in 6 s | params 26,564 | val_loss ep 1 ICBHI 0.348 AUC 0.495 | val_score ep 1 ICBHI 0.348 AUC 0.495
+2026-09-17 09:40:05,872 - INFO -   [2/6] events_dur_ones_seed42: 2 ep. in 5 s | params 26,564 | val_loss ep 1 ICBHI 0.349 AUC 0.494 | val_score ep 1 ICBHI 0.349 AUC 0.494
+2026-09-17 09:40:12,116 - INFO -   [3/6] events_dur_mean_seed42: 2 ep. in 5 s | params 26,564 | val_loss ep 1 ICBHI 0.347 AUC 0.493 | val_score ep 1 ICBHI 0.347 AUC 0.493
+2026-09-17 09:40:18,468 - INFO -   [4/6] events_nodur_real_seed42: 2 ep. in 5 s | params 26,500 | val_loss ep 1 ICBHI 0.346 AUC 0.537 | val_score ep 1 ICBHI 0.346 AUC 0.537
+2026-09-17 09:40:24,929 - INFO -   [5/6] events_nodur_ones_seed42: 2 ep. in 5 s | params 26,500 | val_loss ep 1 ICBHI 0.362 AUC 0.537 | val_score ep 1 ICBHI 0.362 AUC 0.537
+2026-09-17 09:40:31,468 - INFO -   [6/6] events_nodur_mean_seed42: 2 ep. in 5 s | params 26,500 | val_loss ep 1 ICBHI 0.355 AUC 0.537 | val_score ep 1 ICBHI 0.355 AUC 0.537
+2026-09-17 09:40:31,473 - INFO - 
+[3/3] Analysis
+2026-09-17 09:40:31,581 - INFO -   test: 2733 cycles · 49 patients · devices ['AKGC417L', 'Litt3200', 'Meditron']
+2026-09-17 09:40:31,774 - INFO -   [val_loss] Q1 dur: real - ones      icbhi  Δ -0.0013 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0037, +0.0011] | supported: no
+2026-09-17 09:40:31,775 - INFO -   [val_loss] Q1 dur: real - ones      auc    Δ +0.0008 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0048, +0.0033] | supported: no
+2026-09-17 09:40:31,775 - INFO -   [val_loss] Q1 dur: real - ones      auc_wd Δ -0.0005 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0084, +0.0037] | supported: no
+2026-09-17 09:40:31,776 - INFO -   [val_loss] Q1 dur: real - mean      icbhi  Δ +0.0003 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0030, +0.0037] | supported: no
+2026-09-17 09:40:31,776 - INFO -   [val_loss] Q1 dur: real - mean      auc    Δ +0.0015 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0036, +0.0033] | supported: no
+2026-09-17 09:40:31,776 - INFO -   [val_loss] Q1 dur: real - mean      auc_wd Δ +0.0012 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0063, +0.0046] | supported: no
+2026-09-17 09:40:31,777 - INFO -   [val_loss] Q1 nodur: real - ones    icbhi  Δ -0.0154 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0303, -0.0049] | supported: no
+2026-09-17 09:40:31,777 - INFO -   [val_loss] Q1 nodur: real - ones    auc    Δ +0.0001 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0048, +0.0039] | supported: no
+2026-09-17 09:40:31,777 - INFO -   [val_loss] Q1 nodur: real - ones    auc_wd Δ -0.0016 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0092, +0.0064] | supported: no
+2026-09-17 09:40:31,778 - INFO -   [val_loss] Q1 nodur: real - mean    icbhi  Δ -0.0091 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0123, -0.0064] | supported: no
+2026-09-17 09:40:31,778 - INFO -   [val_loss] Q1 nodur: real - mean    auc    Δ +0.0007 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0026, +0.0031] | supported: no
+2026-09-17 09:40:31,778 - INFO -   [val_loss] Q1 nodur: real - mean    auc_wd Δ -0.0003 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0057, +0.0046] | supported: no
+2026-09-17 09:40:31,779 - INFO -   [val_loss] Q3 real: dur - nodur     icbhi  Δ +0.0013 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0114, +0.0242] | supported: no
+2026-09-17 09:40:31,779 - INFO -   [val_loss] Q3 real: dur - nodur     auc    Δ -0.0428 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0604, -0.0156] | supported: no
+2026-09-17 09:40:31,779 - INFO -   [val_loss] Q3 real: dur - nodur     auc_wd Δ -0.0645 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0922, -0.0233] | supported: no
+2026-09-17 09:40:31,780 - INFO -   [val_loss] Q3 ones: dur - nodur     icbhi  Δ -0.0128 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0215, +0.0071] | supported: no
+2026-09-17 09:40:31,780 - INFO -   [val_loss] Q3 ones: dur - nodur     auc    Δ -0.0435 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0641, -0.0156] | supported: no
+2026-09-17 09:40:31,780 - INFO -   [val_loss] Q3 ones: dur - nodur     auc_wd Δ -0.0656 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0962, -0.0240] | supported: no
+2026-09-17 09:40:31,780 - INFO -   [val_loss] Q3 mean: dur - nodur     icbhi  Δ -0.0081 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0214, +0.0117] | supported: no
+2026-09-17 09:40:31,781 - INFO -   [val_loss] Q3 mean: dur - nodur     auc    Δ -0.0435 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0616, -0.0141] | supported: no
+2026-09-17 09:40:31,781 - INFO -   [val_loss] Q3 mean: dur - nodur     auc_wd Δ -0.0660 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0943, -0.0220] | supported: no
+2026-09-17 09:40:31,781 - INFO -   [val_score] Q1 dur: real - ones      icbhi  Δ -0.0013 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0037, +0.0011] | supported: no
+2026-09-17 09:40:31,782 - INFO -   [val_score] Q1 dur: real - ones      auc    Δ +0.0008 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0048, +0.0033] | supported: no
+2026-09-17 09:40:31,782 - INFO -   [val_score] Q1 dur: real - ones      auc_wd Δ -0.0005 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0084, +0.0037] | supported: no
+2026-09-17 09:40:31,782 - INFO -   [val_score] Q1 dur: real - mean      icbhi  Δ +0.0003 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0030, +0.0037] | supported: no
+2026-09-17 09:40:31,783 - INFO -   [val_score] Q1 dur: real - mean      auc    Δ +0.0015 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0036, +0.0033] | supported: no
+2026-09-17 09:40:31,783 - INFO -   [val_score] Q1 dur: real - mean      auc_wd Δ +0.0012 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0063, +0.0046] | supported: no
+2026-09-17 09:40:31,783 - INFO -   [val_score] Q1 nodur: real - ones    icbhi  Δ -0.0154 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0303, -0.0049] | supported: no
+2026-09-17 09:40:31,783 - INFO -   [val_score] Q1 nodur: real - ones    auc    Δ +0.0001 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0048, +0.0039] | supported: no
+2026-09-17 09:40:31,784 - INFO -   [val_score] Q1 nodur: real - ones    auc_wd Δ -0.0016 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0092, +0.0064] | supported: no
+2026-09-17 09:40:31,784 - INFO -   [val_score] Q1 nodur: real - mean    icbhi  Δ -0.0091 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0123, -0.0064] | supported: no
+2026-09-17 09:40:31,784 - INFO -   [val_score] Q1 nodur: real - mean    auc    Δ +0.0007 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0026, +0.0031] | supported: no
+2026-09-17 09:40:31,784 - INFO -   [val_score] Q1 nodur: real - mean    auc_wd Δ -0.0003 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0057, +0.0046] | supported: no
+2026-09-17 09:40:31,785 - INFO -   [val_score] Q3 real: dur - nodur     icbhi  Δ +0.0013 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0114, +0.0242] | supported: no
+2026-09-17 09:40:31,785 - INFO -   [val_score] Q3 real: dur - nodur     auc    Δ -0.0428 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0604, -0.0156] | supported: no
+2026-09-17 09:40:31,785 - INFO -   [val_score] Q3 real: dur - nodur     auc_wd Δ -0.0645 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0922, -0.0233] | supported: no
+2026-09-17 09:40:31,786 - INFO -   [val_score] Q3 ones: dur - nodur     icbhi  Δ -0.0128 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0215, +0.0071] | supported: no
+2026-09-17 09:40:31,786 - INFO -   [val_score] Q3 ones: dur - nodur     auc    Δ -0.0435 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0641, -0.0156] | supported: no
+2026-09-17 09:40:31,786 - INFO -   [val_score] Q3 ones: dur - nodur     auc_wd Δ -0.0656 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0962, -0.0240] | supported: no
+2026-09-17 09:40:31,786 - INFO -   [val_score] Q3 mean: dur - nodur     icbhi  Δ -0.0081 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0214, +0.0117] | supported: no
+2026-09-17 09:40:31,787 - INFO -   [val_score] Q3 mean: dur - nodur     auc    Δ -0.0435 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0616, -0.0141] | supported: no
+2026-09-17 09:40:31,787 - INFO -   [val_score] Q3 mean: dur - nodur     auc_wd Δ -0.0660 CI90 [+nan, +nan] t p nan TOST p nan | boot [-0.0943, -0.0220] | supported: no
+2026-09-17 09:40:31,813 - INFO - 
+Outputs in D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\events_rerun_dryrun
+2026-09-17 09:40:31,813 - INFO - Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script37_dryrun_log.txt
+2026-09-17 09:40:31,813 - INFO - Done.

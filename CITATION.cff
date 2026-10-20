@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, together with the article it accompanies."
+type: software
+title: "Baselines Before Benchmarks: code for the patient-level evaluation of compact, pretrained, and continuous-time models for respiratory sound classification at the edge"
+authors:
+  - family-names: Rodriguez-Guillen
+    given-names: Reinier
+    orcid: "https://orcid.org/0000-0002-2895-4477"
+    affiliation: "Facultad de Ingeniería, Universidad Autónoma de Chile"
+  - family-names: Garcia-Garcia
+    given-names: Yainet
+    orcid: "https://orcid.org/0000-0001-7565-4859"
+    affiliation: "Facultad de Ingeniería, Universidad Autónoma de Chile"
+repository-code: "https://github.com/reyrg2021/baselines-before-benchmarks"
+license: MIT
+keywords:
+  - respiratory sound classification
+  - ICBHI 2017
+  - auscultation
+  - edge computing
+  - Raspberry Pi 5
+  - model quantization
+  - continuous-time neural networks
+  - reproducible evaluation

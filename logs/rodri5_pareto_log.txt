@@ -1,0 +1,18 @@
+2026-09-17 15:19:03,746 - INFO - ==============================================================================
+2026-09-17 15:19:03,747 - INFO - Figure 5 — AUC versus end-to-end latency plane (Pi 5)
+2026-09-17 15:19:03,747 - INFO - ==============================================================================
+2026-09-17 15:19:03,747 - INFO -   JSON: results\edge_benchmark\pi5_extended\edge_extended_RPi5_performance_v7_ext_4h_20260907_232133.json  (4 threads, metric auc)
+2026-09-17 15:19:03,747 - INFO -   front end: mel 15.10 ms · resampling 1.70 ms
+2026-09-17 15:19:03,747 - INFO -   CNN-RespNet INT8         forward   15.30 + front 15.10 =   30.40 ms | auc 0.572 |   0.58 MB  <- Pareto
+2026-09-17 15:19:03,747 - INFO -   MobileNetV3 (scratch)    forward   17.81 + front 15.10 =   32.90 ms | auc 0.528 |   5.85 MB
+2026-09-17 15:19:03,747 - INFO -   MobileNetV3 (ImageNet)   forward   17.85 + front 15.10 =   32.95 ms | auc 0.543 |   5.85 MB
+2026-09-17 15:19:03,747 - INFO -   CNN-RespNet FP32         forward   27.24 + front 15.10 =   42.34 ms | auc 0.572 |   2.13 MB
+2026-09-17 15:19:03,748 - INFO -   CfC-Hybrid               forward   81.65 + front 15.10 =   96.75 ms | auc 0.501 |   1.88 MB
+2026-09-17 15:19:03,748 - INFO -   PANNs CNN6               forward  279.51 + front  1.70 =  281.21 ms | auc 0.546 |  22.60 MB
+2026-09-17 15:19:03,748 - INFO -   PANNs CNN6 (tune)        forward  282.47 + front  1.70 =  284.18 ms | auc 0.516 |  22.60 MB
+2026-09-17 15:19:03,748 - INFO -   Non-dominated: CNN-RespNet INT8
+2026-09-17 15:19:04,448 - INFO -   Figure: rodri5.png  and  rodri5.pdf
+2026-09-17 15:19:04,448 - INFO -   Data:  rodri5_pareto_data.csv
+2026-09-17 15:19:04,448 - INFO -   Log:    rodri5_pareto_log.txt
+2026-09-17 15:19:04,448 - INFO -   Benchmark system: Raspberry Pi 5 Model B Rev 1.1 · torch 2.12.0+cpu · 2026-09-17
+2026-09-17 15:19:04,448 - INFO - Done.

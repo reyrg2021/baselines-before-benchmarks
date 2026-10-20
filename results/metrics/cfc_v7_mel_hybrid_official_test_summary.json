@@ -1,0 +1,55 @@
+{
+  "run_name": "cfc_v7_mel_hybrid_official",
+  "architecture": "hybrid",
+  "test_loss": 1.4111875448739881,
+  "test_accuracy": 35.41895353091841,
+  "test_icbhi": 0.5322396011369519,
+  "test_sensitivity": 0.31578791995386957,
+  "test_specificity": 0.7486912823200342,
+  "per_class": [
+    {
+      "class": "Normal",
+      "TP": 612,
+      "FN": 961,
+      "FP": 525,
+      "TN": 635,
+      "sensitivity": 0.38906547997457086,
+      "specificity": 0.5474137931034483
+    },
+    {
+      "class": "Crackle",
+      "TP": 196,
+      "FN": 448,
+      "FP": 606,
+      "TN": 1483,
+      "sensitivity": 0.30434782608695654,
+      "specificity": 0.7099090473910962
+    },
+    {
+      "class": "Wheeze",
+      "TP": 128,
+      "FN": 249,
+      "FP": 466,
+      "TN": 1890,
+      "sensitivity": 0.3395225464190981,
+      "specificity": 0.8022071307300509
+    },
+    {
+      "class": "Both",
+      "TP": 32,
+      "FN": 107,
+      "FP": 168,
+      "TN": 2426,
+      "sensitivity": 0.2302158273381295,
+      "specificity": 0.9352351580570547
+    }
+  ],
+  "total_params": 491492,
+  "best_epoch": 66,
+  "vs_cnn_baseline": {
+    "cnn_icbhi": 0.549,
+    "our_icbhi": 0.5322396011369519,
+    "delta": -0.016760398863048143,
+    "relative_pct": -3.0528959677683316
+  }
+}

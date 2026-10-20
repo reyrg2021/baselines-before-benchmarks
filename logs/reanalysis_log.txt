@@ -1,0 +1,125 @@
+2026-09-16 09:56:05,864 - INFO - ==============================================================================
+2026-09-16 09:56:05,864 - INFO - SCRIPT 29 — Statistical reanalysis of test probabilities
+2026-09-16 09:56:05,864 - INFO - ==============================================================================
+2026-09-16 09:56:05,864 - INFO - BASE_DIR:   D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-16 09:56:05,864 - INFO - ARRAYS_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\arrays
+2026-09-16 09:56:05,864 - INFO - delta TOST = 0.02 (preregistered)  alpha = 0.05  B = 2000  boot_seed = 2026
+2026-09-16 09:56:05,864 - INFO - 
+[1/6] Loading, alignment and integrity
+2026-09-16 09:56:05,882 - INFO - test_cycles.csv: 2733 cycles, 49 patients, 378 recordings
+2026-09-16 09:56:05,883 - INFO - Class distribution: Normal=1573, Crackle=644, Wheeze=377, Both=139
+2026-09-16 09:56:05,885 - INFO - Devices: AKGC417L=1813, Litt3200=461, Meditron=459
+2026-09-16 09:56:05,980 - INFO -   ✓ CNN-RespiratoryNet (FP32): 5 seeds aligned
+2026-09-16 09:56:06,066 - INFO -   ✓ CNN-RespiratoryNet (INT8, FP32 head): 5 seeds aligned
+2026-09-16 09:56:06,154 - INFO -   ✓ MobileNetV3-Small (ImageNet): 5 seeds aligned
+2026-09-16 09:56:06,243 - INFO -   ✓ MobileNetV3-Small (scratch): 5 seeds aligned
+2026-09-16 09:56:06,341 - INFO -   ✓ PANNs CNN6 (AudioSet): 5 seeds aligned
+2026-09-16 09:56:06,422 - INFO -   ✓ PANNs CNN6 (AudioSet, tune): 5 seeds aligned
+2026-09-16 09:56:06,507 - INFO -   ✓ CfC-Hybrid (mmRNN): 5 seeds aligned
+2026-09-16 09:56:06,599 - INFO -   ✓ LSTM-Hybrid (h=103): 5 seeds aligned
+2026-09-16 09:56:06,679 - INFO -   ✓ GRU-Hybrid (h=134): 5 seeds aligned
+2026-09-16 09:56:06,788 - INFO -   ✓ CfC-Hybrid pure (no mixed memory): 5 seeds aligned
+2026-09-16 09:56:06,799 - WARNING -   CNN_INT8 not in master_results.json; cross-check skipped
+2026-09-16 09:56:06,800 - INFO -     MobileNetV3_ImageNet seed 7: ΔAUC = 1.11e-16 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,800 - INFO -     MobileNetV3_scratch seed 123: ΔAUC = 1.11e-16 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,802 - INFO -     PANNs_CNN6_AudioSet seed 123: ΔAUC = 1.10e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,803 - INFO -     PANNs_CNN6_AudioSet seed 314: ΔAUC = 1.92e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,803 - INFO -     PANNs_CNN6_AudioSet seed 42: ΔAUC = 2.74e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,804 - INFO -     PANNs_CNN6_AudioSet seed 7: ΔAUC = 2.74e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,804 - INFO -     PANNs_CNN6_AudioSet seed 99: ΔAUC = 8.22e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,804 - INFO -     PANNs_CNN6_tune seed 123: ΔAUC = 8.22e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,804 - INFO -     PANNs_CNN6_tune seed 314: ΔAUC = 5.48e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,805 - INFO -     PANNs_CNN6_tune seed 42: ΔAUC = 2.74e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,805 - INFO -     PANNs_CNN6_tune seed 7: ΔAUC = 1.10e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,805 - INFO -     PANNs_CNN6_tune seed 99: ΔAUC = 1.64e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 09:56:06,807 - WARNING -   LSTM_Hybrid not in master_results.json; cross-check skipped
+2026-09-16 09:56:06,807 - WARNING -   GRU_Hybrid not in master_results.json; cross-check skipped
+2026-09-16 09:56:06,807 - WARNING -   CfC_pure not in master_results.json; cross-check skipped
+2026-09-16 09:56:06,807 - INFO -   ✓ Cross-check with master_results.json: 30 (model, seed) match on ICBHI (tol 1e-06) and AUC (tol 1e-05)
+2026-09-16 09:56:06,818 - INFO - 
+[2/6] Trivial baselines
+2026-09-16 09:56:06,839 - INFO -     prior train AKGC417L   P(abnormal)=0.660  majority=Crackle  n=2013
+2026-09-16 09:56:06,840 - INFO -     prior train Litt3200   P(abnormal)=0.692  majority=Normal  n=13
+2026-09-16 09:56:06,840 - INFO -     prior train LittC2SE   P(abnormal)=0.401  majority=Normal  n=494
+2026-09-16 09:56:06,841 - INFO -     prior train Meditron   P(abnormal)=0.287  majority=Normal  n=830
+2026-09-16 09:56:06,842 - INFO -   always-Normal              ICBHI 0.500 (Se 0.000 / Sp 1.000)  AUC 0.500
+2026-09-16 09:56:06,842 - INFO -   always-Crackle             ICBHI 0.278 (Se 0.555 / Sp 0.000)  AUC 0.500
+2026-09-16 09:56:06,842 - INFO -   random-stratified (E)      ICBHI 0.379 (Se 0.182 / Sp 0.576)  AUC 0.500
+2026-09-16 09:56:06,842 - INFO -   random-uniform (E)         ICBHI 0.250 (Se 0.250 / Sp 0.250)  AUC 0.500
+2026-09-16 09:56:06,842 - INFO -   device-prior (train)       ICBHI 0.437 (Se 0.467 / Sp 0.406)  AUC 0.494
+2026-09-16 09:56:06,842 - INFO - 
+[3/6] Paired TOST per seed
+2026-09-16 09:56:06,845 - INFO -   CNN - CNN_INT8   icbhi  Δ=+0.0028 CI90 [-0.0001, +0.0058]  t p=0.112  Wilcoxon p=0.188  TOST p=0.000 → EQUIVALENT (±0.02)
+2026-09-16 09:56:06,847 - INFO -   CNN - CNN_INT8   auc    Δ=-0.0001 CI90 [-0.0011, +0.0009]  t p=0.830  Wilcoxon p=1.000  TOST p=0.000 → EQUIVALENT (±0.02)
+2026-09-16 09:56:06,850 - INFO -   CNN - MNv3_IN    icbhi  Δ=-0.0027 CI90 [-0.0202, +0.0148]  t p=0.759  Wilcoxon p=0.812  TOST p=0.051 → not equivalent (±0.02)
+2026-09-16 09:56:06,852 - INFO -   CNN - MNv3_IN    auc    Δ=+0.0286 CI90 [-0.0156, +0.0728]  t p=0.239  Wilcoxon p=0.188  TOST p=0.651 → not equivalent (±0.02)
+2026-09-16 09:56:06,854 - INFO -   CNN - MNv3_SC    icbhi  Δ=+0.0747 CI90 [+0.0225, +0.1269]  t p=0.038  Wilcoxon p=0.125  TOST p=0.955 → not equivalent (±0.02)
+2026-09-16 09:56:06,856 - INFO -   CNN - MNv3_SC    auc    Δ=+0.0440 CI90 [-0.0042, +0.0921]  t p=0.123  Wilcoxon p=0.125  TOST p=0.826 → not equivalent (±0.02)
+2026-09-16 09:56:06,859 - INFO -   CNN - PANNs      icbhi  Δ=+0.0203 CI90 [-0.0109, +0.0515]  t p=0.237  Wilcoxon p=0.312  TOST p=0.507 → not equivalent (±0.02)
+2026-09-16 09:56:06,861 - INFO -   CNN - PANNs      auc    Δ=+0.0254 CI90 [-0.0061, +0.0569]  t p=0.161  Wilcoxon p=0.188  TOST p=0.633 → not equivalent (±0.02)
+2026-09-16 09:56:06,863 - INFO -   CNN - PANNs_tune icbhi  Δ=+0.0290 CI90 [-0.0199, +0.0780]  t p=0.275  Wilcoxon p=0.312  TOST p=0.643 → not equivalent (±0.02)
+2026-09-16 09:56:06,865 - INFO -   CNN - PANNs_tune auc    Δ=+0.0557 CI90 [+0.0203, +0.0911]  t p=0.028  Wilcoxon p=0.062  TOST p=0.951 → not equivalent (±0.02)
+2026-09-16 09:56:06,867 - INFO -   CNN - CfC        icbhi  Δ=+0.1086 CI90 [+0.0752, +0.1420]  t p=0.002  Wilcoxon p=0.062  TOST p=0.998 → not equivalent (±0.02)
+2026-09-16 09:56:06,870 - INFO -   CNN - CfC        auc    Δ=+0.0708 CI90 [+0.0476, +0.0941]  t p=0.003  Wilcoxon p=0.062  TOST p=0.995 → not equivalent (±0.02)
+2026-09-16 09:56:06,872 - INFO -   CNN - LSTM       icbhi  Δ=+0.1070 CI90 [+0.0733, +0.1407]  t p=0.002  Wilcoxon p=0.062  TOST p=0.997 → not equivalent (±0.02)
+2026-09-16 09:56:06,874 - INFO -   CNN - LSTM       auc    Δ=+0.0932 CI90 [+0.0697, +0.1167]  t p=0.001  Wilcoxon p=0.062  TOST p=0.999 → not equivalent (±0.02)
+2026-09-16 09:56:06,875 - INFO -   CNN - GRU        icbhi  Δ=+0.1650 CI90 [+0.1448, +0.1851]  t p=0.000  Wilcoxon p=0.062  TOST p=1.000 → not equivalent (±0.02)
+2026-09-16 09:56:06,878 - INFO -   CNN - GRU        auc    Δ=+0.1166 CI90 [+0.0850, +0.1481]  t p=0.001  Wilcoxon p=0.062  TOST p=0.999 → not equivalent (±0.02)
+2026-09-16 09:56:06,880 - INFO -   CNN - CfC_pure   icbhi  Δ=-0.0402 CI90 [-0.0564, -0.0240]  t p=0.006  Wilcoxon p=0.062  TOST p=0.972 → not equivalent (±0.02)
+2026-09-16 09:56:06,882 - INFO -   CNN - CfC_pure   auc    Δ=+0.0733 CI90 [+0.0472, +0.0994]  t p=0.004  Wilcoxon p=0.062  TOST p=0.994 → not equivalent (±0.02)
+2026-09-16 09:56:06,882 - INFO - 
+[4/6] Patient-clustered bootstrap
+2026-09-16 09:56:06,884 - INFO -   49 patients in test; B = 2000 replicates
+2026-09-16 09:56:12,053 - INFO -     replicate 500/2000
+2026-09-16 09:56:17,299 - INFO -     replicate 1000/2000
+2026-09-16 09:56:22,566 - INFO -     replicate 1500/2000
+2026-09-16 09:56:29,415 - INFO -     replicate 2000/2000
+2026-09-16 09:56:29,423 - INFO -   CNN        ICBHI 0.459 [0.406, 0.515]  AUC 0.571 [0.515, 0.630]
+2026-09-16 09:56:29,424 - INFO -   CNN_INT8   ICBHI 0.456 [0.404, 0.512]  AUC 0.571 [0.517, 0.630]
+2026-09-16 09:56:29,425 - INFO -     Δ vs CNN_INT8   ICBHI +0.0027 CI90 [-0.0001, +0.0052] within ±0.02  |  AUC -0.0002 CI90 [-0.0022, +0.0017] within
+2026-09-16 09:56:29,427 - INFO -   MNv3_IN    ICBHI 0.461 [0.413, 0.507]  AUC 0.540 [0.477, 0.596]
+2026-09-16 09:56:29,429 - INFO -     Δ vs MNv3_IN    ICBHI -0.0020 CI90 [-0.0275, +0.0243] OUTSIDE ±0.02  |  AUC +0.0309 CI90 [-0.0034, +0.0673] OUTSIDE
+2026-09-16 09:56:29,430 - INFO -   MNv3_SC    ICBHI 0.384 [0.355, 0.417]  AUC 0.527 [0.484, 0.574]
+2026-09-16 09:56:29,431 - INFO -     Δ vs MNv3_SC    ICBHI +0.0742 CI90 [+0.0507, +0.0989] OUTSIDE ±0.02  |  AUC +0.0436 CI90 [+0.0178, +0.0706] OUTSIDE
+2026-09-16 09:56:29,433 - INFO -   PANNs      ICBHI 0.439 [0.404, 0.478]  AUC 0.547 [0.488, 0.611]
+2026-09-16 09:56:29,434 - INFO -     Δ vs PANNs      ICBHI +0.0199 CI90 [-0.0092, +0.0492] OUTSIDE ±0.02  |  AUC +0.0242 CI90 [-0.0130, +0.0599] OUTSIDE
+2026-09-16 09:56:29,436 - INFO -   PANNs_tune ICBHI 0.430 [0.399, 0.463]  AUC 0.516 [0.473, 0.562]
+2026-09-16 09:56:29,437 - INFO -     Δ vs PANNs_tune ICBHI +0.0286 CI90 [-0.0008, +0.0590] OUTSIDE ±0.02  |  AUC +0.0548 CI90 [+0.0248, +0.0847] OUTSIDE
+2026-09-16 09:56:29,438 - INFO -   CfC        ICBHI 0.352 [0.305, 0.402]  AUC 0.503 [0.423, 0.586]
+2026-09-16 09:56:29,439 - INFO -     Δ vs CfC        ICBHI +0.1064 CI90 [+0.0596, +0.1557] OUTSIDE ±0.02  |  AUC +0.0684 CI90 [+0.0196, +0.1167] OUTSIDE
+2026-09-16 09:56:29,440 - INFO -   LSTM       ICBHI 0.354 [0.310, 0.399]  AUC 0.480 [0.401, 0.561]
+2026-09-16 09:56:29,441 - INFO -     Δ vs LSTM       ICBHI +0.1049 CI90 [+0.0645, +0.1451] OUTSIDE ±0.02  |  AUC +0.0907 CI90 [+0.0384, +0.1435] OUTSIDE
+2026-09-16 09:56:29,442 - INFO -   GRU        ICBHI 0.296 [0.260, 0.331]  AUC 0.457 [0.369, 0.546]
+2026-09-16 09:56:29,443 - INFO -     Δ vs GRU        ICBHI +0.1628 CI90 [+0.1134, +0.2112] OUTSIDE ±0.02  |  AUC +0.1140 CI90 [+0.0514, +0.1785] OUTSIDE
+2026-09-16 09:56:29,445 - INFO -   CfC_pure   ICBHI 0.500 [0.499, 0.500]  AUC 0.498 [0.494, 0.500]
+2026-09-16 09:56:29,446 - INFO -     Δ vs CfC_pure   ICBHI -0.0413 CI90 [-0.0855, +0.0065] OUTSIDE ±0.02  |  AUC +0.0726 CI90 [+0.0259, +0.1212] OUTSIDE
+2026-09-16 09:56:29,446 - INFO - 
+[5/6] Stratification by device and patient level
+2026-09-16 09:56:29,461 - INFO -   AKGC417L   n= 1813 pat= 16 N/A=934/879  CNN ICBHI 0.485±0.042  AUC 0.627±0.038
+2026-09-16 09:56:29,470 - INFO -   Litt3200   n=  461 pat= 10 N/A=325/136  CNN ICBHI 0.375±0.047  AUC 0.468±0.033
+2026-09-16 09:56:29,479 - INFO -   Meditron   n=  459 pat= 24 N/A=314/145  CNN ICBHI 0.436±0.030  AUC 0.529±0.043
+2026-09-16 09:56:29,565 - INFO -   ICBHI diagnoses: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\data\raw\ICBHI_Challenge_diagnosis.txt
+2026-09-16 09:56:29,566 - INFO -   49 patients; positive by cycles (>50 %): 16; by diagnosis (!= Healthy): 35
+2026-09-16 09:56:29,573 - INFO -   CNN        AUC pat (cycles) 0.641±0.103  AUC pat (diag) 0.678±0.064  Se/Sp pat 0.62/0.55
+2026-09-16 09:56:29,578 - INFO -   CNN_INT8   AUC pat (cycles) 0.638±0.103  AUC pat (diag) 0.673±0.063  Se/Sp pat 0.66/0.55
+2026-09-16 09:56:29,583 - INFO -   MNv3_IN    AUC pat (cycles) 0.453±0.084  AUC pat (diag) 0.507±0.052  Se/Sp pat 0.26/0.68
+2026-09-16 09:56:29,590 - INFO -   MNv3_SC    AUC pat (cycles) 0.580±0.160  AUC pat (diag) 0.598±0.103  Se/Sp pat 0.64/0.44
+2026-09-16 09:56:29,601 - INFO -   PANNs      AUC pat (cycles) 0.631±0.029  AUC pat (diag) 0.827±0.076  Se/Sp pat 0.61/0.60
+2026-09-16 09:56:29,610 - INFO -   PANNs_tune AUC pat (cycles) 0.543±0.056  AUC pat (diag) 0.718±0.164  Se/Sp pat 0.54/0.55
+2026-09-16 09:56:29,615 - INFO -   CfC        AUC pat (cycles) 0.523±0.035  AUC pat (diag) 0.651±0.073  Se/Sp pat 0.54/0.38
+2026-09-16 09:56:29,622 - INFO -   LSTM       AUC pat (cycles) 0.459±0.051  AUC pat (diag) 0.555±0.103  Se/Sp pat 0.51/0.38
+2026-09-16 09:56:29,630 - INFO -   GRU        AUC pat (cycles) 0.438±0.039  AUC pat (diag) 0.569±0.118  Se/Sp pat 0.65/0.10
+2026-09-16 09:56:29,634 - INFO -   CfC_pure   AUC pat (cycles) 0.454±0.052  AUC pat (diag) 0.483±0.026  Se/Sp pat 0.00/1.00
+2026-09-16 09:56:29,634 - INFO - 
+[6/6] Operating points on the binary ROC
+2026-09-16 09:56:29,636 - INFO -   CNN argmax    tau=nan  bin Se/Sp 0.622/0.511  official ICBHI 0.460±0.017 (Se 0.408 / Sp 0.511)
+2026-09-16 09:56:29,646 - INFO -   CNN se_eq_sp  tau=0.593  bin Se/Sp 0.596/0.538  official ICBHI 0.459±0.015 (Se 0.381 / Sp 0.538)
+2026-09-16 09:56:29,650 - INFO -   CNN youden    tau=0.585  bin Se/Sp 0.594/0.557  official ICBHI 0.466±0.016 (Se 0.374 / Sp 0.557)
+2026-09-16 09:56:29,652 - INFO -   CNN sp_0.70   tau=0.619  bin Se/Sp 0.315/0.759  official ICBHI 0.470±0.019 (Se 0.181 / Sp 0.759)
+2026-09-16 09:56:29,654 - INFO -   CNN sp_0.80   tau=0.747  bin Se/Sp 0.181/0.839  official ICBHI 0.467±0.018 (Se 0.095 / Sp 0.839)
+2026-09-16 09:56:29,658 - INFO -   CNN se_0.80   tau=0.471  bin Se/Sp 0.801/0.308  official ICBHI 0.418±0.022 (Se 0.527 / Sp 0.308)
+2026-09-16 09:56:29,774 - INFO - 
+Writing outputs
+2026-09-16 09:56:29,811 - INFO -   ✓ Outputs in D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\reanalysis
+2026-09-16 09:56:29,811 - INFO - Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\reanalysis_log.txt
+2026-09-16 09:56:29,812 - INFO - Done.

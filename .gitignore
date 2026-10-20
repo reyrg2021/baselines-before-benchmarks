@@ -1,0 +1,37 @@
+# Audio and audio-derived data (not redistributed; see data/README.md)
+data/raw/
+data/processed/
+data/segments/
+data/features/
+data/events/
+data/SPRSound/
+data/splits/strategy1_official_fulltest/
+data/splits/strategy2_custom/
+
+# Weights
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+*.pth
+*.onnx
+*.onnx.data
+scripts/*.pt
+
+# Outputs written by re-running the scripts
+/*_log.txt
+scripts/*_log.txt
+events/*_log.txt
+scripts/*.png
+scripts/*.pdf
+results/figures/
+results/edge_benchmark/
+results/tensorboard/
+results/quality_analysis/
+supplementary/
+
+# Python and OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+desktop.ini

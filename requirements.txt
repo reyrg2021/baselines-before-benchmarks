@@ -1,0 +1,32 @@
+# Main pipeline (scripts/). Versions of the Conda environment used for the experiments
+# (Python 3.10.19, Windows, NVIDIA GeForce RTX 3060 Laptop GPU).
+#
+# Install PyTorch first, from the CUDA 12.6 index:
+#   pip install torch==2.10.0 torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu126
+# then:
+#   pip install -r requirements.txt
+
+# --- Core (imported by the pipeline) ---
+torch==2.10.0
+torchvision==0.25.0
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+librosa==0.11.0
+soundfile==0.13.1
+matplotlib==3.10.8
+tqdm==4.67.3
+torchlibrosa==0.1.0      # PANNs CNN6 front end (panns_cnn6.py)
+
+# --- Optional (imported inside try/except by 09 and 11a; not needed for any result) ---
+tensorboard==2.20.0
+torchinfo==1.8.0
+torchview==0.2.7
+torchviz==0.0.3
+onnx==1.20.1
+
+# --- MACs counting (script 19; also used on the Raspberry Pi by 15 and 32) ---
+# Not present in the recorded environment; versions were not recorded.
+ptflops
+thop

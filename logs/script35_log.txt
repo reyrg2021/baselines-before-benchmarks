@@ -1,0 +1,108 @@
+2026-09-16 17:39:05,467 - INFO - ==============================================================================
+2026-09-16 17:39:05,467 - INFO - SCRIPT 35 — Device confounding in the binary AUC
+2026-09-16 17:39:05,467 - INFO - ==============================================================================
+2026-09-16 17:39:05,467 - INFO - 
+[1/4] Loading, alignment and integrity
+2026-09-16 17:39:05,514 - INFO - test_cycles.csv: 2733 cycles, 49 patients, 378 recordings
+2026-09-16 17:39:05,515 - INFO - Class distribution: Normal=1573, Crackle=644, Wheeze=377, Both=139
+2026-09-16 17:39:05,520 - INFO - Devices: AKGC417L=1813, Litt3200=461, Meditron=459
+2026-09-16 17:39:05,626 - INFO -   ✓ CNN-RespiratoryNet (FP32): 5 seeds aligned
+2026-09-16 17:39:05,724 - INFO -   ✓ CNN-RespiratoryNet (INT8, FP32 head): 5 seeds aligned
+2026-09-16 17:39:05,831 - INFO -   ✓ MobileNetV3-Small (ImageNet): 5 seeds aligned
+2026-09-16 17:39:05,930 - INFO -   ✓ MobileNetV3-Small (scratch): 5 seeds aligned
+2026-09-16 17:39:06,028 - INFO -   ✓ PANNs CNN6 (AudioSet): 5 seeds aligned
+2026-09-16 17:39:06,123 - INFO -   ✓ PANNs CNN6 (AudioSet, tune): 5 seeds aligned
+2026-09-16 17:39:06,230 - INFO -   ✓ CfC-Hybrid (mmRNN): 5 seeds aligned
+2026-09-16 17:39:06,329 - INFO -   ✓ LSTM-Hybrid (h=103): 5 seeds aligned
+2026-09-16 17:39:06,421 - INFO -   ✓ GRU-Hybrid (h=134): 5 seeds aligned
+2026-09-16 17:39:06,530 - INFO -   ✓ CfC-Hybrid pure (no mixed memory): 5 seeds aligned
+2026-09-16 17:39:06,540 - WARNING -   CNN_INT8 not in master_results.json; cross-check skipped
+2026-09-16 17:39:06,542 - INFO -     MobileNetV3_ImageNet seed 7: ΔAUC = 1.11e-16 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,542 - INFO -     MobileNetV3_scratch seed 123: ΔAUC = 1.11e-16 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,544 - INFO -     PANNs_CNN6_AudioSet seed 123: ΔAUC = 1.10e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,544 - INFO -     PANNs_CNN6_AudioSet seed 314: ΔAUC = 1.92e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,544 - INFO -     PANNs_CNN6_AudioSet seed 42: ΔAUC = 2.74e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,545 - INFO -     PANNs_CNN6_AudioSet seed 7: ΔAUC = 2.74e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,545 - INFO -     PANNs_CNN6_AudioSet seed 99: ΔAUC = 8.22e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,545 - INFO -     PANNs_CNN6_tune seed 123: ΔAUC = 8.22e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,546 - INFO -     PANNs_CNN6_tune seed 314: ΔAUC = 5.48e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,546 - INFO -     PANNs_CNN6_tune seed 42: ΔAUC = 2.74e-07 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,547 - INFO -     PANNs_CNN6_tune seed 7: ΔAUC = 1.10e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,547 - INFO -     PANNs_CNN6_tune seed 99: ΔAUC = 1.64e-06 (ΔICBHI = 0.0e+00)
+2026-09-16 17:39:06,549 - WARNING -   LSTM_Hybrid not in master_results.json; cross-check skipped
+2026-09-16 17:39:06,549 - WARNING -   GRU_Hybrid not in master_results.json; cross-check skipped
+2026-09-16 17:39:06,549 - WARNING -   CfC_pure not in master_results.json; cross-check skipped
+2026-09-16 17:39:06,549 - INFO -   ✓ Cross-check with master_results.json: 30 (model, seed) match on ICBHI (tol 1e-06) and AUC (tol 1e-05)
+2026-09-16 17:39:06,556 - INFO -   ✓ Linear scores: linear_logreg_selauc_test_pabn.npy
+2026-09-16 17:39:06,561 - INFO -   ✓ Linear scores: linear_linsvm_selauc_test_pabn.npy
+2026-09-16 17:39:06,561 - INFO - 
+[2/4] Device-only baselines
+2026-09-16 17:39:06,589 - INFO -   Global train prior P(abnormal) = 0.5293
+2026-09-16 17:39:06,589 - INFO -     train AKGC417L   n= 2013  P(abnormal)=0.6597
+2026-09-16 17:39:06,589 - INFO -     train Meditron   n=  830  P(abnormal)=0.2867
+2026-09-16 17:39:06,589 - INFO -     train LittC2SE   n=  494  P(abnormal)=0.4008
+2026-09-16 17:39:06,589 - INFO -     train Litt3200   n=   13  P(abnormal)=0.6923
+2026-09-16 17:39:06,589 - INFO -   Majority device in train: AKGC417L
+2026-09-16 17:39:06,591 - INFO -   B1_train_prior           AKGC417L=0.660, Litt3200=0.692, Meditron=0.287
+2026-09-16 17:39:06,591 - INFO -   B2_train_prior_shrunk    AKGC417L=0.660, Litt3200=0.529, Meditron=0.287
+2026-09-16 17:39:06,591 - INFO -   B3_majority_device       AKGC417L=1.000, Litt3200=0.000, Meditron=0.000
+2026-09-16 17:39:06,591 - INFO -   B4_oracle_test_prev      AKGC417L=0.485, Litt3200=0.295, Meditron=0.316
+2026-09-16 17:39:06,592 - INFO - 
+[3/4] Point estimate on the full test
+2026-09-16 17:39:06,631 - INFO -   ✓ B1 reproduces the device-prior of Script 29: AUC 0.4938
+2026-09-16 17:39:06,631 - INFO -   Fraction of pairs (abnormal, normal) from the same device: 0.4991
+2026-09-16 17:39:06,631 - INFO -   B1_train_prior           AUC 0.4938
+2026-09-16 17:39:06,631 - INFO -   B2_train_prior_shrunk    AUC 0.5808
+2026-09-16 17:39:06,631 - INFO -   B3_majority_device       AUC 0.5820
+2026-09-16 17:39:06,631 - INFO -   B4_oracle_test_prev      AUC 0.5832
+2026-09-16 17:39:06,666 - INFO -   CNN         pooled 0.5717  within 0.6144 ± 0.0335  between 0.5292  devmean 0.5117
+2026-09-16 17:39:06,666 - INFO -   CNN_INT8    pooled 0.5718  within 0.6128 ± 0.0333  between 0.5310  devmean 0.5117
+2026-09-16 17:39:06,667 - INFO -   MNv3_IN     pooled 0.5431  within 0.5997 ± 0.0236  between 0.4867  devmean 0.4630
+2026-09-16 17:39:06,668 - INFO -   MNv3_SC     pooled 0.5278  within 0.5545 ± 0.0346  between 0.5011  devmean 0.4958
+2026-09-16 17:39:06,669 - INFO -   PANNs       pooled 0.5464  within 0.5746 ± 0.0328  between 0.5182  devmean 0.4938
+2026-09-16 17:39:06,669 - INFO -   PANNs_tune  pooled 0.5160  within 0.5378 ± 0.0387  between 0.4943  devmean 0.4784
+2026-09-16 17:39:06,669 - INFO -   CfC         pooled 0.5009  within 0.5401 ± 0.0204  between 0.4619  devmean 0.4938
+2026-09-16 17:39:06,670 - INFO -   LSTM        pooled 0.4785  within 0.5188 ± 0.0162  between 0.4385  devmean 0.4784
+2026-09-16 17:39:06,670 - INFO -   GRU         pooled 0.4552  within 0.4883 ± 0.0113  between 0.4222  devmean 0.4322
+2026-09-16 17:39:06,671 - INFO -   CfC_pure    pooled 0.4984  within 0.4994 ± 0.0005  between 0.4975  devmean 0.5370
+2026-09-16 17:39:06,671 - INFO -   logreg      pooled 0.5562  within 0.5950  between 0.5176  devmean 0.4938
+2026-09-16 17:39:06,671 - INFO -   linsvm      pooled 0.5599  within 0.5917  between 0.5283  devmean 0.4938
+2026-09-16 17:39:06,678 - INFO -   TOST within CNN - CNN_INT8   Δ +0.0016 CI90 [-0.0006, +0.0038]  t p 0.194  TOST p 0.000
+2026-09-16 17:39:06,681 - INFO -   TOST within CNN - MNv3_IN    Δ +0.0147 CI90 [-0.0180, +0.0473]  t p 0.392  TOST p 0.373
+2026-09-16 17:39:06,683 - INFO -   TOST within CNN - MNv3_SC    Δ +0.0599 CI90 [+0.0068, +0.1130]  t p 0.074  TOST p 0.908
+2026-09-16 17:39:06,687 - INFO -   TOST within CNN - PANNs      Δ +0.0398 CI90 [-0.0203, +0.0999]  t p 0.231  TOST p 0.739
+2026-09-16 17:39:06,690 - INFO -   TOST within CNN - PANNs_tune Δ +0.0766 CI90 [+0.0126, +0.1407]  t p 0.063  TOST p 0.934
+2026-09-16 17:39:06,692 - INFO -   TOST within CNN - CfC        Δ +0.0743 CI90 [+0.0369, +0.1118]  t p 0.013  TOST p 0.982
+2026-09-16 17:39:06,695 - INFO -   TOST within CNN - LSTM       Δ +0.0957 CI90 [+0.0561, +0.1352]  t p 0.007  TOST p 0.992
+2026-09-16 17:39:06,699 - INFO -   TOST within CNN - GRU        Δ +0.1261 CI90 [+0.0972, +0.1551]  t p 0.001  TOST p 0.999
+2026-09-16 17:39:06,701 - INFO -   TOST within CNN - CfC_pure   Δ +0.1150 CI90 [+0.0829, +0.1471]  t p 0.002  TOST p 0.998
+2026-09-16 17:39:06,702 - INFO - 
+[4/4] Per-patient bootstrap (B = 2000, seed 2026)
+2026-09-16 17:39:15,005 - INFO -     replicate 250/2000
+2026-09-16 17:39:24,821 - INFO -     replicate 500/2000
+2026-09-16 17:39:33,942 - INFO -     replicate 750/2000
+2026-09-16 17:39:43,366 - INFO -     replicate 1000/2000
+2026-09-16 17:39:53,887 - INFO -     replicate 1250/2000
+2026-09-16 17:40:03,990 - INFO -     replicate 1500/2000
+2026-09-16 17:40:14,215 - INFO -     replicate 1750/2000
+2026-09-16 17:40:23,741 - INFO -     replicate 2000/2000
+2026-09-16 17:40:23,809 - INFO -   CNN pooled - B3 indicator                      Δ -0.0103 [-0.1321, +0.0982]  p 0.846
+2026-09-16 17:40:23,811 - INFO -   CNN pooled - B2 shrunk prior                   Δ -0.0090 [-0.1265, +0.0960]  p 0.879
+2026-09-16 17:40:23,812 - INFO -   CNN within - 0.5                               Δ +0.1144 [+0.0517, +0.1731]  p 0.001
+2026-09-16 17:40:23,816 - INFO -   CNN within - CNN_INT8 within                   Δ +0.0016 [-0.0012, +0.0034]  p 0.231
+2026-09-16 17:40:23,818 - INFO -   CNN within - MNv3_IN within                    Δ +0.0147 [-0.0360, +0.0772]  p 0.504
+2026-09-16 17:40:23,821 - INFO -   CNN within - MNv3_SC within                    Δ +0.0599 [+0.0234, +0.0948]  p 0.000
+2026-09-16 17:40:23,824 - INFO -   CNN within - PANNs within                      Δ +0.0398 [-0.0228, +0.0910]  p 0.220
+2026-09-16 17:40:23,827 - INFO -   CNN within - PANNs_tune within                 Δ +0.0766 [+0.0239, +0.1192]  p 0.001
+2026-09-16 17:40:23,829 - INFO -   CNN within - CfC within                        Δ +0.0743 [-0.0135, +0.1505]  p 0.111
+2026-09-16 17:40:23,830 - INFO -   CNN within - LSTM within                       Δ +0.0957 [+0.0077, +0.1708]  p 0.028
+2026-09-16 17:40:23,831 - INFO -   CNN within - GRU within                        Δ +0.1261 [+0.0285, +0.2237]  p 0.006
+2026-09-16 17:40:23,833 - INFO -   CNN within - CfC_pure within                   Δ +0.1150 [+0.0537, +0.1738]  p 0.001
+2026-09-16 17:40:23,836 - INFO -   CNN pooled - logreg pooled                     Δ +0.0155 [-0.0315, +0.0603]  p 0.532
+2026-09-16 17:40:23,838 - INFO -   CNN within - logreg within                     Δ +0.0195 [-0.0359, +0.0743]  p 0.492
+2026-09-16 17:40:23,839 - INFO -   CNN pooled - linsvm pooled                     Δ +0.0118 [-0.0386, +0.0616]  p 0.674
+2026-09-16 17:40:23,842 - INFO -   CNN within - linsvm within                     Δ +0.0227 [-0.0352, +0.0808]  p 0.456
+2026-09-16 17:40:23,857 - INFO - 
+Outputs in D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\reanalysis
+2026-09-16 17:40:23,858 - INFO - Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script35_log.txt
+2026-09-16 17:40:23,858 - INFO - Done.

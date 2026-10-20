@@ -1,0 +1,253 @@
+2026-09-06 22:44:01,487 - INFO - ==============================================================================
+2026-09-06 22:44:01,488 - INFO - SCRIPT 30 — stage: linear
+2026-09-06 22:44:01,488 - INFO - ==============================================================================
+2026-09-06 22:44:01,488 - INFO - BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-06 22:44:01,947 - INFO - [LINEAR] train 3350 / val 635 / test 2733; extracting features
+2026-09-06 22:44:09,376 - INFO -     train: 1000/3350
+2026-09-06 22:44:16,880 - INFO -     train: 2000/3350
+2026-09-06 22:44:24,533 - INFO -     train: 3000/3350
+2026-09-06 22:44:39,471 - INFO -     test: 1000/2733
+2026-09-06 22:44:47,061 - INFO -     test: 2000/2733
+2026-09-06 22:44:53,359 - INFO -   logreg C=0.001  val ICBHI 0.407  AUC 0.666
+2026-09-06 22:44:53,607 - INFO -   logreg C=0.01   val ICBHI 0.385  AUC 0.623
+2026-09-06 22:44:54,091 - INFO -   logreg C=0.1    val ICBHI 0.382  AUC 0.608
+2026-09-06 22:44:55,179 - INFO -   logreg C=1.0    val ICBHI 0.393  AUC 0.594
+2026-09-06 22:44:58,029 - INFO -   logreg C=10.0   val ICBHI 0.420  AUC 0.583
+2026-09-06 22:44:58,559 - INFO -   logreg (C=10.0) TEST ICBHI 0.345 [0.298, 0.400]  Se 0.328 / Sp 0.361  AUC 0.550 [0.490, 0.617]  Meditron AUC 0.585  Litt3200 AUC 0.506  AKGC417L AUC 0.592
+2026-09-06 22:44:59,332 - INFO -   linsvm C=0.001  val ICBHI 0.417  AUC 0.628
+2026-09-06 22:45:00,770 - INFO -   linsvm C=0.01   val ICBHI 0.403  AUC 0.601
+2026-09-06 22:45:03,385 - INFO -   linsvm C=0.1    val ICBHI 0.428  AUC 0.586
+2026-09-06 22:45:08,313 - INFO -   linsvm C=1.0    val ICBHI 0.431  AUC 0.580
+2026-09-06 22:45:19,593 - INFO -   linsvm C=10.0   val ICBHI 0.434  AUC 0.579
+2026-09-06 22:45:20,117 - INFO -   linsvm (C=10.0) TEST ICBHI 0.372 [0.325, 0.428]  Se 0.306 / Sp 0.439  AUC 0.555 [0.495, 0.621]  Meditron AUC 0.600  Litt3200 AUC 0.519  AKGC417L AUC 0.584
+2026-09-06 22:45:20,133 - INFO - Summary: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\reanalysis\script30_summary.md   Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script30_log.txt
+2026-09-06 22:45:20,133 - INFO - Done.
+2026-09-06 22:45:32,991 - INFO - ==============================================================================
+2026-09-06 22:45:32,992 - INFO - SCRIPT 30 — stage: val
+2026-09-06 22:45:32,992 - INFO - ==============================================================================
+2026-09-06 22:45:32,992 - INFO - BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-06 22:45:36,854 - INFO - [VAL] device = cuda
+2026-09-06 22:45:39,417 - INFO - ======================================================================
+2026-09-06 22:45:39,417 - INFO - CREATING DATALOADERS
+2026-09-06 22:45:39,417 - INFO - ======================================================================
+2026-09-06 22:45:39,417 - INFO -   Split strategy: strategy1_official
+2026-09-06 22:45:39,417 - INFO -   Class mode:      4class
+2026-09-06 22:45:39,417 - INFO -   Augmentation:        none
+2026-09-06 22:45:39,418 - INFO -   Batch size:          32
+2026-09-06 22:45:39,418 - INFO -   Num workers:         0
+2026-09-06 22:45:39,418 - INFO -   Weighted sampling:   False
+2026-09-06 22:45:39,418 - INFO - 
+[TRAIN] Creating training dataset...
+2026-09-06 22:45:39,724 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-09-06 22:45:39,724 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-09-06 22:45:39,724 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-09-06 22:45:39,725 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-09-06 22:45:39,725 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-09-06 22:45:39,726 - INFO - 
+[VAL] Creating validation dataset...
+2026-09-06 22:45:39,787 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-09-06 22:45:39,787 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-09-06 22:45:39,788 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-09-06 22:45:39,788 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-09-06 22:45:39,788 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-09-06 22:45:39,788 - INFO - 
+[TEST] Creating test dataset...
+2026-09-06 22:45:40,044 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-09-06 22:45:40,044 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-09-06 22:45:40,044 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-09-06 22:45:40,044 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-09-06 22:45:40,044 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-09-06 22:45:40,045 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-09-06 22:45:40,056 - INFO - 
+  Class weights for loss:
+2026-09-06 22:45:40,058 - INFO -       Normal: 0.3647
+2026-09-06 22:45:40,058 - INFO -      Crackle: 0.5661
+2026-09-06 22:45:40,058 - INFO -       Wheeze: 1.3826
+2026-09-06 22:45:40,058 - INFO -         Both: 1.6866
+2026-09-06 22:45:40,058 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-09-06 22:45:40,152 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-09-06 22:45:40,152 - INFO -   Labels shape: torch.Size([32])
+2026-09-06 22:45:40,152 - INFO -   Spec dtype: torch.float32
+2026-09-06 22:45:40,157 - INFO -   Spec range: [0.0000, 1.0000]
+2026-09-06 22:45:40,157 - INFO -   Labels in batch: Counter({1: 17, 0: 8, 2: 7})
+2026-09-06 22:45:40,157 - INFO - 
+======================================================================
+2026-09-06 22:45:40,157 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-09-06 22:45:40,158 - INFO - ======================================================================
+2026-09-06 22:45:40,158 - INFO -   Train:   3350 samples →  104 batches
+2026-09-06 22:45:40,158 - INFO -   Val:      635 samples →   20 batches
+2026-09-06 22:45:40,158 - INFO -   Test:    2733 samples →   86 batches
+2026-09-06 22:45:40,158 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-09-06 22:45:40,158 - INFO - ======================================================================
+2026-09-06 22:45:42,582 - INFO -   CNN        VAL ICBHI 0.521 ± 0.063  AUC 0.690 ± 0.057
+2026-09-06 22:45:42,582 - INFO -      se_eq_sp  tau=0.569±0.109 val Se/Sp 0.67/0.61 → TEST bin Se/Sp 0.654/0.487  ICBHI 0.456±0.017
+2026-09-06 22:45:42,583 - INFO -      youden    tau=0.535±0.085 val Se/Sp 0.75/0.55 → TEST bin Se/Sp 0.715/0.413  ICBHI 0.440±0.023
+2026-09-06 22:45:42,583 - INFO -      sp_0.70   tau=0.591±0.097 val Se/Sp 0.47/0.76 → TEST bin Se/Sp 0.456/0.641  ICBHI 0.468±0.024
+2026-09-06 22:45:42,583 - INFO -      sp_0.80   tau=0.611±0.087 val Se/Sp 0.37/0.84 → TEST bin Se/Sp 0.362/0.714  ICBHI 0.466±0.021
+2026-09-06 22:45:45,159 - INFO -   MNv3_IN    VAL ICBHI 0.543 ± 0.011  AUC 0.638 ± 0.044
+2026-09-06 22:45:45,159 - INFO -      se_eq_sp  tau=0.477±0.073 val Se/Sp 0.59/0.59 → TEST bin Se/Sp 0.570/0.506  ICBHI 0.438±0.038
+2026-09-06 22:45:45,160 - INFO -      youden    tau=0.544±0.124 val Se/Sp 0.53/0.69 → TEST bin Se/Sp 0.449/0.614  ICBHI 0.451±0.050
+2026-09-06 22:45:45,160 - INFO -      sp_0.70   tau=0.538±0.077 val Se/Sp 0.50/0.70 → TEST bin Se/Sp 0.474/0.593  ICBHI 0.446±0.043
+2026-09-06 22:45:45,160 - INFO -      sp_0.80   tau=0.617±0.090 val Se/Sp 0.39/0.80 → TEST bin Se/Sp 0.350/0.701  ICBHI 0.458±0.032
+2026-09-06 22:45:47,499 - INFO -   MNv3_SC    VAL ICBHI 0.476 ± 0.018  AUC 0.639 ± 0.024
+2026-09-06 22:45:47,499 - INFO -      se_eq_sp  tau=0.625±0.030 val Se/Sp 0.59/0.59 → TEST bin Se/Sp 0.547/0.484  ICBHI 0.385±0.034
+2026-09-06 22:45:47,500 - INFO -      youden    tau=0.607±0.078 val Se/Sp 0.64/0.58 → TEST bin Se/Sp 0.575/0.459  ICBHI 0.382±0.052
+2026-09-06 22:45:47,500 - INFO -      sp_0.70   tau=0.674±0.041 val Se/Sp 0.46/0.70 → TEST bin Se/Sp 0.438/0.596  ICBHI 0.409±0.028
+2026-09-06 22:45:47,500 - INFO -      sp_0.80   tau=0.721±0.046 val Se/Sp 0.35/0.80 → TEST bin Se/Sp 0.327/0.707  ICBHI 0.431±0.025
+2026-09-06 22:45:47,533 - INFO - ======================================================================
+2026-09-06 22:45:47,533 - INFO - CREATING RAW-AUDIO DATALOADERS (PANNs)
+2026-09-06 22:45:47,533 - INFO - ======================================================================
+2026-09-06 22:45:47,533 - INFO -   Strategy:        strategy1_official
+2026-09-06 22:45:47,533 - INFO -   Segments (.wav):  D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\data\segments
+2026-09-06 22:45:47,535 - INFO -   Sample rate:       32000 Hz  (resampled from 16 kHz)
+2026-09-06 22:45:47,535 - INFO -   Fixed length:     256000 samples (8.0 s)
+2026-09-06 22:45:47,535 - INFO -   Batch size:        16
+2026-09-06 22:45:47,535 - INFO -   Weighted sampling: False
+2026-09-06 22:45:47,535 - INFO - 
+[TRAIN]
+2026-09-06 22:45:47,998 - INFO -   [RawAudio] 3350 cycles | count per class: [1577, 1016, 416, 341]
+2026-09-06 22:45:47,999 - INFO - [VAL]
+2026-09-06 22:45:48,086 - INFO -   [RawAudio] 635 cycles | count per class: [412, 139, 65, 19]
+2026-09-06 22:45:48,086 - INFO - [TEST]
+2026-09-06 22:45:48,460 - INFO -   [RawAudio] 2733 cycles | count per class: [1573, 644, 377, 139]
+2026-09-06 22:45:48,460 - INFO - 
+  Train: 3350 | Val: 635 | Test: 2733
+2026-09-06 22:45:48,461 - INFO - ======================================================================
+2026-09-06 22:46:18,330 - INFO -   PANNs      VAL ICBHI 0.482 ± 0.019  AUC 0.621 ± 0.041
+2026-09-06 22:46:18,331 - INFO -      se_eq_sp  tau=0.670±0.025 val Se/Sp 0.58/0.58 → TEST bin Se/Sp 0.537/0.526  ICBHI 0.417±0.014
+2026-09-06 22:46:18,331 - INFO -      youden    tau=0.656±0.037 val Se/Sp 0.74/0.47 → TEST bin Se/Sp 0.665/0.409  ICBHI 0.398±0.023
+2026-09-06 22:46:18,332 - INFO -      sp_0.70   tau=0.686±0.015 val Se/Sp 0.42/0.70 → TEST bin Se/Sp 0.430/0.626  ICBHI 0.430±0.016
+2026-09-06 22:46:18,332 - INFO -      sp_0.80   tau=0.708±0.008 val Se/Sp 0.31/0.80 → TEST bin Se/Sp 0.337/0.715  ICBHI 0.445±0.013
+2026-09-06 22:46:42,984 - INFO -   PANNs_tune VAL ICBHI 0.474 ± 0.044  AUC 0.601 ± 0.058
+2026-09-06 22:46:42,985 - INFO -      se_eq_sp  tau=0.706±0.021 val Se/Sp 0.57/0.57 → TEST bin Se/Sp 0.505/0.525  ICBHI 0.411±0.018
+2026-09-06 22:46:42,985 - INFO -      youden    tau=0.704±0.024 val Se/Sp 0.62/0.55 → TEST bin Se/Sp 0.532/0.495  ICBHI 0.409±0.025
+2026-09-06 22:46:42,986 - INFO -      sp_0.70   tau=0.711±0.019 val Se/Sp 0.42/0.71 → TEST bin Se/Sp 0.378/0.648  ICBHI 0.430±0.006
+2026-09-06 22:46:42,986 - INFO -      sp_0.80   tau=0.717±0.013 val Se/Sp 0.31/0.80 → TEST bin Se/Sp 0.287/0.736  ICBHI 0.445±0.010
+2026-09-06 22:46:50,298 - INFO -   CfC        VAL ICBHI 0.538 ± 0.037  AUC 0.687 ± 0.029
+2026-09-06 22:46:50,298 - INFO -      se_eq_sp  tau=0.644±0.046 val Se/Sp 0.63/0.63 → TEST bin Se/Sp 0.490/0.506  ICBHI 0.374±0.018
+2026-09-06 22:46:50,299 - INFO -      youden    tau=0.656±0.081 val Se/Sp 0.61/0.68 → TEST bin Se/Sp 0.474/0.533  ICBHI 0.386±0.024
+2026-09-06 22:46:50,299 - INFO -      sp_0.70   tau=0.670±0.048 val Se/Sp 0.54/0.70 → TEST bin Se/Sp 0.424/0.577  ICBHI 0.388±0.015
+2026-09-06 22:46:50,300 - INFO -      sp_0.80   tau=0.709±0.039 val Se/Sp 0.42/0.80 → TEST bin Se/Sp 0.347/0.672  ICBHI 0.409±0.015
+2026-09-06 22:46:50,315 - INFO - Summary: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\reanalysis\script30_summary.md   Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script30_log.txt
+2026-09-06 22:46:50,315 - INFO - Done.
+2026-09-06 22:48:06,482 - INFO - ==============================================================================
+2026-09-06 22:48:06,482 - INFO - SCRIPT 30 — stage: fulltest
+2026-09-06 22:48:06,482 - INFO - ==============================================================================
+2026-09-06 22:48:06,482 - INFO - BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-06 22:48:08,373 - INFO - [FULLTEST] device = cuda
+2026-09-06 22:48:08,439 - INFO -   Excluded by QC: 22  (official test: 3, official train: 19)
+2026-09-06 22:48:08,440 - INFO -     147_2b3_Pl_mc_AKGC417L: In the list of problematic files (Day 2)
+2026-09-06 22:48:08,441 - INFO -     177_1b4_Lr_mc_AKGC417L: In the list of problematic files (Day 2)
+2026-09-06 22:48:08,441 - INFO -     211_1p2_Pl_mc_AKGC417L: In the list of problematic files (Day 2)
+2026-09-06 22:48:09,832 - INFO -     147_2b3_Pl_mc_AKGC417L: original clipping 11.73 % → Resampled to 16000 Hz; Bandpass filter 50-2000 Hz; Clipping correction applied (11.73%); RMS normalization to 0.1
+2026-09-06 22:48:10,120 - INFO -     177_1b4_Lr_mc_AKGC417L: original clipping 19.89 % → Resampled to 16000 Hz; Bandpass filter 50-2000 Hz; Clipping correction applied (19.89%); RMS normalization to 0.1
+2026-09-06 22:48:10,283 - INFO -     211_1p2_Pl_mc_AKGC417L: original clipping 17.38 % → Resampled to 16000 Hz; Bandpass filter 50-2000 Hz; Clipping correction applied (17.38%); RMS normalization to 0.1
+2026-09-06 22:48:10,547 - INFO -   Reintegrated cycles: 23  Normal=6, Crackle=5, Wheeze=8, Both=4
+2026-09-06 22:48:10,601 - INFO -   Split fulltest: test 2733 + 23 = 2756 cycles, 49 patients
+2026-09-06 22:48:12,424 - INFO - ======================================================================
+2026-09-06 22:48:12,424 - INFO - CREATING DATALOADERS
+2026-09-06 22:48:12,425 - INFO - ======================================================================
+2026-09-06 22:48:12,425 - INFO -   Split strategy: strategy1_official_fulltest
+2026-09-06 22:48:12,425 - INFO -   Class mode:      4class
+2026-09-06 22:48:12,425 - INFO -   Augmentation:        none
+2026-09-06 22:48:12,425 - INFO -   Batch size:          32
+2026-09-06 22:48:12,425 - INFO -   Num workers:         0
+2026-09-06 22:48:12,425 - INFO -   Weighted sampling:   False
+2026-09-06 22:48:12,426 - INFO - 
+[TRAIN] Creating training dataset...
+2026-09-06 22:48:12,731 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-09-06 22:48:12,731 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-09-06 22:48:12,731 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-09-06 22:48:12,732 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-09-06 22:48:12,732 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-09-06 22:48:12,733 - INFO - 
+[VAL] Creating validation dataset...
+2026-09-06 22:48:12,800 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-09-06 22:48:12,800 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-09-06 22:48:12,801 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-09-06 22:48:12,801 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-09-06 22:48:12,801 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-09-06 22:48:12,801 - INFO - 
+[TEST] Creating test dataset...
+2026-09-06 22:48:13,054 - INFO -     Class 0 (  Normal):  1579 ( 57.3%) — weight: 0.436
+2026-09-06 22:48:13,054 - INFO -     Class 1 ( Crackle):   649 ( 23.5%) — weight: 1.062
+2026-09-06 22:48:13,055 - INFO -     Class 2 (  Wheeze):   385 ( 14.0%) — weight: 1.790
+2026-09-06 22:48:13,055 - INFO -     Class 3 (    Both):   143 (  5.2%) — weight: 4.818
+2026-09-06 22:48:13,055 - INFO -   Dataset created: 2756 samples, 4 classes (4class), augment=No
+2026-09-06 22:48:13,056 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-09-06 22:48:13,056 - INFO - 
+  Class weights for loss:
+2026-09-06 22:48:13,057 - INFO -       Normal: 0.3647
+2026-09-06 22:48:13,057 - INFO -      Crackle: 0.5661
+2026-09-06 22:48:13,057 - INFO -       Wheeze: 1.3826
+2026-09-06 22:48:13,058 - INFO -         Both: 1.6866
+2026-09-06 22:48:13,058 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-09-06 22:48:13,096 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-09-06 22:48:13,096 - INFO -   Labels shape: torch.Size([32])
+2026-09-06 22:48:13,097 - INFO -   Spec dtype: torch.float32
+2026-09-06 22:48:13,097 - INFO -   Spec range: [0.0000, 1.0000]
+2026-09-06 22:48:13,097 - INFO -   Labels in batch: Counter({0: 17, 1: 9, 3: 5, 2: 1})
+2026-09-06 22:48:13,098 - INFO - 
+======================================================================
+2026-09-06 22:48:13,098 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-09-06 22:48:13,098 - INFO - ======================================================================
+2026-09-06 22:48:13,098 - INFO -   Train:   3350 samples →  104 batches
+2026-09-06 22:48:13,098 - INFO -   Val:      635 samples →   20 batches
+2026-09-06 22:48:13,098 - INFO -   Test:    2756 samples →   87 batches
+2026-09-06 22:48:13,098 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-09-06 22:48:13,098 - INFO - ======================================================================
+2026-09-06 22:48:21,705 - INFO -   CNN        ICBHI post-QC 0.460 ± 0.017 → full 0.457 ± 0.016  [worst 0.456, best 0.465]  AUC 0.572 ± 0.026 → 0.569 ± 0.025  reintegrated acc 0.10  Δmax vs post-QC 1.3e-07
+2026-09-06 22:48:30,005 - INFO -   MNv3_IN    ICBHI post-QC 0.462 ± 0.021 → full 0.461 ± 0.021  [worst 0.459, best 0.468]  AUC 0.543 ± 0.034 → 0.544 ± 0.034  reintegrated acc 0.20  Δmax vs post-QC 1.8e-03
+2026-09-06 22:48:38,835 - INFO -   MNv3_SC    ICBHI post-QC 0.385 ± 0.041 → full 0.383 ± 0.041  [worst 0.382, best 0.391]  AUC 0.528 ± 0.045 → 0.525 ± 0.044  reintegrated acc 0.15  Δmax vs post-QC 6.8e-04
+2026-09-06 22:48:38,843 - INFO - ======================================================================
+2026-09-06 22:48:38,843 - INFO - CREATING RAW-AUDIO DATALOADERS (PANNs)
+2026-09-06 22:48:38,843 - INFO - ======================================================================
+2026-09-06 22:48:38,843 - INFO -   Strategy:        strategy1_official_fulltest
+2026-09-06 22:48:38,843 - INFO -   Segments (.wav):  D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\data\segments
+2026-09-06 22:48:38,843 - INFO -   Sample rate:       32000 Hz  (resampled from 16 kHz)
+2026-09-06 22:48:38,843 - INFO -   Fixed length:     256000 samples (8.0 s)
+2026-09-06 22:48:38,843 - INFO -   Batch size:        16
+2026-09-06 22:48:38,843 - INFO -   Weighted sampling: False
+2026-09-06 22:48:38,843 - INFO - 
+[TRAIN]
+2026-09-06 22:48:39,449 - INFO -   [RawAudio] 3350 cycles | count per class: [1577, 1016, 416, 341]
+2026-09-06 22:48:39,450 - INFO - [VAL]
+2026-09-06 22:48:39,543 - INFO -   [RawAudio] 635 cycles | count per class: [412, 139, 65, 19]
+2026-09-06 22:48:39,543 - INFO - [TEST]
+2026-09-06 22:48:39,923 - INFO -   [RawAudio] 2756 cycles | count per class: [1579, 649, 385, 143]
+2026-09-06 22:48:39,924 - INFO - 
+  Train: 3350 | Val: 635 | Test: 2756
+2026-09-06 22:48:39,924 - INFO - ======================================================================
+2026-09-06 22:50:51,138 - INFO -   PANNs      ICBHI post-QC 0.439 ± 0.041 → full 0.438 ± 0.042  [worst 0.436, best 0.445]  AUC 0.546 ± 0.023 → 0.547 ± 0.024  reintegrated acc 0.28  Δmax vs post-QC 2.0e-06
+2026-09-06 22:52:51,016 - INFO -   PANNs_tune ICBHI post-QC 0.431 ± 0.046 → full 0.429 ± 0.046  [worst 0.427, best 0.436]  AUC 0.516 ± 0.027 → 0.515 ± 0.026  reintegrated acc 0.25  Δmax vs post-QC 9.9e-07
+2026-09-06 22:53:23,336 - INFO -   CfC        ICBHI post-QC 0.351 ± 0.030 → full 0.350 ± 0.031  [worst 0.348, best 0.357]  AUC 0.501 ± 0.021 → 0.500 ± 0.021  reintegrated acc 0.20  Δmax vs post-QC 1.1e-07
+2026-09-06 22:53:23,355 - INFO - Summary: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\reanalysis\script30_summary.md   Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script30_log.txt
+2026-09-06 22:53:23,355 - INFO - Done.
+2026-09-06 22:57:11,503 - INFO - ==============================================================================
+2026-09-06 22:57:11,503 - INFO - SCRIPT 30 — stage: linear
+2026-09-06 22:57:11,503 - INFO - ==============================================================================
+2026-09-06 22:57:11,504 - INFO - BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+2026-09-06 22:57:11,796 - INFO - [LINEAR] train 3350 / val 635 / test 2733; extracting features
+2026-09-06 22:57:12,046 - INFO -     train: 1000/3350
+2026-09-06 22:57:12,287 - INFO -     train: 2000/3350
+2026-09-06 22:57:12,540 - INFO -     train: 3000/3350
+2026-09-06 22:57:13,016 - INFO -     test: 1000/2733
+2026-09-06 22:57:13,260 - INFO -     test: 2000/2733
+2026-09-06 22:57:13,571 - INFO -   logreg C=0.001  val ICBHI 0.407  AUC 0.666
+2026-09-06 22:57:13,762 - INFO -   logreg C=0.01   val ICBHI 0.385  AUC 0.623
+2026-09-06 22:57:14,231 - INFO -   logreg C=0.1    val ICBHI 0.382  AUC 0.608
+2026-09-06 22:57:15,327 - INFO -   logreg C=1.0    val ICBHI 0.393  AUC 0.594
+2026-09-06 22:57:18,401 - INFO -   logreg C=10.0   val ICBHI 0.420  AUC 0.583
+2026-09-06 22:57:18,939 - INFO -   logreg (C=0.001) TEST ICBHI 0.343 [0.276, 0.414]  Se 0.416 / Sp 0.271  AUC 0.556 [0.493, 0.629]  Meditron AUC 0.471  Litt3200 AUC 0.537  AKGC417L AUC 0.605
+2026-09-06 22:57:19,731 - INFO -   linsvm C=0.001  val ICBHI 0.417  AUC 0.628
+2026-09-06 22:57:21,234 - INFO -   linsvm C=0.01   val ICBHI 0.403  AUC 0.601
+2026-09-06 22:57:24,010 - INFO -   linsvm C=0.1    val ICBHI 0.428  AUC 0.586
+2026-09-06 22:57:31,901 - INFO -   linsvm C=1.0    val ICBHI 0.431  AUC 0.580
+2026-09-06 22:57:49,308 - INFO -   linsvm C=10.0   val ICBHI 0.434  AUC 0.579
+2026-09-06 22:57:50,067 - INFO -   linsvm (C=0.001) TEST ICBHI 0.386 [0.326, 0.454]  Se 0.359 / Sp 0.413  AUC 0.560 [0.495, 0.630]  Meditron AUC 0.466  Litt3200 AUC 0.522  AKGC417L AUC 0.602
+2026-09-06 22:57:50,078 - INFO - Summary: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\reanalysis\script30_summary.md   Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script30_log.txt
+2026-09-06 22:57:50,078 - INFO - Done.

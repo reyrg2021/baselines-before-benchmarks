@@ -1,0 +1,59 @@
+2026-06-14 00:57:01,315 | INFO | ======================================================================
+2026-06-14 00:57:01,316 | INFO | IN-DOMAIN TRAINING ON SPRSound (counterpart of the zero-shot)
+2026-06-14 00:57:01,316 | INFO | Date: 2026-06-14 00:57:01 | Device: cuda | Modes: ['from_scratch', 'finetune_icbhi']
+2026-06-14 00:57:01,316 | INFO | ======================================================================
+2026-06-14 00:57:01,316 | INFO | Building train2022 and inter_test (pipeline identical to ICBHI)...
+2026-06-14 00:58:24,486 | INFO | [train2022] events=6319 (short discarded=337, unknown label=0) | patients=243
+2026-06-14 00:58:24,487 | INFO |     [train2022] Normal: 5055 (80.0%)
+2026-06-14 00:58:24,493 | INFO |     [train2022] Crackle: 924 (14.6%)
+2026-06-14 00:58:24,493 | INFO |     [train2022] Wheeze: 312 (4.9%)
+2026-06-14 00:58:24,493 | INFO |     [train2022] Both: 28 (0.4%)
+2026-06-14 00:58:38,314 | INFO | [inter_test] events=1271 (short discarded=158, unknown label=0) | patients=41
+2026-06-14 00:58:38,314 | INFO |     [inter_test] Normal: 970 (76.3%)
+2026-06-14 00:58:38,314 | INFO |     [inter_test] Crackle: 76 (6.0%)
+2026-06-14 00:58:38,315 | INFO |     [inter_test] Wheeze: 224 (17.6%)
+2026-06-14 00:58:38,315 | INFO |     [inter_test] Both: 1 (0.1%)
+2026-06-14 00:58:38,316 | INFO | Patients train=243, test=41, intersection=0 (must be 0)
+2026-06-14 00:58:38,532 | INFO | Train: 5520 events / 207 pat | Val: 799 / 36 pat | Test: 1271
+2026-06-14 00:58:38,532 | INFO | ######################################################################
+2026-06-14 00:58:38,532 | INFO | MODE: from_scratch
+2026-06-14 00:58:38,551 | INFO |   [from_scratch] seed 42: training...
+2026-06-14 01:00:48,137 | INFO |       early stopping at epoch 20 (val_loss=0.6640)
+2026-06-14 01:00:49,252 | INFO |   [from_scratch] seed 42: ICBHI=0.7377 | BIN Se=0.761 Sp=0.877 AUC=0.918
+2026-06-14 01:00:49,266 | INFO |   [from_scratch] seed 123: training...
+2026-06-14 01:03:33,099 | INFO |       early stopping at epoch 26 (val_loss=1.0505)
+2026-06-14 01:03:33,475 | INFO |   [from_scratch] seed 123: ICBHI=0.6979 | BIN Se=0.608 Sp=0.934 AUC=0.901
+2026-06-14 01:03:33,491 | INFO |   [from_scratch] seed 7: training...
+2026-06-14 01:05:17,564 | INFO |       early stopping at epoch 16 (val_loss=0.5483)
+2026-06-14 01:05:17,951 | INFO |   [from_scratch] seed 7: ICBHI=0.7106 | BIN Se=0.472 Sp=0.979 AUC=0.920
+2026-06-14 01:05:17,970 | INFO |   [from_scratch] seed 99: training...
+2026-06-14 01:08:00,624 | INFO |       early stopping at epoch 26 (val_loss=0.5100)
+2026-06-14 01:08:01,018 | INFO |   [from_scratch] seed 99: ICBHI=0.7249 | BIN Se=0.678 Sp=0.908 AUC=0.907
+2026-06-14 01:08:01,029 | INFO |   [from_scratch] seed 314: training...
+2026-06-14 01:10:37,097 | INFO |       early stopping at epoch 24 (val_loss=0.4703)
+2026-06-14 01:10:37,502 | INFO |   [from_scratch] seed 314: ICBHI=0.8234 | BIN Se=0.804 Sp=0.926 AUC=0.949
+2026-06-14 01:10:37,514 | INFO |   >>> [from_scratch] SUMMARY: ICBHI=0.739±0.044 | binary AUC=0.919±0.017
+2026-06-14 01:10:37,514 | INFO | ######################################################################
+2026-06-14 01:10:37,514 | INFO | MODE: finetune_icbhi
+2026-06-14 01:10:37,590 | INFO |   [finetune_icbhi] seed 42: training...
+2026-06-14 01:13:32,847 | INFO |       early stopping at epoch 27 (val_loss=1.2140)
+2026-06-14 01:13:33,245 | INFO |   [finetune_icbhi] seed 42: ICBHI=0.7409 | BIN Se=0.691 Sp=0.894 AUC=0.909
+2026-06-14 01:13:33,305 | INFO |   [finetune_icbhi] seed 123: training...
+2026-06-14 01:16:25,690 | INFO |       early stopping at epoch 27 (val_loss=0.3975)
+2026-06-14 01:16:26,092 | INFO |   [finetune_icbhi] seed 123: ICBHI=0.6993 | BIN Se=0.595 Sp=0.927 AUC=0.900
+2026-06-14 01:16:26,161 | INFO |   [finetune_icbhi] seed 7: training...
+2026-06-14 01:19:00,728 | INFO |       early stopping at epoch 24 (val_loss=0.4224)
+2026-06-14 01:19:01,099 | INFO |   [finetune_icbhi] seed 7: ICBHI=0.7899 | BIN Se=0.731 Sp=0.932 AUC=0.936
+2026-06-14 01:19:01,159 | INFO |   [finetune_icbhi] seed 99: training...
+2026-06-14 01:21:55,299 | INFO |       early stopping at epoch 27 (val_loss=0.4212)
+2026-06-14 01:21:55,684 | INFO |   [finetune_icbhi] seed 99: ICBHI=0.7788 | BIN Se=0.817 Sp=0.873 AUC=0.934
+2026-06-14 01:21:55,741 | INFO |   [finetune_icbhi] seed 314: training...
+2026-06-14 01:24:41,772 | INFO |       early stopping at epoch 26 (val_loss=0.3462)
+2026-06-14 01:24:42,180 | INFO |   [finetune_icbhi] seed 314: ICBHI=0.7845 | BIN Se=0.734 Sp=0.914 AUC=0.926
+2026-06-14 01:24:42,190 | INFO |   >>> [finetune_icbhi] SUMMARY: ICBHI=0.759±0.034 | binary AUC=0.921±0.014
+2026-06-14 01:24:42,191 | INFO | ======================================================================
+2026-06-14 01:24:42,191 | INFO | FINAL COMPARISON (binary AUC, what matters):
+2026-06-14 01:24:42,191 | INFO |   zero-shot (script 25)        : 0.457 ± 0.081  (chance)
+2026-06-14 01:24:42,192 | INFO |   in-domain from_scratch    : 0.919 ± 0.017
+2026-06-14 01:24:42,192 | INFO |   in-domain finetune_icbhi  : 0.921 ± 0.014
+2026-06-14 01:24:42,194 | INFO | Results saved to D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\scripts\sprsound_indomain_results.json

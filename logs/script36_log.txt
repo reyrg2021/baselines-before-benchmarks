@@ -1,0 +1,79 @@
+2026-09-17 00:06:13,016 - INFO - ==============================================================================
+2026-09-17 00:06:13,016 - INFO - SCRIPT 36 — Paired contrasts of pretraining and recipe
+2026-09-17 00:06:13,016 - INFO - ==============================================================================
+2026-09-17 00:06:13,016 - INFO - 
+[1/4] Loading, alignment and integrity
+2026-09-17 00:06:13,040 - INFO - test_cycles.csv: 2733 cycles, 49 patients, 378 recordings
+2026-09-17 00:06:13,040 - INFO - Class distribution: Normal=1573, Crackle=644, Wheeze=377, Both=139
+2026-09-17 00:06:13,042 - INFO - Devices: AKGC417L=1813, Litt3200=461, Meditron=459
+2026-09-17 00:06:13,141 - INFO -   ✓ CNN-RespiratoryNet (FP32): 5 seeds aligned
+2026-09-17 00:06:13,235 - INFO -   ✓ CNN-RespiratoryNet (INT8, FP32 head): 5 seeds aligned
+2026-09-17 00:06:13,342 - INFO -   ✓ MobileNetV3-Small (ImageNet): 5 seeds aligned
+2026-09-17 00:06:13,440 - INFO -   ✓ MobileNetV3-Small (scratch): 5 seeds aligned
+2026-09-17 00:06:13,540 - INFO -   ✓ PANNs CNN6 (AudioSet): 5 seeds aligned
+2026-09-17 00:06:13,633 - INFO -   ✓ PANNs CNN6 (AudioSet, tune): 5 seeds aligned
+2026-09-17 00:06:13,736 - INFO -   ✓ CfC-Hybrid (mmRNN): 5 seeds aligned
+2026-09-17 00:06:13,840 - INFO -   ✓ LSTM-Hybrid (h=103): 5 seeds aligned
+2026-09-17 00:06:13,959 - INFO -   ✓ GRU-Hybrid (h=134): 5 seeds aligned
+2026-09-17 00:06:14,059 - INFO -   ✓ CfC-Hybrid pure (no mixed memory): 5 seeds aligned
+2026-09-17 00:06:14,243 - INFO -   ✓ MobileNetV3-Small (ImageNet, without augmentation or mixup): 5 seeds aligned
+2026-09-17 00:06:14,250 - WARNING -   CNN_INT8 not in master_results.json; cross-check skipped
+2026-09-17 00:06:14,251 - INFO -     MobileNetV3_ImageNet seed 7: ΔAUC = 1.11e-16 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,251 - INFO -     MobileNetV3_scratch seed 123: ΔAUC = 1.11e-16 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,252 - INFO -     PANNs_CNN6_AudioSet seed 123: ΔAUC = 1.10e-06 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,253 - INFO -     PANNs_CNN6_AudioSet seed 314: ΔAUC = 1.92e-06 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,253 - INFO -     PANNs_CNN6_AudioSet seed 42: ΔAUC = 2.74e-06 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,254 - INFO -     PANNs_CNN6_AudioSet seed 7: ΔAUC = 2.74e-07 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,254 - INFO -     PANNs_CNN6_AudioSet seed 99: ΔAUC = 8.22e-07 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,255 - INFO -     PANNs_CNN6_tune seed 123: ΔAUC = 8.22e-07 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,255 - INFO -     PANNs_CNN6_tune seed 314: ΔAUC = 5.48e-07 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,255 - INFO -     PANNs_CNN6_tune seed 42: ΔAUC = 2.74e-07 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,255 - INFO -     PANNs_CNN6_tune seed 7: ΔAUC = 1.10e-06 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,257 - INFO -     PANNs_CNN6_tune seed 99: ΔAUC = 1.64e-06 (ΔICBHI = 0.0e+00)
+2026-09-17 00:06:14,258 - WARNING -   LSTM_Hybrid not in master_results.json; cross-check skipped
+2026-09-17 00:06:14,258 - WARNING -   GRU_Hybrid not in master_results.json; cross-check skipped
+2026-09-17 00:06:14,258 - WARNING -   CfC_pure not in master_results.json; cross-check skipped
+2026-09-17 00:06:14,258 - WARNING -   MobileNetV3_ImageNet_noaug not in master_results.json; cross-check skipped
+2026-09-17 00:06:14,258 - INFO -   ✓ Cross-check with master_results.json: 30 (model, seed) match on ICBHI (tol 1e-06) and AUC (tol 1e-05)
+2026-09-17 00:06:14,259 - INFO - 
+[2/4] Metrics per seed (full test)
+2026-09-17 00:06:14,280 - INFO -   CNN         ICBHI 0.4596 ± 0.0169  AUC 0.5717 ± 0.0263  AUC_wd 0.6144 ± 0.0335  Se 0.408  Sp 0.511
+2026-09-17 00:06:14,280 - INFO -   MNv3_IN     ICBHI 0.4623 ± 0.0210  AUC 0.5431 ± 0.0339  AUC_wd 0.5997 ± 0.0236  Se 0.257  Sp 0.668
+2026-09-17 00:06:14,280 - INFO -   MNv3_SC     ICBHI 0.3849 ± 0.0410  AUC 0.5278 ± 0.0449  AUC_wd 0.5545 ± 0.0346  Se 0.327  Sp 0.443
+2026-09-17 00:06:14,281 - INFO -   PANNs       ICBHI 0.4393 ± 0.0414  AUC 0.5464 ± 0.0232  AUC_wd 0.5746 ± 0.0328  Se 0.336  Sp 0.542
+2026-09-17 00:06:14,281 - INFO -   PANNs_tune  ICBHI 0.4306 ± 0.0457  AUC 0.5160 ± 0.0267  AUC_wd 0.5378 ± 0.0387  Se 0.333  Sp 0.528
+2026-09-17 00:06:14,281 - INFO -   MNv3_noaug  ICBHI 0.4391 ± 0.0492  AUC 0.5122 ± 0.0334  AUC_wd 0.5544 ± 0.0349  Se 0.076  Sp 0.802
+2026-09-17 00:06:14,281 - INFO -   ✓ MNv3_noaug icbhi matches Script 34 (0.439)
+2026-09-17 00:06:14,282 - INFO -   ✓ MNv3_noaug auc matches Script 34 (0.512)
+2026-09-17 00:06:14,286 - INFO -   ✓ Control CNN − MNv3_IN reproduces Script 29 (ICBHI and AUC)
+2026-09-17 00:06:14,286 - INFO - 
+[3/4] Per-patient bootstrap (B = 2000, seed 2026)
+2026-09-17 00:06:19,374 - INFO -     replicate 250/2000
+2026-09-17 00:06:24,401 - INFO -     replicate 500/2000
+2026-09-17 00:06:29,506 - INFO -     replicate 750/2000
+2026-09-17 00:06:34,520 - INFO -     replicate 1000/2000
+2026-09-17 00:06:39,611 - INFO -     replicate 1250/2000
+2026-09-17 00:06:46,867 - INFO -     replicate 1500/2000
+2026-09-17 00:06:54,812 - INFO -     replicate 1750/2000
+2026-09-17 00:06:59,833 - INFO -     replicate 2000/2000
+2026-09-17 00:06:59,835 - INFO - 
+[4/4] Paired contrasts
+2026-09-17 00:06:59,839 - INFO -   P1 MNv3_IN − MNv3_SC    icbhi  Δ +0.0774 CI90 [+0.0238, +0.1309] t p 0.037 TOST p 0.958 | boot [+0.0436, +0.1107] p 0.000 | supported: YES
+2026-09-17 00:06:59,842 - INFO -   P1 MNv3_IN − MNv3_SC    auc    Δ +0.0153 CI90 [-0.0538, +0.0845] t p 0.661 TOST p 0.446 | boot [-0.0398, +0.0658] p 0.625 | supported: no
+2026-09-17 00:06:59,844 - INFO -   P1 MNv3_IN − MNv3_SC    auc_wd Δ +0.0452 CI90 [-0.0031, +0.0936] t p 0.117 TOST p 0.836 | boot [-0.0270, +0.1073] p 0.222 | supported: no
+2026-09-17 00:06:59,846 - INFO -   P2 PANNs − PANNs_tune icbhi  Δ +0.0087 CI90 [-0.0370, +0.0544] t p 0.705 TOST p 0.314 | boot [-0.0095, +0.0268] p 0.317 | supported: no
+2026-09-17 00:06:59,849 - INFO -   P2 PANNs − PANNs_tune auc    Δ +0.0304 CI90 [+0.0073, +0.0535] t p 0.049 TOST p 0.804 | boot [+0.0089, +0.0552] p 0.000 | supported: YES
+2026-09-17 00:06:59,852 - INFO -   P2 PANNs − PANNs_tune auc_wd Δ +0.0368 CI90 [+0.0127, +0.0610] t p 0.031 TOST p 0.895 | boot [+0.0094, +0.0647] p 0.004 | supported: YES
+2026-09-17 00:06:59,854 - INFO -   P3 MNv3_IN − PANNs      icbhi  Δ +0.0230 CI90 [-0.0232, +0.0691] t p 0.348 TOST p 0.551 | boot [-0.0165, +0.0589] p 0.256 | supported: no
+2026-09-17 00:06:59,857 - INFO -   P3 MNv3_IN − PANNs      auc    Δ -0.0033 CI90 [-0.0419, +0.0353] t p 0.866 TOST p 0.204 | boot [-0.0783, +0.0617] p 0.871 | supported: no
+2026-09-17 00:06:59,859 - INFO -   P3 MNv3_IN − PANNs      auc_wd Δ +0.0251 CI90 [-0.0177, +0.0680] t p 0.280 TOST p 0.594 | boot [-0.0745, +0.1080] p 0.685 | supported: no
+2026-09-17 00:06:59,861 - INFO -   P4 MNv3_IN − MNv3_noaug icbhi  Δ +0.0232 CI90 [-0.0164, +0.0628] t p 0.280 TOST p 0.564 | boot [-0.0096, +0.0589] p 0.220 | supported: no
+2026-09-17 00:06:59,864 - INFO -   P4 MNv3_IN − MNv3_noaug auc    Δ +0.0310 CI90 [+0.0031, +0.0588] t p 0.077 TOST p 0.775 | boot [-0.0009, +0.0568] p 0.062 | supported: no
+2026-09-17 00:06:59,867 - INFO -   P4 MNv3_IN − MNv3_noaug auc_wd Δ +0.0453 CI90 [+0.0167, +0.0739] t p 0.028 TOST p 0.934 | boot [+0.0078, +0.0714] p 0.024 | supported: YES
+2026-09-17 00:06:59,869 - INFO -   P5 CNN − MNv3_noaug icbhi  Δ +0.0205 CI90 [-0.0280, +0.0690] t p 0.418 TOST p 0.509 | boot [-0.0251, +0.0719] p 0.455 | supported: no
+2026-09-17 00:06:59,871 - INFO -   P5 CNN − MNv3_noaug auc    Δ +0.0596 CI90 [+0.0100, +0.1092] t p 0.063 TOST p 0.918 | boot [+0.0246, +0.1022] p 0.000 | supported: no
+2026-09-17 00:06:59,874 - INFO -   P5 CNN − MNv3_noaug auc_wd Δ +0.0600 CI90 [+0.0272, +0.0927] t p 0.017 TOST p 0.970 | boot [+0.0212, +0.1085] p 0.001 | supported: YES
+2026-09-17 00:06:59,880 - INFO - 
+Outputs in D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\reanalysis
+2026-09-17 00:06:59,880 - INFO - Log: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\script36_log.txt
+2026-09-17 00:06:59,880 - INFO - Done.

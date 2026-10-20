@@ -1,0 +1,29 @@
+{
+  "split_dir": "D:\\UNIVERSIDAD\\PAPERS\\1.PAPER_FONIS_1_2027\\FONIS_MVP\\data\\splits\\strategy1_official",
+  "events_pkl": ".\\data\\events\\events.pkl",
+  "n_cycles": {
+    "train": 3350,
+    "val": 635,
+    "test": 2733
+  },
+  "n_missing": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "n_features": 21,
+  "events_per_cycle": {
+    "mean": 3.856951473652873,
+    "median": 3.0,
+    "p5": 1.0,
+    "p95": 9.0,
+    "min": 1,
+    "max": 21
+  },
+  "dt_seconds": {
+    "mean": 0.7001970234944486,
+    "median": 0.3840000033378601,
+    "p5": 0.07199999690055847,
+    "p95": 2.428499937057495
+  }
+}

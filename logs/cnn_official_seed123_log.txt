@@ -1,0 +1,330 @@
+2026-06-08 09:19:16,865 - INFO - ======================================================================
+2026-06-08 09:19:16,866 - INFO - FONIS 2026 MVP — CNN BASELINE TRAINING
+2026-06-08 09:19:16,866 - INFO - ======================================================================
+2026-06-08 09:19:16,866 - INFO - Date: 2026-06-08 09:19:16
+2026-06-08 09:19:16,867 - INFO - Run tag: best_model
+2026-06-08 09:19:16,868 - INFO - Config:  loss=ce gamma=2.0 alpha=balanced sampler=weighted select=val_loss seed=123
+2026-06-08 09:19:16,885 - INFO - Device: cuda
+2026-06-08 09:19:16,889 - INFO - GPU: NVIDIA GeForce RTX 3060 Laptop GPU
+2026-06-08 09:19:16,889 - INFO - VRAM: 6.4 GB
+2026-06-08 09:19:16,892 - INFO - Script 08 imported from: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\scripts\08_dataset_dataloader.py
+2026-06-08 09:19:16,892 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:16,892 - INFO - STEP 1: PREPARE DATA
+2026-06-08 09:19:16,893 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:16,893 - INFO - ======================================================================
+2026-06-08 09:19:16,893 - INFO - CREATING DATALOADERS
+2026-06-08 09:19:16,893 - INFO - ======================================================================
+2026-06-08 09:19:16,893 - INFO -   Split strategy: strategy1_official
+2026-06-08 09:19:16,893 - INFO -   Class mode:      4class
+2026-06-08 09:19:16,894 - INFO -   Augmentation:        none
+2026-06-08 09:19:16,894 - INFO -   Batch size:          32
+2026-06-08 09:19:16,894 - INFO -   Num workers:         0
+2026-06-08 09:19:16,895 - INFO -   Weighted sampling:   True
+2026-06-08 09:19:16,895 - INFO - 
+[TRAIN] Creating training dataset...
+2026-06-08 09:19:17,309 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-06-08 09:19:17,309 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-06-08 09:19:17,310 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-06-08 09:19:17,310 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-06-08 09:19:17,310 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-06-08 09:19:17,311 - INFO - 
+[VAL] Creating validation dataset...
+2026-06-08 09:19:17,377 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-06-08 09:19:17,377 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-06-08 09:19:17,377 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-06-08 09:19:17,378 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-06-08 09:19:17,378 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-06-08 09:19:17,379 - INFO - 
+[TEST] Creating test dataset...
+2026-06-08 09:19:17,651 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-06-08 09:19:17,651 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-06-08 09:19:17,652 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-06-08 09:19:17,652 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-06-08 09:19:17,652 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-06-08 09:19:17,653 - INFO - 
+[SAMPLER] Configuring WeightedRandomSampler for train...
+2026-06-08 09:19:17,654 - INFO -   Weighted sampling enabled: 3350 samples/epoch
+2026-06-08 09:19:17,654 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-06-08 09:19:17,656 - INFO - 
+  Class weights for loss:
+2026-06-08 09:19:17,656 - INFO -       Normal: 0.3647
+2026-06-08 09:19:17,656 - INFO -      Crackle: 0.5661
+2026-06-08 09:19:17,657 - INFO -       Wheeze: 1.3826
+2026-06-08 09:19:17,657 - INFO -         Both: 1.6866
+2026-06-08 09:19:17,657 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-06-08 09:19:17,775 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-06-08 09:19:17,776 - INFO -   Labels shape: torch.Size([32])
+2026-06-08 09:19:17,776 - INFO -   Spec dtype: torch.float32
+2026-06-08 09:19:17,776 - INFO -   Spec range: [0.0000, 1.0000]
+2026-06-08 09:19:17,776 - INFO -   Labels in batch: Counter({2: 12, 1: 9, 3: 6, 0: 5})
+2026-06-08 09:19:17,777 - INFO - 
+======================================================================
+2026-06-08 09:19:17,777 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-06-08 09:19:17,777 - INFO - ======================================================================
+2026-06-08 09:19:17,778 - INFO -   Train:   3350 samples →  104 batches
+2026-06-08 09:19:17,778 - INFO -   Val:      635 samples →   20 batches
+2026-06-08 09:19:17,778 - INFO -   Test:    2733 samples →   86 batches
+2026-06-08 09:19:17,778 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-06-08 09:19:17,778 - INFO - ======================================================================
+2026-06-08 09:19:17,779 - INFO -   Input shape: (1, 128, 251)
+2026-06-08 09:19:17,779 - INFO -   Classes: ['Normal', 'Crackle', 'Wheeze', 'Both']
+2026-06-08 09:19:17,779 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:17,779 - INFO - STEP 2: CREATE MODEL
+2026-06-08 09:19:17,779 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:17,795 - INFO -   Model: RespiratoryNet
+2026-06-08 09:19:17,796 - INFO -   Total parameters: 556,500
+2026-06-08 09:19:17,796 - INFO -   Trainable parameters: 556,500
+2026-06-08 09:19:17,796 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:17,796 - INFO - STEP 3: VISUALIZE ARCHITECTURE
+2026-06-08 09:19:17,797 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:17,798 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:17,798 - INFO - TORCHINFO — Architecture Summary
+2026-06-08 09:19:17,798 - INFO - (Equivalent to MATLAB analyzeNetwork())
+2026-06-08 09:19:17,798 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:18,034 - INFO - 
+  Summary saved: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\model_summary_torchinfo.txt
+2026-06-08 09:19:18,034 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:18,034 - INFO - TORCHVIEW — Visual Architecture Diagram
+2026-06-08 09:19:18,035 - INFO - (Equivalent to MATLAB Deep Network Designer)
+2026-06-08 09:19:18,035 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:18,848 - INFO -   Diagram saved to: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\figures
+2026-06-08 09:19:18,849 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:18,849 - INFO - TORCHVIZ — Computational Graph with Gradients
+2026-06-08 09:19:18,849 - INFO - (Useful for debugging: check that gradients flow)
+2026-06-08 09:19:18,849 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:19,851 - INFO -   Graph saved: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\figures\model_gradient_graph.png
+2026-06-08 09:19:19,852 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:19,852 - INFO - ONNX — Export for Netron
+2026-06-08 09:19:19,852 - INFO - (Open with Netron for an interactive view)
+2026-06-08 09:19:19,852 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:24,991 - INFO - Removed 87 unused nodes
+2026-06-08 09:19:24,992 - INFO - No unused functions to remove
+2026-06-08 09:19:24,994 - INFO - Skipping constant folding for node 'node_Shape_0' because it is graph input to preserve graph signature
+2026-06-08 09:19:25,002 - INFO - Skipping constant folding for node 'node_conv2d' because it is graph input to preserve graph signature
+2026-06-08 09:19:25,142 - INFO - Removed 77 unused nodes
+2026-06-08 09:19:25,145 - INFO - No unused functions to remove
+2026-06-08 09:19:25,145 - INFO - Skipping constant folding for node 'node_Shape_0' because it is graph input to preserve graph signature
+2026-06-08 09:19:25,147 - INFO - Skipping constant folding for node 'node_Conv_198' because it is graph input to preserve graph signature
+2026-06-08 09:19:25,185 - INFO - Removed 1 unused nodes
+2026-06-08 09:19:25,188 - INFO - No unused functions to remove
+2026-06-08 09:19:25,248 - INFO -   ✅ Valid ONNX model: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\model_architecture.onnx
+2026-06-08 09:19:25,248 - INFO -   To view interactively:
+2026-06-08 09:19:25,249 - INFO -     pip install netron
+2026-06-08 09:19:25,249 - INFO -     netron "D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\model_architecture.onnx"
+2026-06-08 09:19:25,249 - INFO -   Or open with the Netron app: https://netron.app
+2026-06-08 09:19:25,249 - INFO - 
+──────────────────────────────────────────────────────────────────────
+2026-06-08 09:19:25,249 - INFO - VISUALIZATION TOOLS SUMMARY
+2026-06-08 09:19:25,249 - INFO - ──────────────────────────────────────────────────────────────────────
+2026-06-08 09:19:25,249 - INFO -   torchinfo      : ✅ Available         — Tabular summary
+2026-06-08 09:19:25,249 - INFO -   TensorBoard    : ✅ Available         — Real-time monitoring
+2026-06-08 09:19:25,249 - INFO -   torchview      : ✅ Available         — Architecture diagram
+2026-06-08 09:19:25,250 - INFO -   torchviz       : ✅ Available         — Computational graph
+2026-06-08 09:19:25,250 - INFO -   ONNX/Netron    : ✅ Available         — Interactive view
+2026-06-08 09:19:25,250 - INFO - ──────────────────────────────────────────────────────────────────────
+2026-06-08 09:19:25,251 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:25,251 - INFO - STEP 4: TRAINING
+2026-06-08 09:19:25,251 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:19:25,255 - INFO -   Counts per class (train): [1577, 1016, 416, 341]
+2026-06-08 09:19:25,255 - INFO -   Loss: CrossEntropyLoss without weights
+2026-06-08 09:19:25,255 - INFO -   Selection criterion: val_loss
+2026-06-08 09:19:25,257 - INFO -   Optimizer: Adam (lr=0.0003, weight_decay=0.0001)
+2026-06-08 09:19:25,259 - INFO -   TensorBoard: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\tensorboard\run_2026-06-08_09-19-25
+2026-06-08 09:19:25,259 - INFO -   To monitor: tensorboard --logdir "D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\tensorboard"
+2026-06-08 09:19:25,644 - INFO -   Model graph logged to TensorBoard
+2026-06-08 09:19:25,660 - INFO - 
+======================================================================
+2026-06-08 09:19:25,661 - INFO - TRAINING START
+2026-06-08 09:19:25,661 - INFO - ======================================================================
+2026-06-08 09:19:31,608 - INFO - 
+  Epoch   1/80 (5.9s) | LR: 3.00e-04 | Train: loss=4.7118, acc=28.7% | Val: loss=1.3819, acc=25.4% | OFFICIAL=0.2232 (Se=0.121 Sp=0.325) | macroF1=0.1973
+2026-06-08 09:19:31,656 - INFO -   ★ New best model saved (val_loss=-1.3819, val_loss=1.381933)
+2026-06-08 09:19:37,005 - INFO - 
+  Epoch   2/80 (5.3s) | LR: 3.00e-04 | Train: loss=1.4197, acc=28.0% | Val: loss=1.4081, acc=24.1% | OFFICIAL=0.2577 (Se=0.314 Sp=0.201) | macroF1=0.1830
+2026-06-08 09:19:37,007 - INFO -   EarlyStopping: 1/15 (best val_loss: 1.381933 at epoch 1)
+2026-06-08 09:19:42,448 - INFO - 
+  Epoch   3/80 (5.4s) | LR: 3.00e-04 | Train: loss=1.3915, acc=28.1% | Val: loss=1.3059, acc=39.4% | OFFICIAL=0.4104 (Se=0.466 Sp=0.354) | macroF1=0.3195
+2026-06-08 09:19:42,484 - INFO -   ★ New best model saved (val_loss=-1.3059, val_loss=1.305927)
+2026-06-08 09:19:47,895 - INFO - 
+  Epoch   4/80 (5.4s) | LR: 3.00e-04 | Train: loss=1.3659, acc=28.7% | Val: loss=1.3336, acc=37.2% | OFFICIAL=0.4160 (Se=0.565 Sp=0.267) | macroF1=0.2693
+2026-06-08 09:19:47,895 - INFO -   EarlyStopping: 1/15 (best val_loss: 1.305927 at epoch 3)
+2026-06-08 09:19:53,280 - INFO - 
+  Epoch   5/80 (5.4s) | LR: 3.00e-04 | Train: loss=1.3570, acc=29.7% | Val: loss=1.4179, acc=11.5% | OFFICIAL=0.1596 (Se=0.309 Sp=0.010) | macroF1=0.0905
+2026-06-08 09:19:53,280 - WARNING -     [COLLAPSE→Abnormal] Sp≈0: predicts almost everything abnormal (identifies no Normals). Config too aggressive.
+2026-06-08 09:19:53,280 - INFO -   EarlyStopping: 2/15 (best val_loss: 1.305927 at epoch 3)
+2026-06-08 09:19:58,628 - INFO - 
+  Epoch   6/80 (5.3s) | LR: 3.00e-04 | Train: loss=1.3352, acc=31.0% | Val: loss=1.3933, acc=19.4% | OFFICIAL=0.2696 (Se=0.525 Sp=0.015) | macroF1=0.1671
+2026-06-08 09:19:58,628 - WARNING -     [COLLAPSE→Abnormal] Sp≈0: predicts almost everything abnormal (identifies no Normals). Config too aggressive.
+2026-06-08 09:19:58,629 - INFO -   EarlyStopping: 3/15 (best val_loss: 1.305927 at epoch 3)
+2026-06-08 09:20:04,037 - INFO - 
+  Epoch   7/80 (5.4s) | LR: 3.00e-04 | Train: loss=1.3671, acc=30.8% | Val: loss=1.3300, acc=33.4% | OFFICIAL=0.3941 (Se=0.596 Sp=0.192) | macroF1=0.2839
+2026-06-08 09:20:04,038 - INFO -   EarlyStopping: 4/15 (best val_loss: 1.305927 at epoch 3)
+2026-06-08 09:20:09,438 - INFO - 
+  Epoch   8/80 (5.4s) | LR: 3.00e-04 | Train: loss=1.2803, acc=36.7% | Val: loss=1.2914, acc=35.6% | OFFICIAL=0.4275 (Se=0.668 Sp=0.187) | macroF1=0.3188
+2026-06-08 09:20:09,479 - INFO -   ★ New best model saved (val_loss=-1.2914, val_loss=1.291369)
+2026-06-08 09:20:14,916 - INFO - 
+  Epoch   9/80 (5.4s) | LR: 3.00e-04 | Train: loss=1.2629, acc=40.1% | Val: loss=1.1931, acc=52.3% | OFFICIAL=0.5572 (Se=0.673 Sp=0.442) | macroF1=0.4793
+2026-06-08 09:20:14,962 - INFO -   ★ New best model saved (val_loss=-1.1931, val_loss=1.193101)
+2026-06-08 09:20:20,369 - INFO - 
+  Epoch  10/80 (5.4s) | LR: 3.00e-04 | Train: loss=1.2325, acc=40.1% | Val: loss=1.8846, acc=28.3% | OFFICIAL=0.2976 (Se=0.345 Sp=0.250) | macroF1=0.2678
+2026-06-08 09:20:20,570 - INFO -   EarlyStopping: 1/15 (best val_loss: 1.193101 at epoch 9)
+2026-06-08 09:20:25,918 - INFO - 
+  Epoch  11/80 (5.3s) | LR: 3.00e-04 | Train: loss=1.1722, acc=41.0% | Val: loss=1.3377, acc=36.5% | OFFICIAL=0.4451 (Se=0.713 Sp=0.177) | macroF1=0.3345
+2026-06-08 09:20:25,918 - INFO -   EarlyStopping: 2/15 (best val_loss: 1.193101 at epoch 9)
+2026-06-08 09:20:31,491 - INFO - 
+  Epoch  12/80 (5.6s) | LR: 3.00e-04 | Train: loss=1.1514, acc=41.8% | Val: loss=1.2469, acc=33.7% | OFFICIAL=0.3903 (Se=0.570 Sp=0.211) | macroF1=0.3223
+2026-06-08 09:20:31,491 - INFO -   EarlyStopping: 3/15 (best val_loss: 1.193101 at epoch 9)
+2026-06-08 09:20:36,973 - INFO - 
+  Epoch  13/80 (5.5s) | LR: 3.00e-04 | Train: loss=1.1580, acc=44.2% | Val: loss=1.0010, acc=59.4% | OFFICIAL=0.5038 (Se=0.202 Sp=0.806) | macroF1=0.3884
+2026-06-08 09:20:37,017 - INFO -   ★ New best model saved (val_loss=-1.0010, val_loss=1.001042)
+2026-06-08 09:20:42,892 - INFO - 
+  Epoch  14/80 (5.9s) | LR: 3.00e-04 | Train: loss=1.1145, acc=43.8% | Val: loss=1.1100, acc=43.9% | OFFICIAL=0.4589 (Se=0.525 Sp=0.393) | macroF1=0.3754
+2026-06-08 09:20:42,893 - INFO -   EarlyStopping: 1/15 (best val_loss: 1.001042 at epoch 13)
+2026-06-08 09:20:49,219 - INFO - 
+  Epoch  15/80 (6.3s) | LR: 3.00e-04 | Train: loss=1.1201, acc=44.9% | Val: loss=1.0057, acc=43.0% | OFFICIAL=0.4794 (Se=0.646 Sp=0.313) | macroF1=0.3265
+2026-06-08 09:20:49,220 - INFO -   EarlyStopping: 2/15 (best val_loss: 1.001042 at epoch 13)
+2026-06-08 09:20:54,864 - INFO - 
+  Epoch  16/80 (5.6s) | LR: 3.00e-04 | Train: loss=1.1079, acc=46.5% | Val: loss=0.9816, acc=37.3% | OFFICIAL=0.4388 (Se=0.659 Sp=0.218) | macroF1=0.3236
+2026-06-08 09:20:54,909 - INFO -   ★ New best model saved (val_loss=-0.9816, val_loss=0.981598)
+2026-06-08 09:21:00,628 - INFO - 
+  Epoch  17/80 (5.7s) | LR: 3.00e-04 | Train: loss=1.1007, acc=46.4% | Val: loss=1.0933, acc=38.7% | OFFICIAL=0.4600 (Se=0.704 Sp=0.216) | macroF1=0.3543
+2026-06-08 09:21:00,628 - INFO -   EarlyStopping: 1/15 (best val_loss: 0.981598 at epoch 16)
+2026-06-08 09:21:06,374 - INFO - 
+  Epoch  18/80 (5.7s) | LR: 3.00e-04 | Train: loss=1.0560, acc=48.4% | Val: loss=3.2004, acc=19.4% | OFFICIAL=0.2120 (Se=0.274 Sp=0.150) | macroF1=0.1582
+2026-06-08 09:21:06,375 - INFO -   EarlyStopping: 2/15 (best val_loss: 0.981598 at epoch 16)
+2026-06-08 09:21:12,026 - INFO - 
+  Epoch  19/80 (5.7s) | LR: 3.00e-04 | Train: loss=1.0586, acc=50.3% | Val: loss=1.1859, acc=40.5% | OFFICIAL=0.4621 (Se=0.655 Sp=0.269) | macroF1=0.3712
+2026-06-08 09:21:12,026 - INFO -   EarlyStopping: 3/15 (best val_loss: 0.981598 at epoch 16)
+2026-06-08 09:21:17,510 - INFO - 
+  Epoch  20/80 (5.5s) | LR: 3.00e-04 | Train: loss=1.0436, acc=50.6% | Val: loss=1.1081, acc=37.0% | OFFICIAL=0.4395 (Se=0.673 Sp=0.206) | macroF1=0.3276
+2026-06-08 09:21:17,729 - INFO -   EarlyStopping: 4/15 (best val_loss: 0.981598 at epoch 16)
+2026-06-08 09:21:23,099 - INFO - 
+  Epoch  21/80 (5.4s) | LR: 3.00e-04 | Train: loss=0.9999, acc=51.7% | Val: loss=1.2893, acc=45.2% | OFFICIAL=0.4769 (Se=0.561 Sp=0.393) | macroF1=0.4145
+2026-06-08 09:21:23,100 - INFO -   EarlyStopping: 5/15 (best val_loss: 0.981598 at epoch 16)
+2026-06-08 09:21:28,492 - INFO - 
+  Epoch  22/80 (5.4s) | LR: 3.00e-04 | Train: loss=0.9862, acc=52.1% | Val: loss=1.2513, acc=39.7% | OFFICIAL=0.4282 (Se=0.534 Sp=0.323) | macroF1=0.3648
+2026-06-08 09:21:28,492 - INFO -   EarlyStopping: 6/15 (best val_loss: 0.981598 at epoch 16)
+2026-06-08 09:21:33,912 - INFO - 
+  Epoch  23/80 (5.4s) | LR: 3.00e-04 | Train: loss=0.9773, acc=52.2% | Val: loss=1.1568, acc=59.7% | OFFICIAL=0.4980 (Se=0.166 Sp=0.830) | macroF1=0.3502
+2026-06-08 09:21:33,913 - INFO -   EarlyStopping: 7/15 (best val_loss: 0.981598 at epoch 16)
+2026-06-08 09:21:39,273 - INFO - 
+  Epoch  24/80 (5.4s) | LR: 3.00e-04 | Train: loss=0.9500, acc=54.4% | Val: loss=2.6600, acc=25.0% | OFFICIAL=0.2578 (Se=0.283 Sp=0.233) | macroF1=0.2284
+2026-06-08 09:21:39,274 - INFO -   EarlyStopping: 8/15 (best val_loss: 0.981598 at epoch 16)
+2026-06-08 09:21:44,967 - INFO - 
+  Epoch  25/80 (5.7s) | LR: 1.50e-04 | Train: loss=0.8783, acc=57.1% | Val: loss=0.9774, acc=58.0% | OFFICIAL=0.5155 (Se=0.300 Sp=0.731) | macroF1=0.4055
+2026-06-08 09:21:45,023 - INFO -   ★ New best model saved (val_loss=-0.9774, val_loss=0.977354)
+2026-06-08 09:21:50,789 - INFO - 
+  Epoch  26/80 (5.8s) | LR: 1.50e-04 | Train: loss=0.8755, acc=55.9% | Val: loss=1.2312, acc=54.3% | OFFICIAL=0.5380 (Se=0.520 Sp=0.556) | macroF1=0.4360
+2026-06-08 09:21:50,789 - INFO -   EarlyStopping: 1/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:21:56,347 - INFO - 
+  Epoch  27/80 (5.6s) | LR: 1.50e-04 | Train: loss=0.8241, acc=59.3% | Val: loss=1.1225, acc=48.8% | OFFICIAL=0.5110 (Se=0.587 Sp=0.434) | macroF1=0.4080
+2026-06-08 09:21:56,348 - INFO -   EarlyStopping: 2/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:01,733 - INFO - 
+  Epoch  28/80 (5.4s) | LR: 1.50e-04 | Train: loss=0.7928, acc=60.5% | Val: loss=1.6706, acc=40.3% | OFFICIAL=0.4259 (Se=0.502 Sp=0.350) | macroF1=0.3606
+2026-06-08 09:22:01,733 - INFO -   EarlyStopping: 3/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:07,202 - INFO - 
+  Epoch  29/80 (5.5s) | LR: 1.50e-04 | Train: loss=0.8063, acc=61.0% | Val: loss=2.0111, acc=41.7% | OFFICIAL=0.4389 (Se=0.511 Sp=0.367) | macroF1=0.3472
+2026-06-08 09:22:07,202 - INFO -   EarlyStopping: 4/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:12,889 - INFO - 
+  Epoch  30/80 (5.7s) | LR: 1.50e-04 | Train: loss=0.7838, acc=60.5% | Val: loss=1.8179, acc=42.2% | OFFICIAL=0.4353 (Se=0.480 Sp=0.391) | macroF1=0.3688
+2026-06-08 09:22:13,156 - INFO -   EarlyStopping: 5/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:19,120 - INFO - 
+  Epoch  31/80 (6.0s) | LR: 1.50e-04 | Train: loss=0.7728, acc=62.3% | Val: loss=1.7743, acc=41.6% | OFFICIAL=0.4284 (Se=0.471 Sp=0.386) | macroF1=0.3593
+2026-06-08 09:22:19,120 - INFO -   EarlyStopping: 6/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:24,980 - INFO - 
+  Epoch  32/80 (5.9s) | LR: 1.50e-04 | Train: loss=0.7439, acc=62.4% | Val: loss=4.9328, acc=22.2% | OFFICIAL=0.2400 (Se=0.300 Sp=0.180) | macroF1=0.2108
+2026-06-08 09:22:24,980 - INFO -   EarlyStopping: 7/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:30,682 - INFO - 
+  Epoch  33/80 (5.7s) | LR: 1.50e-04 | Train: loss=0.7265, acc=63.7% | Val: loss=1.2970, acc=57.8% | OFFICIAL=0.5318 (Se=0.377 Sp=0.687) | macroF1=0.4283
+2026-06-08 09:22:30,682 - INFO -   EarlyStopping: 8/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:36,186 - INFO - 
+  Epoch  34/80 (5.5s) | LR: 7.50e-05 | Train: loss=0.6755, acc=65.9% | Val: loss=2.0257, acc=43.6% | OFFICIAL=0.4390 (Se=0.448 Sp=0.430) | macroF1=0.3668
+2026-06-08 09:22:36,186 - INFO -   EarlyStopping: 9/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:41,780 - INFO - 
+  Epoch  35/80 (5.6s) | LR: 7.50e-05 | Train: loss=0.6675, acc=66.2% | Val: loss=1.1493, acc=58.6% | OFFICIAL=0.5553 (Se=0.453 Sp=0.658) | macroF1=0.4349
+2026-06-08 09:22:41,782 - INFO -   EarlyStopping: 10/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:47,798 - INFO - 
+  Epoch  36/80 (6.0s) | LR: 7.50e-05 | Train: loss=0.6435, acc=68.5% | Val: loss=1.1569, acc=63.9% | OFFICIAL=0.5524 (Se=0.260 Sp=0.845) | macroF1=0.4290
+2026-06-08 09:22:47,799 - INFO -   EarlyStopping: 11/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:53,468 - INFO - 
+  Epoch  37/80 (5.7s) | LR: 7.50e-05 | Train: loss=0.6315, acc=68.9% | Val: loss=2.3705, acc=43.1% | OFFICIAL=0.4395 (Se=0.466 Sp=0.413) | macroF1=0.3659
+2026-06-08 09:22:53,469 - INFO -   EarlyStopping: 12/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:22:59,073 - INFO - 
+  Epoch  38/80 (5.6s) | LR: 7.50e-05 | Train: loss=0.6385, acc=67.7% | Val: loss=2.1189, acc=42.2% | OFFICIAL=0.4415 (Se=0.507 Sp=0.376) | macroF1=0.3648
+2026-06-08 09:22:59,074 - INFO -   EarlyStopping: 13/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:23:04,644 - INFO - 
+  Epoch  39/80 (5.6s) | LR: 7.50e-05 | Train: loss=0.6308, acc=68.4% | Val: loss=1.5292, acc=50.7% | OFFICIAL=0.5163 (Se=0.547 Sp=0.485) | macroF1=0.3988
+2026-06-08 09:23:04,645 - INFO -   EarlyStopping: 14/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:23:10,136 - INFO - 
+  Epoch  40/80 (5.5s) | LR: 7.50e-05 | Train: loss=0.5968, acc=70.6% | Val: loss=1.2021, acc=63.5% | OFFICIAL=0.5981 (Se=0.475 Sp=0.721) | macroF1=0.4659
+2026-06-08 09:23:10,367 - INFO -   EarlyStopping: 15/15 (best val_loss: 0.977354 at epoch 25)
+2026-06-08 09:23:10,367 - INFO - 
+  ⏹ EARLY STOPPING at epoch 40
+2026-06-08 09:23:10,372 - INFO -     Best model: epoch 25 (val_loss: 0.977354, val_acc: 58.0%)
+2026-06-08 09:23:10,394 - INFO - 
+======================================================================
+2026-06-08 09:23:10,394 - INFO - TRAINING COMPLETED
+2026-06-08 09:23:10,394 - INFO - ======================================================================
+2026-06-08 09:23:10,394 - INFO -   Total time: 3.7 minutes
+2026-06-08 09:23:10,394 - INFO -   Epochs run: 40/80
+2026-06-08 09:23:10,394 - INFO -   Best epoch: 25
+2026-06-08 09:23:10,394 - INFO -   Best val_loss: 0.977354
+2026-06-08 09:23:10,394 - INFO -   Best val_acc: 58.0%
+2026-06-08 09:23:10,396 - INFO -   Model saved: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\final_model.pth
+2026-06-08 09:23:10,396 - INFO - ======================================================================
+2026-06-08 09:23:10,396 - INFO - 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 09:23:10,396 - INFO - STEP 5: POST-TRAINING VISUALIZATION
+2026-06-08 09:23:10,397 - INFO - ══════════════════════════════════════════════════════════════════════
+2026-06-08 09:23:12,174 - INFO -   Training curves: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\figures\training_curves.png
+2026-06-08 09:23:12,468 - INFO -   Overfitting gap: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\figures\overfitting_gap.png
+2026-06-08 09:23:15,785 - INFO - Removed 87 unused nodes
+2026-06-08 09:23:15,787 - INFO - No unused functions to remove
+2026-06-08 09:23:15,790 - INFO - Skipping constant folding for node 'node_Shape_0' because it is graph input to preserve graph signature
+2026-06-08 09:23:15,795 - INFO - Skipping constant folding for node 'node_conv2d' because it is graph input to preserve graph signature
+2026-06-08 09:23:15,975 - INFO - Removed 67 unused nodes
+2026-06-08 09:23:15,979 - INFO - No unused functions to remove
+2026-06-08 09:23:15,980 - INFO - Skipping constant folding for node 'node_Shape_0' because it is graph input to preserve graph signature
+2026-06-08 09:23:15,981 - INFO - Skipping constant folding for node 'node_Conv_197' because it is graph input to preserve graph signature
+2026-06-08 09:23:16,032 - INFO - Removed 1 unused nodes
+2026-06-08 09:23:16,034 - INFO - No unused functions to remove
+2026-06-08 09:23:16,090 - INFO -   Trained model exported to ONNX: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\best_model.onnx
+2026-06-08 09:23:16,091 - INFO -   Open with: netron "D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\best_model.onnx"
+2026-06-08 09:23:16,093 - INFO -   Configuration saved: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\training_config.json
+2026-06-08 09:23:16,093 - INFO - 
+======================================================================
+2026-06-08 09:23:16,093 - INFO - ✅ PIPELINE COMPLETE — SUMMARY
+2026-06-08 09:23:16,093 - INFO - ======================================================================
+2026-06-08 09:23:16,093 - INFO -   Model:           RespiratoryNet
+2026-06-08 09:23:16,094 - INFO -   Parameters:       556,500
+2026-06-08 09:23:16,094 - INFO -   Best epoch:      25
+2026-06-08 09:23:16,094 - INFO -   Best val_loss:   0.977354
+2026-06-08 09:23:16,094 - INFO -   Best val_acc:    58.0%
+2026-06-08 09:23:16,094 - INFO -   Total time:     3.7 minutes
+2026-06-08 09:23:16,095 - INFO - 
+2026-06-08 09:23:16,095 - INFO -   GENERATED FILES:
+2026-06-08 09:23:16,095 - INFO -   ├── D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\best_model.pth
+2026-06-08 09:23:16,095 - INFO -   ├── D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\best_model.onnx
+2026-06-08 09:23:16,095 - INFO -   ├── D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\training_config.json
+2026-06-08 09:23:16,095 - INFO -   ├── D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\training_log.csv
+2026-06-08 09:23:16,095 - INFO -   ├── D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\figures\training_curves.png
+2026-06-08 09:23:16,095 - INFO -   ├── D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\figures\overfitting_gap.png
+2026-06-08 09:23:16,097 - INFO -   └── D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\tensorboard\...
+2026-06-08 09:23:16,097 - INFO - 
+2026-06-08 09:23:16,097 - INFO -   NEXT STEPS:
+2026-06-08 09:23:16,097 - INFO -   1. Review curves in TensorBoard:
+2026-06-08 09:23:16,097 - INFO -      tensorboard --logdir "D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\tensorboard"
+2026-06-08 09:23:16,097 - INFO -   2. Explore the model in Netron:
+2026-06-08 09:23:16,097 - INFO -      netron "D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\best_model.onnx"
+2026-06-08 09:23:16,098 - INFO -   3. Run Script 10 for full evaluation on the test set
+2026-06-08 09:23:16,098 - INFO - ======================================================================

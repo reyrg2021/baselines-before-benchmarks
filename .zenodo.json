@@ -1,0 +1,29 @@
+{
+  "upload_type": "software",
+  "title": "Baselines Before Benchmarks: code for the patient-level evaluation of compact, pretrained, and continuous-time models for respiratory sound classification at the edge",
+  "description": "<p>Code, cycle-level split, per-run test predictions, and training logs for the article <em>Baselines Before Benchmarks: A Patient-Level Evaluation of Compact, Pretrained, and Continuous-Time Models for Respiratory Sound Classification at the Edge</em> (Rodriguez-Guillen and Garcia-Garcia, submitted to PeerJ Computer Science, 2026). The pipeline covers signal quality control, cycle segmentation, log-mel extraction, training of six configurations on the official ICBHI 2017 split over five seeds, reference baselines that read no audio, paired equivalence tests, patient-level bootstrap intervals, INT8 quantization, and profiling on a Raspberry Pi 5. Audio from ICBHI 2017 and SPRSound is not redistributed; see README.md.</p>",
+  "creators": [
+    {
+      "name": "Rodriguez-Guillen, Reinier",
+      "affiliation": "Facultad de Ingeniería, Universidad Autónoma de Chile",
+      "orcid": "0000-0002-2895-4477"
+    },
+    {
+      "name": "Garcia-Garcia, Yainet",
+      "affiliation": "Facultad de Ingeniería, Universidad Autónoma de Chile",
+      "orcid": "0000-0001-7565-4859"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "respiratory sound classification",
+    "ICBHI 2017",
+    "auscultation",
+    "edge computing",
+    "Raspberry Pi 5",
+    "model quantization",
+    "continuous-time neural networks",
+    "reproducible evaluation"
+  ]
+}

@@ -1,0 +1,46 @@
+23:17:36 | INFO    | ==========================================================================
+23:17:36 | INFO    |   SCRIPT 41 - SUPPLEMENTARY ARTIFACTS
+23:17:36 | INFO    | ==========================================================================
+23:17:36 | INFO    |   Date:     2026-09-17 23:17:36
+23:17:36 | INFO    |   BASE_DIR:  D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+23:17:36 | INFO    |   Output:    D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\supplementary
+23:17:36 | INFO    |   Log:       D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\export_supplementary_log.txt
+23:17:36 | INFO    | 
+23:17:36 | INFO    | ==========================================================================
+23:17:36 | INFO    |   S14 - PREDICTIONS PER SEED
+23:17:36 | INFO    | ==========================================================================
+23:17:36 | INFO    |   test_cycles.csv: 2733 cycles
+23:17:36 | INFO    |   CNN_FP32                 5 seeds exported
+23:17:36 | INFO    |   CNN_INT8                 5 seeds exported
+23:17:36 | INFO    |   MobileNetV3_ImageNet     5 seeds exported
+23:17:36 | INFO    |   MobileNetV3_scratch      5 seeds exported
+23:17:36 | INFO    |   PANNs_CNN6_official      5 seeds exported
+23:17:37 | INFO    |   PANNs_CNN6_tune          5 seeds exported
+23:17:37 | INFO    |   CfC_Hybrid               5 seeds exported
+23:17:37 | INFO    |   LSTM_Hybrid              5 seeds exported
+23:17:37 | INFO    |   GRU_Hybrid               5 seeds exported
+23:17:37 | INFO    |   CfC_no_mixed_memory      5 seeds exported
+23:17:37 | INFO    |   README written: README_S14.txt
+23:17:37 | INFO    | 
+23:17:37 | INFO    | ==========================================================================
+23:17:37 | INFO    |   S15 - INT8 ARTIFACT (TORCHSCRIPT)
+23:17:37 | INFO    | ==========================================================================
+23:17:37 | INFO    |   Copied: S15_cnn_int8_scripted.pt (0.58 MB)
+23:17:37 | INFO    | 
+23:17:37 | INFO    | ==========================================================================
+23:17:37 | INFO    |   BLOCK FOR supplementary/README.md
+23:17:37 | INFO    | ==========================================================================
+23:17:37 | INFO    |   Block printed to screen (not written automatically)
+23:17:37 | INFO    | 
+23:17:37 | INFO    | ==========================================================================
+23:17:37 | INFO    |   VERDICT
+23:17:37 | INFO    | ==========================================================================
+23:17:37 | INFO    |   Predictions per seed ..... YES
+23:17:37 | INFO    |   INT8 artifact ............... YES
+23:17:37 | INFO    | 
+23:17:37 | INFO    |   The 'Data and Code Availability' block of the manuscript
+23:17:37 | INFO    |   is now accurate. Recompress supplementary.zip before uploading.
+23:17:37 | INFO    | 
+23:17:37 | INFO    | ==========================================================================
+23:17:37 | INFO    |   END OF SCRIPT 41
+23:17:37 | INFO    | ==========================================================================

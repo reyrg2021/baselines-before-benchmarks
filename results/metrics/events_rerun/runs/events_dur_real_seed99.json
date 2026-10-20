@@ -1,0 +1,148 @@
+{
+ "n_params": 26564,
+ "epochs_run": 16,
+ "seconds": 47.490506649017334,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.3354956359293924,
+   "val_loss": 1.2410018246943557,
+   "val_score": 0.4477012495102094
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.2576410983925435,
+   "val_loss": 1.3257572789830485,
+   "val_score": 0.3300426662022726
+  },
+  {
+   "epoch": 3,
+   "train_loss": 1.2017327057425655,
+   "val_loss": 1.3266048228646827,
+   "val_score": 0.37655100352649223
+  },
+  {
+   "epoch": 4,
+   "train_loss": 1.1560443930127728,
+   "val_loss": 1.2669609931510264,
+   "val_score": 0.3941562540815882
+  },
+  {
+   "epoch": 5,
+   "train_loss": 1.1245970649149881,
+   "val_loss": 1.341007234167865,
+   "val_score": 0.37846118681701424
+  },
+  {
+   "epoch": 6,
+   "train_loss": 1.084973785770473,
+   "val_loss": 1.298877279026302,
+   "val_score": 0.38782162915233576
+  },
+  {
+   "epoch": 7,
+   "train_loss": 1.040256927333661,
+   "val_loss": 1.2944719752927465,
+   "val_score": 0.40600374417693413
+  },
+  {
+   "epoch": 8,
+   "train_loss": 1.028555825076886,
+   "val_loss": 1.2711399504518885,
+   "val_score": 0.39816709477992074
+  },
+  {
+   "epoch": 9,
+   "train_loss": 0.9997272980746938,
+   "val_loss": 1.3881040220185528,
+   "val_score": 0.3372208193652314
+  },
+  {
+   "epoch": 10,
+   "train_loss": 0.9778186404527124,
+   "val_loss": 1.3387729060931468,
+   "val_score": 0.3935195263180809
+  },
+  {
+   "epoch": 11,
+   "train_loss": 0.9542915751329109,
+   "val_loss": 1.3078550954503336,
+   "val_score": 0.3993208237189255
+  },
+  {
+   "epoch": 12,
+   "train_loss": 0.9116236315556426,
+   "val_loss": 1.4557541103813592,
+   "val_score": 0.348224781226871
+  },
+  {
+   "epoch": 13,
+   "train_loss": 0.9053605654702258,
+   "val_loss": 1.2784941211460144,
+   "val_score": 0.43253950977404326
+  },
+  {
+   "epoch": 14,
+   "train_loss": 0.8585244198343647,
+   "val_loss": 1.3572962888582485,
+   "val_score": 0.4101179851103661
+  },
+  {
+   "epoch": 15,
+   "train_loss": 0.8587222937683561,
+   "val_loss": 1.3602412566425293,
+   "val_score": 0.41415059427924594
+  },
+  {
+   "epoch": 16,
+   "train_loss": 0.8421972399327292,
+   "val_loss": 1.3370026875668624,
+   "val_score": 0.41153837781357483
+  }
+ ],
+ "val_loss": {
+  "best_epoch": 1,
+  "best_value": 1.2410018246943557,
+  "test_icbhi": 0.3255031019137602,
+  "test_se": 0.4189655172413793,
+  "test_sp": 0.23204068658614113,
+  "test_auc": 0.48013733914987833
+ },
+ "val_score": {
+  "best_epoch": 1,
+  "best_value": 0.4477012495102094,
+  "test_icbhi": 0.3255031019137602,
+  "test_se": 0.4189655172413793,
+  "test_sp": 0.23204068658614113,
+  "test_auc": 0.48013733914987833
+ },
+ "condition": "dur",
+ "mode": "real",
+ "seed": 99,
+ "no_duration": false,
+ "args": {
+  "events": ".\\data\\events\\events.pkl",
+  "split_dir": "D:\\UNIVERSIDAD\\PAPERS\\1.PAPER_FONIS_1_2027\\FONIS_MVP\\data\\splits\\strategy1_official",
+  "seeds": [
+   42,
+   123,
+   7,
+   99,
+   314
+  ],
+  "epochs": 100,
+  "batch_size": 32,
+  "hidden": 64,
+  "lr": 0.001,
+  "patience": 15,
+  "n_boot": 2000,
+  "boot_seed": 2026,
+  "delta": 0.02,
+  "alpha": 0.05,
+  "out_dir": null,
+  "force": false,
+  "analyze_only": false,
+  "dry_run": false
+ },
+ "timestamp": "2026-09-17T09:44:55"
+}

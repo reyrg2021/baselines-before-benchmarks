@@ -1,0 +1,8 @@
+model,display,n_runs,n_degenerate,n_verified,epochs_min,epochs_max,best_epoch_min,best_epoch_max,train_acc_min_pct,train_acc_max_pct,test_auc_min,test_auc_max,pearson_all,pearson_p_all,pearson_n_all,pearson_trained_only,pearson_p_trained_only,pearson_n_trained_only
+CNN,CNN-RespiratoryNet (FP32),5,1,5,17,80,2,69,23.8,80.2,0.5450939342788873,0.6045827213538812,-0.5789143139933801,0.3064431376293052,5,0.7425842555084525,0.25741574449154747,4
+CfC,CfC-Hybrid,5,0,5,53,80,33,66,44.8,60.2,0.478043273341079,0.5256993006993007,0.2684864840197718,0.6623049981878374,5,0.2684864840197718,0.6623049981878374,5
+LSTM,LSTM-Hybrid,5,0,5,71,80,51,62,45.9,52.8,,,,,0,,,0
+GRU,GRU-Hybrid,5,0,5,70,80,50,70,44.1,57.3,,,,,0,,,0
+CfC_pure,CfC without mixed memory,5,3,5,21,36,1,16,23.2,26.7,,,,,0,,,0
+CNN_aug,CNN-RespiratoryNet with augmentation,5,1,5,16,32,1,17,24.00841346153846,30.018028846153847,,,,,0,,,0
+MNv3_noaug,MobileNetV3-ImageNet without augmentation,1,0,1,19,19,4,4,98.4,98.4,,,,,0,,,0

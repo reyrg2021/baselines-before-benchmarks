@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-09-16T10:48:56",
+  "preset_arm_a": "moderate",
+  "split": "strategy1_official",
+  "seeds": [
+    42,
+    123,
+    7,
+    99,
+    314
+  ],
+  "aggregated": [
+    {
+      "arm": "cnn_aug",
+      "display": "CNN-RespiratoryNet + augmentation",
+      "n_seeds": 5,
+      "icbhi_mean": 0.24694702632790405,
+      "icbhi_sd": 0.15246190780174387,
+      "se_off_mean": 0.20362068965517244,
+      "se_off_sd": 0.177692259929917,
+      "sp_off_mean": 0.2902733630006357,
+      "sp_off_sd": 0.25562531452254467,
+      "auc_mean": 0.5223668259640046,
+      "auc_sd": 0.06251853266506467,
+      "se_Wheeze_mean": 0.16923076923076924,
+      "se_Wheeze_sd": 0.28734516743636795,
+      "se_Both_mean": 0.3712230215827338,
+      "se_Both_sd": 0.40552189822175305
+    },
+    {
+      "arm": "mnv3_noaug",
+      "display": "MobileNetV3-ImageNet without augmentation or mixup",
+      "n_seeds": 5,
+      "icbhi_mean": 0.43907534471797793,
+      "icbhi_sd": 0.04918215985898294,
+      "se_off_mean": 0.07586206896551725,
+      "se_off_sd": 0.0325024008991532,
+      "sp_off_mean": 0.8022886204704387,
+      "sp_off_sd": 0.1226666610847111,
+      "auc_mean": 0.5121536378981519,
+      "auc_sd": 0.03342181553201005,
+      "se_Wheeze_mean": 0.11405835543766578,
+      "se_Wheeze_sd": 0.07565496390955788,
+      "se_Both_mean": 0.1064748201438849,
+      "se_Both_sd": 0.08240472554403658
+    }
+  ],
+  "paired_vs_baseline": [
+    {
+      "arm": "cnn_aug",
+      "baseline": "CNN-RespiratoryNet (FP32)",
+      "n_seeds": 5,
+      "icbhi_baseline_mean": 0.4595960387574808,
+      "icbhi_new_mean": 0.24694702632790405,
+      "icbhi_diff_mean": -0.2126490124295767,
+      "icbhi_ci90_lo": -0.3625903429668652,
+      "icbhi_ci90_hi": -0.06270768189228818,
+      "icbhi_p_ttest": 0.03903199331244204,
+      "icbhi_p_tost": 0.974022093857406,
+      "icbhi_equivalent": false,
+      "auc_baseline_mean": 0.5717383322007147,
+      "auc_new_mean": 0.5223668259640046,
+      "auc_diff_mean": -0.04937150623671003,
+      "auc_ci90_lo": -0.12893902717983077,
+      "auc_ci90_hi": 0.030196014706410722,
+      "auc_p_ttest": 0.2564556984555829,
+      "auc_p_tost": 0.7623403488620996,
+      "auc_equivalent": false
+    },
+    {
+      "arm": "mnv3_noaug",
+      "baseline": "MobileNetV3-Small (ImageNet)",
+      "n_seeds": 5,
+      "icbhi_baseline_mean": 0.4622873051713177,
+      "icbhi_new_mean": 0.43907534471797793,
+      "icbhi_diff_mean": -0.023211960453339765,
+      "icbhi_ci90_lo": -0.06281804130947076,
+      "icbhi_ci90_hi": 0.01639412040279123,
+      "icbhi_p_ttest": 0.27963283384551557,
+      "icbhi_p_tost": 0.5644323391853023,
+      "icbhi_equivalent": false,
+      "auc_baseline_mean": 0.5431059144617139,
+      "auc_new_mean": 0.5121536378981519,
+      "auc_diff_mean": -0.03095227656356179,
+      "auc_ci90_lo": -0.05884363832388731,
+      "auc_ci90_hi": -0.0030609148032362705,
+      "auc_p_ttest": 0.07717291996030183,
+      "auc_p_tost": 0.7751890752236563,
+      "auc_equivalent": false
+    }
+  ]
+}

@@ -1,0 +1,639 @@
+{
+  "timestamp": "2026-06-08T10:51:30.083187",
+  "per_run": {
+    "cnn_official_seed42": {
+      "model_key": "cnn",
+      "model_display": "CNN-RespiratoryNet",
+      "seed": 42,
+      "icbhi": 0.5611925579552464,
+      "sensitivity": 0.32743811366734205,
+      "specificity": 0.7949470022431506,
+      "accuracy": 0.4478594950603732,
+      "params": 556500,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 665,
+          "FN": 908,
+          "FP": 263,
+          "TN": 897,
+          "sensitivity": 0.4227590591226955,
+          "specificity": 0.7732758620689655
+        },
+        {
+          "class": "Crackle",
+          "TP": 550,
+          "FN": 94,
+          "FP": 1197,
+          "TN": 892,
+          "sensitivity": 0.8540372670807453,
+          "specificity": 0.4269985639061752
+        },
+        {
+          "class": "Wheeze",
+          "TP": 7,
+          "FN": 370,
+          "FP": 41,
+          "TN": 2315,
+          "sensitivity": 0.01856763925729443,
+          "specificity": 0.982597623089983
+        },
+        {
+          "class": "Both",
+          "TP": 2,
+          "FN": 137,
+          "FP": 8,
+          "TN": 2586,
+          "sensitivity": 0.014388489208633094,
+          "specificity": 0.9969159599074788
+        }
+      ]
+    },
+    "cnn_official_seed123": {
+      "model_key": "cnn",
+      "model_display": "CNN-RespiratoryNet",
+      "seed": 123,
+      "icbhi": 0.580344646013748,
+      "sensitivity": 0.38008718241202555,
+      "specificity": 0.7806021096154706,
+      "accuracy": 0.46176362971094037,
+      "params": 556500,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 893,
+          "FN": 680,
+          "FP": 553,
+          "TN": 607,
+          "sensitivity": 0.5677050222504768,
+          "specificity": 0.5232758620689655
+        },
+        {
+          "class": "Crackle",
+          "TP": 222,
+          "FN": 422,
+          "FP": 372,
+          "TN": 1717,
+          "sensitivity": 0.3447204968944099,
+          "specificity": 0.8219243657252274
+        },
+        {
+          "class": "Wheeze",
+          "TP": 99,
+          "FN": 278,
+          "FP": 316,
+          "TN": 2040,
+          "sensitivity": 0.2625994694960212,
+          "specificity": 0.865874363327674
+        },
+        {
+          "class": "Both",
+          "TP": 48,
+          "FN": 91,
+          "FP": 230,
+          "TN": 2364,
+          "sensitivity": 0.34532374100719426,
+          "specificity": 0.9113338473400154
+        }
+      ]
+    },
+    "cnn_official_seed7": {
+      "model_key": "cnn",
+      "model_display": "CNN-RespiratoryNet",
+      "seed": 7,
+      "icbhi": 0.5834142405896523,
+      "sensitivity": 0.3816597373208538,
+      "specificity": 0.7851687438584508,
+      "accuracy": 0.44749359678009515,
+      "params": 556500,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 705,
+          "FN": 868,
+          "FP": 433,
+          "TN": 727,
+          "sensitivity": 0.4481881754609027,
+          "specificity": 0.6267241379310344
+        },
+        {
+          "class": "Crackle",
+          "TP": 372,
+          "FN": 272,
+          "FP": 607,
+          "TN": 1482,
+          "sensitivity": 0.577639751552795,
+          "specificity": 0.7094303494494973
+        },
+        {
+          "class": "Wheeze",
+          "TP": 121,
+          "FN": 256,
+          "FP": 367,
+          "TN": 1989,
+          "sensitivity": 0.3209549071618037,
+          "specificity": 0.8442275042444821
+        },
+        {
+          "class": "Both",
+          "TP": 25,
+          "FN": 114,
+          "FP": 103,
+          "TN": 2491,
+          "sensitivity": 0.17985611510791366,
+          "specificity": 0.9602929838087895
+        }
+      ]
+    },
+    "cnn_official_seed99": {
+      "model_key": "cnn",
+      "model_display": "CNN-RespiratoryNet",
+      "seed": 99,
+      "icbhi": 0.5944442589644194,
+      "sensitivity": 0.39487558950904045,
+      "specificity": 0.7940129284197985,
+      "accuracy": 0.49323088181485547,
+      "params": 556500,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 909,
+          "FN": 664,
+          "FP": 495,
+          "TN": 665,
+          "sensitivity": 0.5778766687857597,
+          "specificity": 0.5732758620689655
+        },
+        {
+          "class": "Crackle",
+          "TP": 305,
+          "FN": 339,
+          "FP": 455,
+          "TN": 1634,
+          "sensitivity": 0.47360248447204967,
+          "specificity": 0.7821924365725227
+        },
+        {
+          "class": "Wheeze",
+          "TP": 96,
+          "FN": 281,
+          "FP": 301,
+          "TN": 2055,
+          "sensitivity": 0.2546419098143236,
+          "specificity": 0.8722410865874364
+        },
+        {
+          "class": "Both",
+          "TP": 38,
+          "FN": 101,
+          "FP": 134,
+          "TN": 2460,
+          "sensitivity": 0.2733812949640288,
+          "specificity": 0.9483423284502699
+        }
+      ]
+    },
+    "cnn_official_seed314": {
+      "model_key": "cnn",
+      "model_display": "CNN-RespiratoryNet",
+      "seed": 314,
+      "icbhi": 0.5831772856988369,
+      "sensitivity": 0.37211253332637945,
+      "specificity": 0.7942420380712942,
+      "accuracy": 0.4862788144895719,
+      "params": 556500,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 845,
+          "FN": 728,
+          "FP": 450,
+          "TN": 710,
+          "sensitivity": 0.5371900826446281,
+          "specificity": 0.6120689655172413
+        },
+        {
+          "class": "Crackle",
+          "TP": 385,
+          "FN": 259,
+          "FP": 618,
+          "TN": 1471,
+          "sensitivity": 0.5978260869565217,
+          "specificity": 0.70416467209191
+        },
+        {
+          "class": "Wheeze",
+          "TP": 79,
+          "FN": 298,
+          "FP": 250,
+          "TN": 2106,
+          "sensitivity": 0.20954907161803712,
+          "specificity": 0.8938879456706282
+        },
+        {
+          "class": "Both",
+          "TP": 20,
+          "FN": 119,
+          "FP": 86,
+          "TN": 2508,
+          "sensitivity": 0.14388489208633093,
+          "specificity": 0.9668465690053971
+        }
+      ]
+    },
+    "hybrid_official_seed42": {
+      "model_key": "hybrid",
+      "model_display": "CfC-Hybrid",
+      "seed": 42,
+      "icbhi": 0.526290616258381,
+      "sensitivity": 0.3026280638416771,
+      "specificity": 0.749953168675085,
+      "accuracy": 0.30698865715331136,
+      "params": 491492,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 448,
+          "FN": 1125,
+          "FP": 372,
+          "TN": 788,
+          "sensitivity": 0.2848061029879212,
+          "specificity": 0.6793103448275862
+        },
+        {
+          "class": "Crackle",
+          "TP": 250,
+          "FN": 394,
+          "FP": 819,
+          "TN": 1270,
+          "sensitivity": 0.38819875776397517,
+          "specificity": 0.607946385830541
+        },
+        {
+          "class": "Wheeze",
+          "TP": 105,
+          "FN": 272,
+          "FP": 422,
+          "TN": 1934,
+          "sensitivity": 0.27851458885941643,
+          "specificity": 0.8208828522920204
+        },
+        {
+          "class": "Both",
+          "TP": 36,
+          "FN": 103,
+          "FP": 281,
+          "TN": 2313,
+          "sensitivity": 0.2589928057553957,
+          "specificity": 0.8916730917501927
+        }
+      ]
+    },
+    "hybrid_official_seed123": {
+      "model_key": "hybrid",
+      "model_display": "CfC-Hybrid",
+      "seed": 123,
+      "icbhi": 0.5639783898456846,
+      "sensitivity": 0.359985237936121,
+      "specificity": 0.7679715417552482,
+      "accuracy": 0.39846322722283206,
+      "params": 491492,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 679,
+          "FN": 894,
+          "FP": 482,
+          "TN": 678,
+          "sensitivity": 0.431659249841068,
+          "specificity": 0.5844827586206897
+        },
+        {
+          "class": "Crackle",
+          "TP": 229,
+          "FN": 415,
+          "FP": 511,
+          "TN": 1578,
+          "sensitivity": 0.3555900621118012,
+          "specificity": 0.755385351842987
+        },
+        {
+          "class": "Wheeze",
+          "TP": 143,
+          "FN": 234,
+          "FP": 437,
+          "TN": 1919,
+          "sensitivity": 0.3793103448275862,
+          "specificity": 0.8145161290322581
+        },
+        {
+          "class": "Both",
+          "TP": 38,
+          "FN": 101,
+          "FP": 214,
+          "TN": 2380,
+          "sensitivity": 0.2733812949640288,
+          "specificity": 0.9175019275250579
+        }
+      ]
+    },
+    "hybrid_official_seed7": {
+      "model_key": "hybrid",
+      "model_display": "CfC-Hybrid",
+      "seed": 7,
+      "icbhi": 0.5162503671874696,
+      "sensitivity": 0.2852928965894393,
+      "specificity": 0.7472078377855,
+      "accuracy": 0.3512623490669594,
+      "params": 491492,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 664,
+          "FN": 909,
+          "FP": 534,
+          "TN": 626,
+          "sensitivity": 0.4221233312142403,
+          "specificity": 0.5396551724137931
+        },
+        {
+          "class": "Crackle",
+          "TP": 184,
+          "FN": 460,
+          "FP": 629,
+          "TN": 1460,
+          "sensitivity": 0.2857142857142857,
+          "specificity": 0.6988989947343226
+        },
+        {
+          "class": "Wheeze",
+          "TP": 82,
+          "FN": 295,
+          "FP": 374,
+          "TN": 1982,
+          "sensitivity": 0.21750663129973474,
+          "specificity": 0.8412563667232598
+        },
+        {
+          "class": "Both",
+          "TP": 30,
+          "FN": 109,
+          "FP": 236,
+          "TN": 2358,
+          "sensitivity": 0.2158273381294964,
+          "specificity": 0.9090208172706246
+        }
+      ]
+    },
+    "hybrid_official_seed99": {
+      "model_key": "hybrid",
+      "model_display": "CfC-Hybrid",
+      "seed": 99,
+      "icbhi": 0.5310945894975523,
+      "sensitivity": 0.31322448817935866,
+      "specificity": 0.7489646908157459,
+      "accuracy": 0.37943651664837175,
+      "params": 491492,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 725,
+          "FN": 848,
+          "FP": 603,
+          "TN": 557,
+          "sensitivity": 0.46090273363000633,
+          "specificity": 0.48017241379310344
+        },
+        {
+          "class": "Crackle",
+          "TP": 148,
+          "FN": 496,
+          "FP": 485,
+          "TN": 1604,
+          "sensitivity": 0.22981366459627328,
+          "specificity": 0.7678314983245572
+        },
+        {
+          "class": "Wheeze",
+          "TP": 136,
+          "FN": 241,
+          "FP": 456,
+          "TN": 1900,
+          "sensitivity": 0.36074270557029176,
+          "specificity": 0.8064516129032258
+        },
+        {
+          "class": "Both",
+          "TP": 28,
+          "FN": 111,
+          "FP": 152,
+          "TN": 2442,
+          "sensitivity": 0.2014388489208633,
+          "specificity": 0.9414032382420972
+        }
+      ]
+    },
+    "hybrid_official_seed314": {
+      "model_key": "hybrid",
+      "model_display": "CfC-Hybrid",
+      "seed": 314,
+      "icbhi": 0.5322396011375506,
+      "sensitivity": 0.3157879199546888,
+      "specificity": 0.7486912823204125,
+      "accuracy": 0.35418953530918407,
+      "params": 491492,
+      "per_class": [
+        {
+          "class": "Normal",
+          "TP": 612,
+          "FN": 961,
+          "FP": 525,
+          "TN": 635,
+          "sensitivity": 0.38906547997457086,
+          "specificity": 0.5474137931034483
+        },
+        {
+          "class": "Crackle",
+          "TP": 196,
+          "FN": 448,
+          "FP": 606,
+          "TN": 1483,
+          "sensitivity": 0.30434782608695654,
+          "specificity": 0.7099090473910962
+        },
+        {
+          "class": "Wheeze",
+          "TP": 128,
+          "FN": 249,
+          "FP": 466,
+          "TN": 1890,
+          "sensitivity": 0.3395225464190981,
+          "specificity": 0.8022071307300509
+        },
+        {
+          "class": "Both",
+          "TP": 32,
+          "FN": 107,
+          "FP": 168,
+          "TN": 2426,
+          "sensitivity": 0.2302158273381295,
+          "specificity": 0.9352351580570547
+        }
+      ]
+    }
+  },
+  "aggregated": {
+    "per_model": {
+      "cnn": {
+        "display_name": "CNN-RespiratoryNet",
+        "n_seeds": 5,
+        "seeds": [
+          42,
+          123,
+          7,
+          99,
+          314
+        ],
+        "icbhi_mean": 0.5805145978443805,
+        "icbhi_std": 0.01207169626317722,
+        "icbhi_per_seed": [
+          0.5611925579552464,
+          0.580344646013748,
+          0.5834142405896523,
+          0.5944442589644194,
+          0.5831772856988369
+        ],
+        "se_mean": 0.3712346312471283,
+        "se_std": 0.025811097760916255,
+        "sp_mean": 0.789794564441633,
+        "sp_std": 0.0065196179611261085,
+        "acc_mean": 0.4673252835711672,
+        "acc_std": 0.02140958355284745,
+        "params": 556500,
+        "per_class_means": [
+          {
+            "class": "Normal",
+            "se_mean": 0.5107438016528926,
+            "se_std": 0.07089663173613524,
+            "sp_mean": 0.6217241379310344,
+            "sp_std": 0.09370891886280192
+          },
+          {
+            "class": "Crackle",
+            "se_mean": 0.5695652173913043,
+            "se_std": 0.18811712863909938,
+            "sp_mean": 0.6889420775490666,
+            "sp_std": 0.15463329156122588
+          },
+          {
+            "class": "Wheeze",
+            "se_mean": 0.21326259946949597,
+            "se_std": 0.11582737697308092,
+            "sp_mean": 0.8917657045840407,
+            "sp_std": 0.05377358570476474
+          },
+          {
+            "class": "Both",
+            "se_mean": 0.19136690647482016,
+            "se_std": 0.12662688005002476,
+            "sp_mean": 0.9567463377023901,
+            "sp_std": 0.031068929702760654
+          }
+        ]
+      },
+      "hybrid": {
+        "display_name": "CfC-Hybrid",
+        "n_seeds": 5,
+        "seeds": [
+          42,
+          123,
+          7,
+          99,
+          314
+        ],
+        "icbhi_mean": 0.5339707127853276,
+        "icbhi_std": 0.01792152369382253,
+        "icbhi_per_seed": [
+          0.526290616258381,
+          0.5639783898456846,
+          0.5162503671874696,
+          0.5310945894975523,
+          0.5322396011375506
+        ],
+        "se_mean": 0.31538372130025694,
+        "se_std": 0.02766896040430353,
+        "sp_mean": 0.7525577042703983,
+        "sp_std": 0.00867251444887093,
+        "acc_mean": 0.35806805708013173,
+        "acc_std": 0.03449219667094844,
+        "params": 491492,
+        "per_class_means": [
+          {
+            "class": "Normal",
+            "se_mean": 0.39771137952956137,
+            "se_std": 0.06812470470917474,
+            "sp_mean": 0.5662068965517242,
+            "sp_std": 0.07346173180934454
+          },
+          {
+            "class": "Crackle",
+            "se_mean": 0.31273291925465835,
+            "se_std": 0.06165984636437627,
+            "sp_mean": 0.7079942556247009,
+            "sp_std": 0.06309195286091217
+          },
+          {
+            "class": "Wheeze",
+            "se_mean": 0.31511936339522545,
+            "se_std": 0.06645607906003209,
+            "sp_mean": 0.817062818336163,
+            "sp_std": 0.015327224181042282
+          },
+          {
+            "class": "Both",
+            "se_mean": 0.23597122302158274,
+            "se_std": 0.0298366062637809,
+            "sp_mean": 0.9189668465690055,
+            "sp_std": 0.0200877336246502
+          }
+        ]
+      }
+    },
+    "stats_tests": {
+      "cnn_vs_hybrid": {
+        "name_a": "CNN",
+        "name_b": "CfC-Hybrid",
+        "seeds": [
+          7,
+          42,
+          99,
+          123,
+          314
+        ],
+        "values_a": [
+          0.5834142405896523,
+          0.5611925579552464,
+          0.5944442589644194,
+          0.580344646013748,
+          0.5831772856988369
+        ],
+        "values_b": [
+          0.5162503671874696,
+          0.526290616258381,
+          0.5310945894975523,
+          0.5639783898456846,
+          0.5322396011375506
+        ],
+        "diff_mean": -0.04654388505905296,
+        "paired_t": {
+          "t": 4.943165447854365,
+          "p_value": 0.007799136961163921
+        },
+        "wilcoxon": {
+          "W": 0.0,
+          "p_value": 0.0625
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+2026-09-16 09:49:02,100 - INFO - SCRIPT 33 — AUC of the CNN INT8
+2026-09-16 09:49:02,120 - INFO - ======================================================================
+2026-09-16 09:49:02,120 - INFO - CREATING DATALOADERS
+2026-09-16 09:49:02,120 - INFO - ======================================================================
+2026-09-16 09:49:02,120 - INFO -   Split strategy: strategy1_official
+2026-09-16 09:49:02,121 - INFO -   Class mode:      4class
+2026-09-16 09:49:02,121 - INFO -   Augmentation:        none
+2026-09-16 09:49:02,121 - INFO -   Batch size:          32
+2026-09-16 09:49:02,121 - INFO -   Num workers:         0
+2026-09-16 09:49:02,121 - INFO -   Weighted sampling:   True
+2026-09-16 09:49:02,121 - INFO - 
+[TRAIN] Creating training dataset...
+2026-09-16 09:49:02,627 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-09-16 09:49:02,627 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-09-16 09:49:02,628 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-09-16 09:49:02,628 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-09-16 09:49:02,628 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-09-16 09:49:02,628 - INFO - 
+[VAL] Creating validation dataset...
+2026-09-16 09:49:02,739 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-09-16 09:49:02,739 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-09-16 09:49:02,739 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-09-16 09:49:02,739 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-09-16 09:49:02,739 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-09-16 09:49:02,739 - INFO - 
+[TEST] Creating test dataset...
+2026-09-16 09:49:03,152 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-09-16 09:49:03,153 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-09-16 09:49:03,153 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-09-16 09:49:03,153 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-09-16 09:49:03,153 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-09-16 09:49:03,153 - INFO - 
+[SAMPLER] Configuring WeightedRandomSampler for train...
+2026-09-16 09:49:03,159 - INFO -   Weighted sampling enabled: 3350 samples/epoch
+2026-09-16 09:49:03,159 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-09-16 09:49:03,179 - INFO - 
+  Class weights for loss:
+2026-09-16 09:49:03,181 - INFO -       Normal: 0.3647
+2026-09-16 09:49:03,181 - INFO -      Crackle: 0.5661
+2026-09-16 09:49:03,181 - INFO -       Wheeze: 1.3826
+2026-09-16 09:49:03,181 - INFO -         Both: 1.6866
+2026-09-16 09:49:03,181 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-09-16 09:49:03,542 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-09-16 09:49:03,542 - INFO -   Labels shape: torch.Size([32])
+2026-09-16 09:49:03,542 - INFO -   Spec dtype: torch.float32
+2026-09-16 09:49:03,546 - INFO -   Spec range: [0.0000, 1.0000]
+2026-09-16 09:49:03,546 - INFO -   Labels in batch: Counter({0: 10, 1: 8, 3: 8, 2: 6})
+2026-09-16 09:49:03,546 - INFO - 
+======================================================================
+2026-09-16 09:49:03,546 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-09-16 09:49:03,546 - INFO - ======================================================================
+2026-09-16 09:49:03,546 - INFO -   Train:   3350 samples →  104 batches
+2026-09-16 09:49:03,546 - INFO -   Val:      635 samples →   20 batches
+2026-09-16 09:49:03,546 - INFO -   Test:    2733 samples →   86 batches
+2026-09-16 09:49:03,546 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-09-16 09:49:03,546 - INFO - ======================================================================
+2026-09-16 09:49:03,548 - INFO -   [split] strategy1_official → test set = 2733 cycles (OK strategy1_official)
+2026-09-16 09:49:27,198 - INFO -   [A] cnn_int8_scripted.pt (onednn): ICBHI 0.4507 (Se 0.482/Sp 0.420)  AUC 0.6036
+2026-09-16 09:49:27,656 - INFO -   CNN FP32 loaded from cnn_official_seed42.pth (val_icbhi=None)
+2026-09-16 09:49:41,608 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: False
+2026-09-16 09:49:41,615 - INFO -   [PTQ] Last Linear left unquantized: 'classifier.4'
+2026-09-16 09:49:41,615 - INFO -   [PTQ] prepare_fx...
+2026-09-16 09:49:43,494 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-16 09:50:12,556 - INFO -   [PTQ] convert_fx...
+2026-09-16 09:50:15,705 - INFO -   [B] seed 42: FP32 ICBHI 0.4523 AUC 0.6046 | INT8 ICBHI 0.4517 AUC 0.6052 (ΔAUC +0.0006) | vs report 23: +0.0009
+2026-09-16 09:50:15,741 - INFO -   CNN FP32 loaded from cnn_official_seed123.pth (val_icbhi=None)
+2026-09-16 09:50:29,906 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: False
+2026-09-16 09:50:29,913 - INFO -   [PTQ] Last Linear left unquantized: 'classifier.4'
+2026-09-16 09:50:29,913 - INFO -   [PTQ] prepare_fx...
+2026-09-16 09:50:29,992 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-16 09:50:53,564 - INFO -   [PTQ] convert_fx...
+2026-09-16 09:50:57,022 - INFO -   [B] seed 123: FP32 ICBHI 0.4428 AUC 0.5451 | INT8 ICBHI 0.4436 AUC 0.5467 (ΔAUC +0.0017) | vs report 23: +0.0012
+2026-09-16 09:50:57,059 - INFO -   CNN FP32 loaded from cnn_official_seed7.pth (val_icbhi=None)
+2026-09-16 09:51:12,116 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: False
+2026-09-16 09:51:12,124 - INFO -   [PTQ] Last Linear left unquantized: 'classifier.4'
+2026-09-16 09:51:12,124 - INFO -   [PTQ] prepare_fx...
+2026-09-16 09:51:12,202 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-16 09:51:33,082 - INFO -   [PTQ] convert_fx...
+2026-09-16 09:51:36,470 - INFO -   [B] seed 7: FP32 ICBHI 0.4474 AUC 0.5480 | INT8 ICBHI 0.4404 AUC 0.5477 (ΔAUC -0.0003) | vs report 23: +0.0087
+2026-09-16 09:51:36,506 - INFO -   CNN FP32 loaded from cnn_official_seed99.pth (val_icbhi=None)
+2026-09-16 09:51:51,355 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: False
+2026-09-16 09:51:51,362 - INFO -   [PTQ] Last Linear left unquantized: 'classifier.4'
+2026-09-16 09:51:51,362 - INFO -   [PTQ] prepare_fx...
+2026-09-16 09:51:51,446 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-16 09:52:10,631 - INFO -   [PTQ] convert_fx...
+2026-09-16 09:52:14,070 - INFO -   [B] seed 99: FP32 ICBHI 0.4782 AUC 0.5922 | INT8 ICBHI 0.4758 AUC 0.5910 (ΔAUC -0.0012) | vs report 23: -0.0044
+2026-09-16 09:52:14,108 - INFO -   CNN FP32 loaded from cnn_official_seed314.pth (val_icbhi=None)
+2026-09-16 09:52:29,403 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: False
+2026-09-16 09:52:29,409 - INFO -   [PTQ] Last Linear left unquantized: 'classifier.4'
+2026-09-16 09:52:29,410 - INFO -   [PTQ] prepare_fx...
+2026-09-16 09:52:29,485 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-16 09:52:47,811 - INFO -   [PTQ] convert_fx...
+2026-09-16 09:52:51,194 - INFO -   [B] seed 314: FP32 ICBHI 0.4772 AUC 0.5688 | INT8 ICBHI 0.4726 AUC 0.5686 (ΔAUC -0.0002) | vs report 23: -0.0115
+2026-09-16 09:52:51,196 - INFO -   INT8 5 seeds: ICBHI 0.457 ± 0.016  AUC 0.572 ± 0.026  ΔAUC vs FP32 +0.0001 ± 0.0011
+2026-09-16 09:52:51,196 - INFO - Done.
+2026-09-17 14:50:30,203 - INFO - SCRIPT 33 — AUC of the CNN INT8
+2026-09-17 14:50:30,217 - INFO - ======================================================================
+2026-09-17 14:50:30,218 - INFO - CREATING DATALOADERS
+2026-09-17 14:50:30,218 - INFO - ======================================================================
+2026-09-17 14:50:30,218 - INFO -   Split strategy: strategy1_official
+2026-09-17 14:50:30,219 - INFO -   Class mode:      4class
+2026-09-17 14:50:30,219 - INFO -   Augmentation:        none
+2026-09-17 14:50:30,219 - INFO -   Batch size:          32
+2026-09-17 14:50:30,219 - INFO -   Num workers:         0
+2026-09-17 14:50:30,219 - INFO -   Weighted sampling:   True
+2026-09-17 14:50:30,222 - INFO - 
+[TRAIN] Creating training dataset...
+2026-09-17 14:50:30,879 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-09-17 14:50:30,879 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-09-17 14:50:30,880 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-09-17 14:50:30,880 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-09-17 14:50:30,880 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-09-17 14:50:30,883 - INFO - 
+[VAL] Creating validation dataset...
+2026-09-17 14:50:31,044 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-09-17 14:50:31,044 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-09-17 14:50:31,046 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-09-17 14:50:31,046 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-09-17 14:50:31,046 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-09-17 14:50:31,047 - INFO - 
+[TEST] Creating test dataset...
+2026-09-17 14:50:31,631 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-09-17 14:50:31,631 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-09-17 14:50:31,631 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-09-17 14:50:31,632 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-09-17 14:50:31,632 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-09-17 14:50:31,633 - INFO - 
+[SAMPLER] Configuring WeightedRandomSampler for train...
+2026-09-17 14:50:31,642 - INFO -   Weighted sampling enabled: 3350 samples/epoch
+2026-09-17 14:50:31,642 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-09-17 14:50:31,679 - INFO - 
+  Class weights for loss:
+2026-09-17 14:50:31,682 - INFO -       Normal: 0.3647
+2026-09-17 14:50:31,684 - INFO -      Crackle: 0.5661
+2026-09-17 14:50:31,684 - INFO -       Wheeze: 1.3826
+2026-09-17 14:50:31,684 - INFO -         Both: 1.6866
+2026-09-17 14:50:31,685 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-09-17 14:50:32,438 - INFO -   Batch shape: torch.Size([32, 1, 128, 251])
+2026-09-17 14:50:32,438 - INFO -   Labels shape: torch.Size([32])
+2026-09-17 14:50:32,439 - INFO -   Spec dtype: torch.float32
+2026-09-17 14:50:32,444 - INFO -   Spec range: [0.0000, 1.0000]
+2026-09-17 14:50:32,444 - INFO -   Labels in batch: Counter({0: 9, 1: 9, 2: 8, 3: 6})
+2026-09-17 14:50:32,446 - INFO - 
+======================================================================
+2026-09-17 14:50:32,446 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-09-17 14:50:32,447 - INFO - ======================================================================
+2026-09-17 14:50:32,447 - INFO -   Train:   3350 samples →  104 batches
+2026-09-17 14:50:32,447 - INFO -   Val:      635 samples →   20 batches
+2026-09-17 14:50:32,447 - INFO -   Test:    2733 samples →   86 batches
+2026-09-17 14:50:32,449 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-09-17 14:50:32,449 - INFO - ======================================================================
+2026-09-17 14:50:32,449 - INFO -   [split] strategy1_official → test set = 2733 cycles (OK strategy1_official)
+2026-09-17 14:51:19,298 - INFO -   [A] cnn_int8_scripted.pt (onednn): ICBHI 0.4507 (Se 0.482/Sp 0.420)  AUC 0.6036
+2026-09-17 14:51:20,146 - INFO -   CNN FP32 loaded from cnn_official_seed42.pth (val_icbhi=None)
+2026-09-17 14:51:46,013 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: True
+2026-09-17 14:51:46,029 - INFO -   [PTQ] prepare_fx...
+2026-09-17 14:51:49,548 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-17 14:52:47,058 - INFO -   [PTQ] convert_fx...
+2026-09-17 14:52:54,058 - INFO -   [B] seed 42: FP32 ICBHI 0.4523 AUC 0.6046 | INT8 ICBHI 0.4900 AUC 0.6040 (ΔAUC -0.0005) | vs report 23: +0.0393
+2026-09-17 14:52:54,143 - INFO -   CNN FP32 loaded from cnn_official_seed123.pth (val_icbhi=None)
+2026-09-17 14:53:17,963 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: True
+2026-09-17 14:53:17,976 - INFO -   [PTQ] prepare_fx...
+2026-09-17 14:53:18,129 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-17 14:54:00,344 - INFO -   [PTQ] convert_fx...
+2026-09-17 14:54:08,622 - INFO -   [B] seed 123: FP32 ICBHI 0.4428 AUC 0.5451 | INT8 ICBHI 0.4478 AUC 0.5418 (ΔAUC -0.0033) | vs report 23: +0.0054
+2026-09-17 14:54:08,711 - INFO -   CNN FP32 loaded from cnn_official_seed7.pth (val_icbhi=None)
+2026-09-17 14:54:35,301 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: True
+2026-09-17 14:54:35,316 - INFO -   [PTQ] prepare_fx...
+2026-09-17 14:54:35,477 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-17 14:55:12,958 - INFO -   [PTQ] convert_fx...
+2026-09-17 14:55:20,768 - INFO -   [B] seed 7: FP32 ICBHI 0.4474 AUC 0.5480 | INT8 ICBHI 0.4437 AUC 0.5473 (ΔAUC -0.0007) | vs report 23: +0.0120
+2026-09-17 14:55:20,853 - INFO -   CNN FP32 loaded from cnn_official_seed99.pth (val_icbhi=None)
+2026-09-17 14:55:46,752 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: True
+2026-09-17 14:55:46,762 - INFO -   [PTQ] prepare_fx...
+2026-09-17 14:55:46,874 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-17 14:56:20,626 - INFO -   [PTQ] convert_fx...
+2026-09-17 14:56:28,655 - INFO -   [B] seed 99: FP32 ICBHI 0.4782 AUC 0.5922 | INT8 ICBHI 0.4775 AUC 0.5942 (ΔAUC +0.0020) | vs report 23: -0.0027
+2026-09-17 14:56:28,736 - INFO -   CNN FP32 loaded from cnn_official_seed314.pth (val_icbhi=None)
+2026-09-17 14:56:54,897 - INFO -   [PTQ] Backend: onednn | activation observer: minmax | weights: per-channel | quantize last layer: True
+2026-09-17 14:56:54,907 - INFO -   [PTQ] prepare_fx...
+2026-09-17 14:56:54,976 - INFO -   [PTQ] Calibrating with 104/104 train batches...
+2026-09-17 14:57:13,472 - INFO -   [PTQ] convert_fx...
+2026-09-17 14:57:16,919 - INFO -   [B] seed 314: FP32 ICBHI 0.4772 AUC 0.5688 | INT8 ICBHI 0.4669 AUC 0.5643 (ΔAUC -0.0045) | vs report 23: -0.0172
+2026-09-17 14:57:16,920 - INFO -   INT8 5 seeds: ICBHI 0.465 ± 0.020  AUC 0.570 ± 0.028  ΔAUC vs FP32 -0.0014 ± 0.0026
+2026-09-17 14:57:16,921 - INFO - Done.

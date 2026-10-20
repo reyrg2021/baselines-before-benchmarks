@@ -1,0 +1,70 @@
+00:22:42 | INFO    | ==========================================================================
+00:22:42 | INFO    |   SCRIPT 42 - DIAGNOSIS OF THE LOG-MEL RECONSTRUCTION
+00:22:42 | INFO    | ==========================================================================
+00:22:42 | INFO    |   Date:    2026-09-18 00:22:42
+00:22:42 | INFO    |   BASE_DIR: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+00:22:42 | INFO    |   Device:   cuda
+00:22:42 | INFO    |   Log:      D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\mel_diagnosis_log.txt
+00:22:42 | INFO    |   Test cycles: 2733
+00:22:42 | INFO    |   WAV missing: 0   .npy missing: 0
+00:22:42 | INFO    | 
+00:22:42 | INFO    | ==========================================================================
+00:22:42 | INFO    |   PART 1 - ELEMENT-WISE COMPARISON (A vs B, A vs C)
+00:22:42 | INFO    | ==========================================================================
+00:22:45 | INFO    |   Cycles compared: 100
+00:22:45 | INFO    | 
+00:22:45 | INFO    |   A (.npy) vs B (WAV without filter)
+00:22:45 | INFO    |     Max absolute difference: mean 0.000000, worst 0.000000
+00:22:45 | INFO    |     Correlation:                mean 1.000000, worst 1.000000
+00:22:45 | INFO    | 
+00:22:45 | INFO    |   A (.npy) vs C (WAV with filter and RMS, as in Script 40)
+00:22:45 | INFO    |     Max absolute difference: mean 0.174528, worst 0.412689
+00:22:45 | INFO    |     Correlation:                mean 0.999172, worst 0.988017
+00:22:45 | INFO    | 
+00:22:45 | INFO    | ==========================================================================
+00:22:45 | INFO    |   PART 2 - METRICS ON THE FULL TEST
+00:22:45 | INFO    | ==========================================================================
+00:22:46 | INFO    |   5 checkpoints loaded
+00:22:46 | INFO    | 
+00:22:46 | INFO    |   Variant A_npy_precomputado ...
+00:22:48 | INFO    |     seed  42: ICBHI 0.4523  AUC 0.6046
+00:22:48 | INFO    |     seed 123: ICBHI 0.4429  AUC 0.5450
+00:22:49 | INFO    |     seed   7: ICBHI 0.4474  AUC 0.5480
+00:22:50 | INFO    |     seed  99: ICBHI 0.4782  AUC 0.5922
+00:22:51 | INFO    |     seed 314: ICBHI 0.4772  AUC 0.5688
+00:22:51 | INFO    |     MEAN: ICBHI 0.4596 +/- 0.0169   AUC 0.5717 +/- 0.0264   -> MATCHES
+00:22:51 | INFO    | 
+00:22:51 | INFO    |   Variant B_wav_sin_filtro ...
+00:23:17 | INFO    |     seed  42: ICBHI 0.4523  AUC 0.6046
+00:23:17 | INFO    |     seed 123: ICBHI 0.4429  AUC 0.5450
+00:23:18 | INFO    |     seed   7: ICBHI 0.4474  AUC 0.5480
+00:23:19 | INFO    |     seed  99: ICBHI 0.4782  AUC 0.5922
+00:23:20 | INFO    |     seed 314: ICBHI 0.4772  AUC 0.5688
+00:23:20 | INFO    |     MEAN: ICBHI 0.4596 +/- 0.0169   AUC 0.5717 +/- 0.0264   -> MATCHES
+00:23:20 | INFO    | 
+00:23:20 | INFO    |   Variant C_wav_con_filtro ...
+00:23:55 | INFO    |     seed  42: ICBHI 0.4509  AUC 0.6019
+00:23:56 | INFO    |     seed 123: ICBHI 0.4480  AUC 0.5533
+00:23:57 | INFO    |     seed   7: ICBHI 0.4472  AUC 0.5528
+00:23:57 | INFO    |     seed  99: ICBHI 0.4794  AUC 0.5951
+00:23:58 | INFO    |     seed 314: ICBHI 0.4811  AUC 0.5733
+00:23:58 | INFO    |     MEAN: ICBHI 0.4613 +/- 0.0173   AUC 0.5753 +/- 0.0229   -> MATCHES
+00:23:58 | INFO    | 
+00:23:58 | INFO    | ==========================================================================
+00:23:58 | INFO    |   PART 3 - VERDICT
+00:23:58 | INFO    | ==========================================================================
+00:23:58 | INFO    |   Reference Table 4: ICBHI 0.460  AUC 0.572
+00:23:58 | INFO    | 
+00:23:58 | INFO    |   A reproduces Table 4 ......... YES
+00:23:58 | INFO    |   B reproduces Table 4 ......... YES
+00:23:58 | INFO    |   A and B numerically equal .... YES
+00:23:58 | INFO    | 
+00:23:58 | INFO    |   CAUSE B confirmed. The metrics are correct and the
+00:23:58 | INFO    |   reconstruction from the WAV is faithful. What broke Script 40
+00:23:58 | INFO    |   was re-applying the filter and the RMS to segments that were already
+00:23:58 | INFO    |   conditioned. Fix the noise injection and run again.
+00:23:58 | INFO    | 
+00:23:58 | INFO    |   mel_diagnosis.csv and mel_diagnosis.json written
+00:23:58 | INFO    | ==========================================================================
+00:23:58 | INFO    |   END OF SCRIPT 42
+00:23:58 | INFO    | ==========================================================================

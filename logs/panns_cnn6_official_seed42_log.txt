@@ -1,0 +1,28 @@
+2026-06-10 23:29:14,251 - INFO - ======================================================================
+2026-06-10 23:29:14,251 - INFO - EVAL-ONLY MODE — per-cycle probability dump (for ROC)
+2026-06-10 23:29:14,251 - INFO - ======================================================================
+2026-06-10 23:29:14,252 - INFO -   Checkpoint: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\panns_cnn6_tune_official_seed99.pth
+2026-06-10 23:29:14,252 - INFO -   Run tag:    panns_cnn6_tune_official_seed99
+2026-06-10 23:29:14,799 - INFO - ======================================================================
+2026-06-10 23:29:14,799 - INFO - CREATING RAW-AUDIO DATALOADERS (PANNs)
+2026-06-10 23:29:14,800 - INFO - ======================================================================
+2026-06-10 23:29:14,800 - INFO -   Strategy:        strategy1_official
+2026-06-10 23:29:14,800 - INFO -   Segments (.wav):  D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\data\segments
+2026-06-10 23:29:14,800 - INFO -   Sample rate:       32000 Hz  (resampled from 16 kHz)
+2026-06-10 23:29:14,801 - INFO -   Fixed length:     256000 samples (8.0 s)
+2026-06-10 23:29:14,801 - INFO -   Batch size:        16
+2026-06-10 23:29:14,801 - INFO -   Weighted sampling: False
+2026-06-10 23:29:14,801 - INFO - 
+[TRAIN]
+2026-06-10 23:29:15,073 - INFO -   [RawAudio] 3350 cycles | count per class: [1577, 1016, 416, 341]
+2026-06-10 23:29:15,074 - INFO - [VAL]
+2026-06-10 23:29:15,176 - INFO -   [RawAudio] 635 cycles | count per class: [412, 139, 65, 19]
+2026-06-10 23:29:15,177 - INFO - [TEST]
+2026-06-10 23:29:15,533 - INFO -   [RawAudio] 2733 cycles | count per class: [1573, 644, 377, 139]
+2026-06-10 23:29:15,535 - INFO - 
+  Train: 3350 | Val: 635 | Test: 2733
+2026-06-10 23:29:15,535 - INFO - ======================================================================
+2026-06-10 23:29:41,082 - INFO -   ✓ Probabilities:  D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\arrays\panns_cnn6_tune_official_seed99_probs.npy  shape=(2733, 4)
+2026-06-10 23:29:41,082 - INFO -   ✓ Labels/preds: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\full_reeval\arrays\panns_cnn6_tune_official_seed99_labels_preds.npz
+2026-06-10 23:29:41,268 - INFO -   [verification] ICBHI=0.4599 (Se=0.065 Sp=0.855) | AUC bin=0.4808
+2026-06-10 23:29:41,268 - INFO -   → Compare with your Table 4: these numbers must match.

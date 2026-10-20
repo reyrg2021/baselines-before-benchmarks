@@ -1,0 +1,271 @@
+2026-06-08 10:11:37,465 - INFO - ======================================================================
+2026-06-08 10:11:37,466 - INFO - FONIS 2026 MVP — Script 11a v7 (Improved regularization)
+2026-06-08 10:11:37,466 - INFO - ======================================================================
+2026-06-08 10:11:37,466 - INFO - Run name:     cfc_v7_mel_hybrid_official
+2026-06-08 10:11:37,466 - INFO - Date:        2026-06-08 10:11:37
+2026-06-08 10:11:37,466 - INFO - Architecture: hybrid
+2026-06-08 10:11:37,467 - INFO - Model name:   CfC_HybridDeep_mmRNN_v7reg
+2026-06-08 10:11:37,467 - INFO - ======================================================================
+2026-06-08 10:11:37,487 - INFO - 
+Device: cuda
+2026-06-08 10:11:37,490 - INFO -   GPU: NVIDIA GeForce RTX 3060 Laptop GPU
+2026-06-08 10:11:37,491 - INFO -   VRAM: 6.44 GB
+2026-06-08 10:11:37,492 - INFO - 
+✅ torch_cfc.py found: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\scripts\torch_cfc.py
+2026-06-08 10:11:37,492 - INFO - 
+[CREATING DATALOADERS]
+2026-06-08 10:11:37,494 - INFO - ======================================================================
+2026-06-08 10:11:37,495 - INFO - CREATING DATALOADERS
+2026-06-08 10:11:37,495 - INFO - ======================================================================
+2026-06-08 10:11:37,495 - INFO -   Split strategy: strategy1_official
+2026-06-08 10:11:37,496 - INFO -   Class mode:      4class
+2026-06-08 10:11:37,496 - INFO -   Augmentation:        none
+2026-06-08 10:11:37,496 - INFO -   Batch size:          64
+2026-06-08 10:11:37,497 - INFO -   Num workers:         0
+2026-06-08 10:11:37,497 - INFO -   Weighted sampling:   True
+2026-06-08 10:11:37,497 - INFO - 
+[TRAIN] Creating training dataset...
+2026-06-08 10:11:37,805 - INFO -     Class 0 (  Normal):  1577 ( 47.1%) — weight: 0.531
+2026-06-08 10:11:37,806 - INFO -     Class 1 ( Crackle):  1016 ( 30.3%) — weight: 0.824
+2026-06-08 10:11:37,806 - INFO -     Class 2 (  Wheeze):   416 ( 12.4%) — weight: 2.013
+2026-06-08 10:11:37,806 - INFO -     Class 3 (    Both):   341 ( 10.2%) — weight: 2.456
+2026-06-08 10:11:37,806 - INFO -   Dataset created: 3350 samples, 4 classes (4class), augment=No
+2026-06-08 10:11:37,808 - INFO - 
+[VAL] Creating validation dataset...
+2026-06-08 10:11:37,879 - INFO -     Class 0 (  Normal):   412 ( 64.9%) — weight: 0.385
+2026-06-08 10:11:37,879 - INFO -     Class 1 ( Crackle):   139 ( 21.9%) — weight: 1.142
+2026-06-08 10:11:37,880 - INFO -     Class 2 (  Wheeze):    65 ( 10.2%) — weight: 2.442
+2026-06-08 10:11:37,880 - INFO -     Class 3 (    Both):    19 (  3.0%) — weight: 8.355
+2026-06-08 10:11:37,880 - INFO -   Dataset created: 635 samples, 4 classes (4class), augment=No
+2026-06-08 10:11:37,880 - INFO - 
+[TEST] Creating test dataset...
+2026-06-08 10:11:38,151 - INFO -     Class 0 (  Normal):  1573 ( 57.6%) — weight: 0.434
+2026-06-08 10:11:38,152 - INFO -     Class 1 ( Crackle):   644 ( 23.6%) — weight: 1.061
+2026-06-08 10:11:38,152 - INFO -     Class 2 (  Wheeze):   377 ( 13.8%) — weight: 1.812
+2026-06-08 10:11:38,152 - INFO -     Class 3 (    Both):   139 (  5.1%) — weight: 4.915
+2026-06-08 10:11:38,153 - INFO -   Dataset created: 2733 samples, 4 classes (4class), augment=No
+2026-06-08 10:11:38,154 - INFO - 
+[SAMPLER] Configuring WeightedRandomSampler for train...
+2026-06-08 10:11:38,156 - INFO -   Weighted sampling enabled: 3350 samples/epoch
+2026-06-08 10:11:38,157 - INFO - 
+[DATALOADERS] Creating DataLoaders...
+2026-06-08 10:11:38,158 - INFO - 
+  Class weights for loss:
+2026-06-08 10:11:38,158 - INFO -       Normal: 0.3647
+2026-06-08 10:11:38,158 - INFO -      Crackle: 0.5661
+2026-06-08 10:11:38,158 - INFO -       Wheeze: 1.3826
+2026-06-08 10:11:38,159 - INFO -         Both: 1.6866
+2026-06-08 10:11:38,159 - INFO - 
+[VERIFICATION] Testing a training batch...
+2026-06-08 10:11:38,279 - INFO -   Batch shape: torch.Size([64, 1, 128, 251])
+2026-06-08 10:11:38,279 - INFO -   Labels shape: torch.Size([64])
+2026-06-08 10:11:38,279 - INFO -   Spec dtype: torch.float32
+2026-06-08 10:11:38,280 - INFO -   Spec range: [0.0000, 1.0000]
+2026-06-08 10:11:38,280 - INFO -   Labels in batch: Counter({3: 21, 0: 17, 1: 14, 2: 12})
+2026-06-08 10:11:38,280 - INFO - 
+======================================================================
+2026-06-08 10:11:38,280 - INFO - DATALOADERS CREATED SUCCESSFULLY
+2026-06-08 10:11:38,280 - INFO - ======================================================================
+2026-06-08 10:11:38,281 - INFO -   Train:   3350 samples →   52 batches
+2026-06-08 10:11:38,281 - INFO -   Val:      635 samples →   10 batches
+2026-06-08 10:11:38,281 - INFO -   Test:    2733 samples →   43 batches
+2026-06-08 10:11:38,281 - INFO -   Input shape: torch.Size([1, 128, 251]) (C, H, W)
+2026-06-08 10:11:38,281 - INFO - ======================================================================
+2026-06-08 10:11:38,281 - INFO -   Train: 3350 samples → 52 batches
+2026-06-08 10:11:38,282 - INFO -   Val:   635 samples → 10 batches
+2026-06-08 10:11:38,282 - INFO -   Test:  2733 samples → 43 batches
+2026-06-08 10:11:38,310 - INFO -   Sample shape: torch.Size([64, 1, 128, 251])
+2026-06-08 10:11:38,311 - INFO -   Spec range: [0.0000, 1.0000]
+2026-06-08 10:11:38,311 - INFO - 
+[BUILDING MODEL]
+2026-06-08 10:11:38,312 - INFO -   Architecture:     hybrid
+2026-06-08 10:11:38,312 - INFO -   Model:           CfC_HybridDeep_mmRNN_v7reg
+2026-06-08 10:11:38,312 - INFO -   use_mixed:        True (CfC-mmRNN)
+2026-06-08 10:11:38,312 - INFO -   init (Xavier):    0.6
+2026-06-08 10:11:38,312 - INFO -   backbone_units:   128
+2026-06-08 10:11:38,312 - INFO -   backbone_layers:  2
+2026-06-08 10:11:38,313 - INFO -   backbone_dr:      0.4    ← v7: increased from 0.2
+2026-06-08 10:11:38,313 - INFO -   hidden_size:      64
+2026-06-08 10:11:38,313 - INFO -   seq_length:       31
+2026-06-08 10:11:38,313 - INFO -   cfc_in_features:  1024
+2026-06-08 10:11:38,313 - INFO -   optimizer:        adamw
+2026-06-08 10:11:38,314 - INFO -   base_lr:          0.0002   ← v7: reduced from 5e-4
+2026-06-08 10:11:38,314 - INFO -   weight_decay:     0.0001    ← v7: increased from 1e-5
+2026-06-08 10:11:38,314 - INFO -   batch_size:       64        ← v7: increased from 32
+2026-06-08 10:11:38,314 - INFO -   conv_dropout:     0.3    ← v7 NEW: Dropout2d in Conv2D
+2026-06-08 10:11:38,314 - INFO -   decay_lr:         0.97
+2026-06-08 10:11:38,314 - INFO - 
+  ────────────────────────────────────────────────────────────
+2026-06-08 10:11:38,315 - INFO -   v7 CHANGES vs v6 (anti-overfitting):
+2026-06-08 10:11:38,315 - INFO -     - backbone_dr:  0.2  → 0.4   (+100% dropout)
+2026-06-08 10:11:38,315 - INFO -     - base_lr:      5e-4 → 2e-4  (LR 2.5x lower)
+2026-06-08 10:11:38,315 - INFO -     - weight_decay: 1e-5 → 1e-4  (10x more reg L2)
+2026-06-08 10:11:38,315 - INFO -     - batch_size:   32   → 64    (more stable gradients)
+2026-06-08 10:11:38,316 - INFO -     - conv_dropout: 0.0  → 0.3   (Dropout2d between Conv2D)
+2026-06-08 10:11:38,316 - INFO -   ────────────────────────────────────────────────────────────
+2026-06-08 10:11:38,341 - INFO - 
+  Total parameters: 491,492
+2026-06-08 10:11:38,341 - INFO -   Comparison with CNN baseline (556,500 params):
+2026-06-08 10:11:38,342 - INFO -     → 1.1x lighter
+2026-06-08 10:11:38,342 - INFO - 
+[MODEL VERIFICATION]
+2026-06-08 10:11:38,602 - INFO -   Input shape:  (2, 1, 128, 251)
+2026-06-08 10:11:38,602 - INFO -   Output shape: (2, 4) (expected: (2, 4))
+2026-06-08 10:11:39,861 - INFO -   TensorBoard logs: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\tensorboard\cfc_v7_mel_hybrid_official_20260608_101139
+2026-06-08 10:11:39,861 - INFO - 
+======================================================================
+2026-06-08 10:11:39,863 - INFO - STARTING TRAINING: cfc_v7_mel_hybrid_official
+2026-06-08 10:11:39,863 - INFO - ======================================================================
+2026-06-08 10:11:39,863 - INFO -   Device: cuda
+2026-06-08 10:11:39,863 - INFO -   Max epochs: 80
+2026-06-08 10:11:39,864 - INFO -   Batch size: 64
+2026-06-08 10:11:39,864 - INFO -   Base LR: 0.0002 (decay 0.97/epoch)
+2026-06-08 10:11:39,864 - INFO -   Early stopping patience: 20
+2026-06-08 10:11:39,864 - INFO - ======================================================================
+
+2026-06-08 10:11:49,416 - INFO - Epoch   1/ 80 (  9.6s) | Train: loss=1.3873 acc= 25.4% | Val: loss=1.3771 acc= 21.7% | ICBHI=0.4992 (Se=0.248 Sp=0.750) | lr=2.00e-04
+2026-06-08 10:11:49,456 - INFO -   ✅ New best model saved (val_loss=1.377126, ICBHI=0.4992)
+2026-06-08 10:11:59,684 - INFO - Epoch   2/ 80 ( 10.2s) | Train: loss=1.3865 acc= 25.3% | Val: loss=1.3909 acc= 11.2% | ICBHI=0.5028 (Se=0.254 Sp=0.752) | lr=1.94e-04
+2026-06-08 10:11:59,685 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.377126 at epoch 1)
+2026-06-08 10:12:10,238 - INFO - Epoch   3/ 80 ( 10.6s) | Train: loss=1.3872 acc= 25.4% | Val: loss=1.4063 acc= 11.2% | ICBHI=0.5028 (Se=0.254 Sp=0.752) | lr=1.88e-04
+2026-06-08 10:12:10,238 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.377126 at epoch 1)
+2026-06-08 10:12:20,313 - INFO - Epoch   4/ 80 ( 10.1s) | Train: loss=1.3873 acc= 24.0% | Val: loss=1.3901 acc=  3.9% | ICBHI=0.5027 (Se=0.254 Sp=0.752) | lr=1.83e-04
+2026-06-08 10:12:20,314 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.377126 at epoch 1)
+2026-06-08 10:12:31,286 - INFO - Epoch   5/ 80 ( 11.0s) | Train: loss=1.3855 acc= 26.2% | Val: loss=1.4022 acc= 11.2% | ICBHI=0.5028 (Se=0.254 Sp=0.752) | lr=1.77e-04
+2026-06-08 10:12:31,287 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.377126 at epoch 1)
+2026-06-08 10:12:42,881 - INFO - Epoch   6/ 80 ( 11.6s) | Train: loss=1.3860 acc= 25.3% | Val: loss=1.3830 acc= 33.1% | ICBHI=0.6012 (Se=0.422 Sp=0.780) | lr=1.72e-04
+2026-06-08 10:12:42,881 - INFO -   EarlyStopping: 5/20 (best val_loss: 1.377126 at epoch 1)
+2026-06-08 10:12:53,745 - INFO - Epoch   7/ 80 ( 10.9s) | Train: loss=1.3835 acc= 26.4% | Val: loss=1.3657 acc= 40.8% | ICBHI=0.5940 (Se=0.392 Sp=0.796) | lr=1.67e-04
+2026-06-08 10:12:53,781 - INFO -   ✅ New best model saved (val_loss=1.365729, ICBHI=0.5940)
+2026-06-08 10:13:04,744 - INFO - Epoch   8/ 80 ( 11.0s) | Train: loss=1.3822 acc= 28.5% | Val: loss=1.3369 acc= 59.2% | ICBHI=0.5645 (Se=0.345 Sp=0.784) | lr=1.62e-04
+2026-06-08 10:13:04,775 - INFO -   ✅ New best model saved (val_loss=1.336857, ICBHI=0.5645)
+2026-06-08 10:13:15,913 - INFO - Epoch   9/ 80 ( 11.1s) | Train: loss=1.3749 acc= 28.7% | Val: loss=1.3010 acc= 52.6% | ICBHI=0.5587 (Se=0.340 Sp=0.778) | lr=1.57e-04
+2026-06-08 10:13:15,949 - INFO -   ✅ New best model saved (val_loss=1.300960, ICBHI=0.5587)
+2026-06-08 10:13:27,458 - INFO - Epoch  10/ 80 ( 11.5s) | Train: loss=1.3563 acc= 32.2% | Val: loss=1.2265 acc= 41.1% | ICBHI=0.5849 (Se=0.387 Sp=0.783) | lr=1.52e-04
+2026-06-08 10:13:27,491 - INFO -   ✅ New best model saved (val_loss=1.226487, ICBHI=0.5849)
+2026-06-08 10:13:38,467 - INFO - Epoch  11/ 80 ( 11.0s) | Train: loss=1.3533 acc= 30.7% | Val: loss=1.2930 acc= 38.4% | ICBHI=0.5892 (Se=0.386 Sp=0.793) | lr=1.47e-04
+2026-06-08 10:13:38,468 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.226487 at epoch 10)
+2026-06-08 10:13:49,439 - INFO - Epoch  12/ 80 ( 11.0s) | Train: loss=1.3435 acc= 32.7% | Val: loss=1.3369 acc= 40.6% | ICBHI=0.5926 (Se=0.386 Sp=0.799) | lr=1.43e-04
+2026-06-08 10:13:49,439 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.226487 at epoch 10)
+2026-06-08 10:14:00,318 - INFO - Epoch  13/ 80 ( 10.9s) | Train: loss=1.3348 acc= 32.4% | Val: loss=1.3621 acc= 32.9% | ICBHI=0.6155 (Se=0.448 Sp=0.783) | lr=1.39e-04
+2026-06-08 10:14:00,318 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.226487 at epoch 10)
+2026-06-08 10:14:11,688 - INFO - Epoch  14/ 80 ( 11.4s) | Train: loss=1.3325 acc= 31.9% | Val: loss=1.3478 acc= 42.2% | ICBHI=0.5746 (Se=0.354 Sp=0.795) | lr=1.35e-04
+2026-06-08 10:14:11,689 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.226487 at epoch 10)
+2026-06-08 10:14:23,013 - INFO - Epoch  15/ 80 ( 11.3s) | Train: loss=1.3334 acc= 33.4% | Val: loss=1.2219 acc= 43.6% | ICBHI=0.6160 (Se=0.433 Sp=0.799) | lr=1.31e-04
+2026-06-08 10:14:23,050 - INFO -   ✅ New best model saved (val_loss=1.221935, ICBHI=0.6160)
+2026-06-08 10:14:33,848 - INFO - Epoch  16/ 80 ( 10.8s) | Train: loss=1.3276 acc= 33.7% | Val: loss=1.2204 acc= 40.6% | ICBHI=0.6217 (Se=0.442 Sp=0.801) | lr=1.27e-04
+2026-06-08 10:14:33,883 - INFO -   ✅ New best model saved (val_loss=1.220389, ICBHI=0.6217)
+2026-06-08 10:14:44,708 - INFO - Epoch  17/ 80 ( 10.8s) | Train: loss=1.3147 acc= 35.0% | Val: loss=1.2770 acc= 40.0% | ICBHI=0.6265 (Se=0.452 Sp=0.801) | lr=1.23e-04
+2026-06-08 10:14:44,709 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:14:56,932 - INFO - Epoch  18/ 80 ( 12.2s) | Train: loss=1.3086 acc= 34.3% | Val: loss=1.2415 acc= 54.0% | ICBHI=0.6392 (Se=0.467 Sp=0.812) | lr=1.19e-04
+2026-06-08 10:14:56,932 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:15:10,076 - INFO - Epoch  19/ 80 ( 13.1s) | Train: loss=1.3070 acc= 35.4% | Val: loss=1.2326 acc= 46.0% | ICBHI=0.6177 (Se=0.438 Sp=0.797) | lr=1.16e-04
+2026-06-08 10:15:10,077 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:15:23,615 - INFO - Epoch  20/ 80 ( 13.5s) | Train: loss=1.2979 acc= 35.8% | Val: loss=1.3096 acc= 36.9% | ICBHI=0.6079 (Se=0.422 Sp=0.793) | lr=1.12e-04
+2026-06-08 10:15:23,616 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:15:35,552 - INFO - Epoch  21/ 80 ( 11.9s) | Train: loss=1.3063 acc= 36.9% | Val: loss=1.3059 acc= 40.0% | ICBHI=0.6260 (Se=0.453 Sp=0.799) | lr=1.09e-04
+2026-06-08 10:15:35,552 - INFO -   EarlyStopping: 5/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:15:46,728 - INFO - Epoch  22/ 80 ( 11.2s) | Train: loss=1.2923 acc= 38.7% | Val: loss=1.3203 acc= 38.4% | ICBHI=0.6179 (Se=0.440 Sp=0.796) | lr=1.05e-04
+2026-06-08 10:15:46,728 - INFO -   EarlyStopping: 6/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:15:57,769 - INFO - Epoch  23/ 80 ( 11.0s) | Train: loss=1.2871 acc= 37.6% | Val: loss=1.3103 acc= 39.1% | ICBHI=0.6196 (Se=0.444 Sp=0.795) | lr=1.02e-04
+2026-06-08 10:15:57,770 - INFO -   EarlyStopping: 7/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:16:09,143 - INFO - Epoch  24/ 80 ( 11.4s) | Train: loss=1.2784 acc= 38.8% | Val: loss=1.2658 acc= 41.4% | ICBHI=0.6151 (Se=0.429 Sp=0.801) | lr=9.93e-05
+2026-06-08 10:16:09,144 - INFO -   EarlyStopping: 8/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:16:20,968 - INFO - Epoch  25/ 80 ( 11.8s) | Train: loss=1.2789 acc= 38.6% | Val: loss=1.2334 acc= 42.8% | ICBHI=0.6254 (Se=0.449 Sp=0.802) | lr=9.63e-05
+2026-06-08 10:16:20,969 - INFO -   EarlyStopping: 9/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:16:33,155 - INFO - Epoch  26/ 80 ( 12.2s) | Train: loss=1.2650 acc= 39.3% | Val: loss=1.3279 acc= 36.4% | ICBHI=0.6185 (Se=0.447 Sp=0.790) | lr=9.34e-05
+2026-06-08 10:16:33,155 - INFO -   EarlyStopping: 10/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:16:44,428 - INFO - Epoch  27/ 80 ( 11.3s) | Train: loss=1.2666 acc= 37.2% | Val: loss=1.2770 acc= 39.1% | ICBHI=0.6126 (Se=0.430 Sp=0.795) | lr=9.06e-05
+2026-06-08 10:16:44,430 - INFO -   EarlyStopping: 11/20 (best val_loss: 1.220389 at epoch 16)
+2026-06-08 10:16:55,597 - INFO - Epoch  28/ 80 ( 11.2s) | Train: loss=1.2615 acc= 39.3% | Val: loss=1.1407 acc= 56.2% | ICBHI=0.5942 (Se=0.408 Sp=0.781) | lr=8.79e-05
+2026-06-08 10:16:55,633 - INFO -   ✅ New best model saved (val_loss=1.140665, ICBHI=0.5942)
+2026-06-08 10:17:07,437 - INFO - Epoch  29/ 80 ( 11.8s) | Train: loss=1.2469 acc= 39.4% | Val: loss=1.2579 acc= 41.4% | ICBHI=0.6376 (Se=0.471 Sp=0.804) | lr=8.52e-05
+2026-06-08 10:17:07,437 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.140665 at epoch 28)
+2026-06-08 10:17:18,899 - INFO - Epoch  30/ 80 ( 11.5s) | Train: loss=1.2231 acc= 41.1% | Val: loss=1.2149 acc= 43.8% | ICBHI=0.6377 (Se=0.468 Sp=0.807) | lr=8.27e-05
+2026-06-08 10:17:18,899 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.140665 at epoch 28)
+2026-06-08 10:17:31,561 - INFO - Epoch  31/ 80 ( 12.7s) | Train: loss=1.2280 acc= 41.6% | Val: loss=1.2752 acc= 40.9% | ICBHI=0.6170 (Se=0.433 Sp=0.801) | lr=8.02e-05
+2026-06-08 10:17:31,562 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.140665 at epoch 28)
+2026-06-08 10:17:43,274 - INFO - Epoch  32/ 80 ( 11.7s) | Train: loss=1.2354 acc= 42.2% | Val: loss=1.1996 acc= 44.3% | ICBHI=0.6436 (Se=0.481 Sp=0.806) | lr=7.78e-05
+2026-06-08 10:17:43,275 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.140665 at epoch 28)
+2026-06-08 10:17:54,496 - INFO - Epoch  33/ 80 ( 11.2s) | Train: loss=1.2448 acc= 40.9% | Val: loss=1.0938 acc= 53.2% | ICBHI=0.6575 (Se=0.496 Sp=0.819) | lr=7.55e-05
+2026-06-08 10:17:54,528 - INFO -   ✅ New best model saved (val_loss=1.093759, ICBHI=0.6575)
+2026-06-08 10:18:05,920 - INFO - Epoch  34/ 80 ( 11.4s) | Train: loss=1.2173 acc= 42.3% | Val: loss=1.3327 acc= 40.0% | ICBHI=0.6161 (Se=0.429 Sp=0.803) | lr=7.32e-05
+2026-06-08 10:18:05,920 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:18:17,018 - INFO - Epoch  35/ 80 ( 11.1s) | Train: loss=1.2147 acc= 43.4% | Val: loss=1.1616 acc= 50.6% | ICBHI=0.6487 (Se=0.477 Sp=0.820) | lr=7.10e-05
+2026-06-08 10:18:17,018 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:18:28,804 - INFO - Epoch  36/ 80 ( 11.8s) | Train: loss=1.2146 acc= 42.5% | Val: loss=1.1910 acc= 50.9% | ICBHI=0.6382 (Se=0.459 Sp=0.817) | lr=6.89e-05
+2026-06-08 10:18:28,805 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:18:40,876 - INFO - Epoch  37/ 80 ( 12.1s) | Train: loss=1.2108 acc= 42.4% | Val: loss=1.2219 acc= 43.1% | ICBHI=0.6403 (Se=0.474 Sp=0.807) | lr=6.68e-05
+2026-06-08 10:18:40,876 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:18:51,381 - INFO - Epoch  38/ 80 ( 10.5s) | Train: loss=1.1852 acc= 44.9% | Val: loss=1.2024 acc= 42.5% | ICBHI=0.6321 (Se=0.460 Sp=0.804) | lr=6.48e-05
+2026-06-08 10:18:51,382 - INFO -   EarlyStopping: 5/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:19:01,475 - INFO - Epoch  39/ 80 ( 10.1s) | Train: loss=1.1879 acc= 43.9% | Val: loss=1.1573 acc= 49.6% | ICBHI=0.6476 (Se=0.474 Sp=0.821) | lr=6.29e-05
+2026-06-08 10:19:01,476 - INFO -   EarlyStopping: 6/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:19:11,883 - INFO - Epoch  40/ 80 ( 10.4s) | Train: loss=1.1921 acc= 44.3% | Val: loss=1.1898 acc= 48.0% | ICBHI=0.6424 (Se=0.464 Sp=0.820) | lr=6.10e-05
+2026-06-08 10:19:11,883 - INFO -   EarlyStopping: 7/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:19:21,993 - INFO - Epoch  41/ 80 ( 10.1s) | Train: loss=1.1862 acc= 44.7% | Val: loss=1.2516 acc= 43.9% | ICBHI=0.6406 (Se=0.469 Sp=0.812) | lr=5.91e-05
+2026-06-08 10:19:21,993 - INFO -   EarlyStopping: 8/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:19:31,983 - INFO - Epoch  42/ 80 ( 10.0s) | Train: loss=1.1866 acc= 44.9% | Val: loss=1.1833 acc= 47.2% | ICBHI=0.6386 (Se=0.460 Sp=0.817) | lr=5.74e-05
+2026-06-08 10:19:31,983 - INFO -   EarlyStopping: 9/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:19:41,841 - INFO - Epoch  43/ 80 (  9.9s) | Train: loss=1.1711 acc= 44.8% | Val: loss=1.2858 acc= 41.7% | ICBHI=0.6285 (Se=0.449 Sp=0.808) | lr=5.56e-05
+2026-06-08 10:19:41,842 - INFO -   EarlyStopping: 10/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:19:52,036 - INFO - Epoch  44/ 80 ( 10.2s) | Train: loss=1.1816 acc= 44.3% | Val: loss=1.1849 acc= 48.2% | ICBHI=0.6455 (Se=0.469 Sp=0.822) | lr=5.40e-05
+2026-06-08 10:19:52,036 - INFO -   EarlyStopping: 11/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:20:03,196 - INFO - Epoch  45/ 80 ( 11.2s) | Train: loss=1.1741 acc= 45.9% | Val: loss=1.1923 acc= 46.0% | ICBHI=0.6438 (Se=0.474 Sp=0.814) | lr=5.24e-05
+2026-06-08 10:20:03,197 - INFO -   EarlyStopping: 12/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:20:18,163 - INFO - Epoch  46/ 80 ( 15.0s) | Train: loss=1.1769 acc= 45.9% | Val: loss=1.1772 acc= 47.2% | ICBHI=0.6490 (Se=0.479 Sp=0.819) | lr=5.08e-05
+2026-06-08 10:20:18,163 - INFO -   EarlyStopping: 13/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:20:32,672 - INFO - Epoch  47/ 80 ( 14.5s) | Train: loss=1.1744 acc= 44.3% | Val: loss=1.1702 acc= 45.4% | ICBHI=0.6319 (Se=0.450 Sp=0.813) | lr=4.93e-05
+2026-06-08 10:20:32,672 - INFO -   EarlyStopping: 14/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:20:46,188 - INFO - Epoch  48/ 80 ( 13.5s) | Train: loss=1.1646 acc= 44.6% | Val: loss=1.1339 acc= 49.4% | ICBHI=0.6569 (Se=0.495 Sp=0.819) | lr=4.78e-05
+2026-06-08 10:20:46,188 - INFO -   EarlyStopping: 15/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:21:02,634 - INFO - Epoch  49/ 80 ( 16.4s) | Train: loss=1.1522 acc= 46.3% | Val: loss=1.1485 acc= 47.9% | ICBHI=0.6417 (Se=0.465 Sp=0.818) | lr=4.64e-05
+2026-06-08 10:21:02,635 - INFO -   EarlyStopping: 16/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:21:13,977 - INFO - Epoch  50/ 80 ( 11.3s) | Train: loss=1.1426 acc= 46.8% | Val: loss=1.2609 acc= 44.9% | ICBHI=0.6374 (Se=0.459 Sp=0.815) | lr=4.50e-05
+2026-06-08 10:21:13,978 - INFO -   EarlyStopping: 17/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:21:25,398 - INFO - Epoch  51/ 80 ( 11.4s) | Train: loss=1.1401 acc= 47.5% | Val: loss=1.1400 acc= 47.7% | ICBHI=0.6428 (Se=0.467 Sp=0.819) | lr=4.36e-05
+2026-06-08 10:21:25,398 - INFO -   EarlyStopping: 18/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:21:36,710 - INFO - Epoch  52/ 80 ( 11.3s) | Train: loss=1.1548 acc= 45.9% | Val: loss=1.2228 acc= 43.0% | ICBHI=0.6265 (Se=0.443 Sp=0.810) | lr=4.23e-05
+2026-06-08 10:21:36,711 - INFO -   EarlyStopping: 19/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:21:47,842 - INFO - Epoch  53/ 80 ( 11.1s) | Train: loss=1.1363 acc= 48.0% | Val: loss=1.2020 acc= 45.5% | ICBHI=0.6351 (Se=0.454 Sp=0.816) | lr=4.10e-05
+2026-06-08 10:21:47,842 - INFO -   EarlyStopping: 20/20 (best val_loss: 1.093759 at epoch 33)
+2026-06-08 10:21:47,843 - INFO - 
+  ⏹ Early stopping at epoch 53 (best: epoch 33)
+2026-06-08 10:21:47,843 - INFO - 
+======================================================================
+2026-06-08 10:21:47,843 - INFO - TRAINING COMPLETED (10.1 min)
+2026-06-08 10:21:47,843 - INFO -   Best epoch: 33
+2026-06-08 10:21:47,844 - INFO -   Best val_loss: 1.093759
+2026-06-08 10:21:47,844 - INFO -   Best val_ICBHI: 0.6575
+2026-06-08 10:21:47,844 - INFO -   Checkpoint: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\best_cfc_v7_mel_hybrid_official.pth
+2026-06-08 10:21:47,844 - INFO - ======================================================================
+2026-06-08 10:21:47,852 - INFO - 
+History saved: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\cfc_v7_mel_hybrid_official_training_log.csv
+2026-06-08 10:21:49,328 - INFO - Curves saved: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\figures\cfc_v7_mel_hybrid_official_training_curves.png
+2026-06-08 10:21:49,330 - INFO - Config saved: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\cfc_v7_mel_hybrid_official_config.json
+2026-06-08 10:21:49,330 - INFO - 
+======================================================================
+2026-06-08 10:21:49,330 - INFO - EVALUATION ON TEST SET
+2026-06-08 10:21:49,331 - INFO - ======================================================================
+2026-06-08 10:21:52,400 - INFO -   Test loss:        1.3666
+2026-06-08 10:21:52,400 - INFO -   Test accuracy:    35.13%
+2026-06-08 10:21:52,400 - INFO -   Test ICBHI Score: 0.5163
+2026-06-08 10:21:52,400 - INFO -   Test Sensitivity: 0.2853
+2026-06-08 10:21:52,400 - INFO -   Test Specificity: 0.7472
+2026-06-08 10:21:52,400 - INFO - 
+2026-06-08 10:21:52,401 - INFO -   Per-class metrics:
+2026-06-08 10:21:52,401 - INFO -     Normal    : Se=0.422  Sp=0.540  (TP=664, FN=909, FP=534, TN=626)
+2026-06-08 10:21:52,401 - INFO -     Crackle   : Se=0.286  Sp=0.699  (TP=184, FN=460, FP=629, TN=1460)
+2026-06-08 10:21:52,401 - INFO -     Wheeze    : Se=0.218  Sp=0.841  (TP=82, FN=295, FP=374, TN=1982)
+2026-06-08 10:21:52,401 - INFO -     Both      : Se=0.216  Sp=0.909  (TP=30, FN=109, FP=236, TN=2358)
+2026-06-08 10:21:52,401 - INFO - 
+2026-06-08 10:21:52,401 - INFO -   COMPARISON:
+2026-06-08 10:21:52,402 - INFO -     CNN baseline (RespiratoryNet): ICBHI = 0.549
+2026-06-08 10:21:52,402 - INFO -     This model (hybrid):       ICBHI = 0.5163
+2026-06-08 10:21:52,402 - INFO -     Difference: -0.0327 (-6.0% worse than CNN)
+2026-06-08 10:21:52,403 - INFO - 
+Test summary saved: D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\results\metrics\cfc_v7_mel_hybrid_official_test_summary.json
+2026-06-08 10:21:52,403 - INFO - 
+======================================================================
+2026-06-08 10:21:52,403 - INFO - ✅ TRAINING V6 (hybrid) COMPLETED
+2026-06-08 10:21:52,403 - INFO - ======================================================================

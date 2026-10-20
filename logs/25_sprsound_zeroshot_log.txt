@@ -1,0 +1,25 @@
+2026-06-14 00:18:15,542 | INFO | ======================================================================
+2026-06-14 00:18:15,542 | INFO | ZERO-SHOT CROSS-DATASET EVALUATION: CNN(ICBHI) -> SPRSound
+2026-06-14 00:18:15,542 | INFO | Date: 2026-06-14 00:18:15 | Device: cuda
+2026-06-14 00:18:15,543 | INFO | ======================================================================
+2026-06-14 00:18:15,543 | INFO | Building SPRSound tensors (pipeline identical to ICBHI)...
+2026-06-14 00:18:15,603 | INFO | WAVs found: 2683 | JSONs indexed: 2683
+2026-06-14 00:21:01,093 | INFO | Files processed: 2496 | events used: 8518 | discarded (short): 571 | (unknown label): 0
+2026-06-14 00:21:02,257 | INFO |     Normal: 6706 (78.7%)
+2026-06-14 00:21:02,257 | INFO |     Crackle: 1176 (13.8%)
+2026-06-14 00:21:02,258 | INFO |     Wheeze: 604 (7.1%)
+2026-06-14 00:21:02,258 | INFO |     Both: 32 (0.4%)
+2026-06-14 00:21:02,259 | INFO | Tensor final: X=(8518, 1, 128, 251), y=(8518,)
+2026-06-14 00:21:06,311 | INFO | seed  42: ICBHI=0.4593 (Se=0.127 Sp=0.791) | BIN Se=0.175 Sp=0.791 AUC=0.329
+2026-06-14 00:21:08,896 | INFO | seed 123: ICBHI=0.4719 (Se=0.353 Sp=0.591) | BIN Se=0.485 Sp=0.591 AUC=0.548
+2026-06-14 00:21:11,499 | INFO | seed   7: ICBHI=0.4867 (Se=0.364 Sp=0.610) | BIN Se=0.407 Sp=0.610 AUC=0.539
+2026-06-14 00:21:14,114 | INFO | seed  99: ICBHI=0.3593 (Se=0.341 Sp=0.378) | BIN Se=0.386 Sp=0.378 AUC=0.425
+2026-06-14 00:21:16,721 | INFO | seed 314: ICBHI=0.4389 (Se=0.281 Sp=0.597) | BIN Se=0.302 Sp=0.597 AUC=0.444
+2026-06-14 00:21:16,730 | INFO | ----------------------------------------------------------------------
+2026-06-14 00:21:16,731 | INFO | SUMMARY (mean ± SD over 5 seeds):
+2026-06-14 00:21:16,731 | INFO |   official ICBHI 4-class : 0.443 ± 0.045  (secondary)
+2026-06-14 00:21:16,731 | INFO |   BINARY  Se            : 0.351 ± 0.105
+2026-06-14 00:21:16,731 | INFO |   BINARY  Sp            : 0.593 ± 0.131
+2026-06-14 00:21:16,732 | INFO |   BINARY  AUC           : 0.457 ± 0.081  (PRIMARY)
+2026-06-14 00:21:16,732 | INFO |   ICBHI->ICBHI reference: binary AUC 0.572
+2026-06-14 00:21:16,733 | INFO | Results saved to D:\UNIVERSIDAD\PROYECTOS\ANID\PAPER_FONIS_1_2027\FONIS_MVP\scripts\sprsound_zeroshot_results.json

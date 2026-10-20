@@ -1,0 +1,262 @@
+{
+  "timestamp": "2026-09-17T11:25:26",
+  "target_params": 491492,
+  "aggregated": [
+    {
+      "cell": "cfcpure",
+      "n_seeds": 5,
+      "n_params": 212708,
+      "hidden_size_rnn": 64,
+      "val_icbhi_mean": 0.5,
+      "val_icbhi_sd": 0.0,
+      "val_auc_mean": 0.5026231007009448,
+      "val_auc_sd": 0.006526263165528451,
+      "test_icbhi_mean": 0.4998092816274634,
+      "test_icbhi_sd": 0.00017410125794825444,
+      "test_se_off_mean": 0.0,
+      "test_se_off_sd": 0.0,
+      "test_sp_off_mean": 0.9996185632549268,
+      "test_sp_off_sd": 0.0003482025158965089,
+      "test_auc_mean": 0.49842531293158254,
+      "test_auc_sd": 0.0013915740929998158,
+      "test_se_Wheeze_mean": 0.0,
+      "test_se_Wheeze_sd": 0.0,
+      "test_se_Both_mean": 0.0,
+      "test_se_Both_sd": 0.0,
+      "best_epoch_mean": 9.0,
+      "best_epoch_sd": 6.2048368229954285
+    },
+    {
+      "cell": "gru",
+      "n_seeds": 5,
+      "n_params": 490380,
+      "hidden_size_rnn": 134,
+      "val_icbhi_mean": 0.48476642431102784,
+      "val_icbhi_sd": 0.0491328463669135,
+      "val_auc_mean": 0.6647350777134398,
+      "val_auc_sd": 0.03891631145649515,
+      "test_icbhi_mean": 0.29461582304842493,
+      "test_icbhi_sd": 0.028610897064358643,
+      "test_se_off_mean": 0.3744827586206897,
+      "test_se_off_sd": 0.05682008968799855,
+      "test_sp_off_mean": 0.2147488874761602,
+      "test_sp_off_sd": 0.09436373839081375,
+      "test_auc_mean": 0.45518315540259113,
+      "test_auc_sd": 0.01766238345596723,
+      "test_se_Wheeze_mean": 0.32042440318302384,
+      "test_se_Wheeze_sd": 0.039137029922383076,
+      "test_se_Both_mean": 0.22014388489208633,
+      "test_se_Both_sd": 0.0502568322203539,
+      "best_epoch_mean": 60.0,
+      "best_epoch_sd": 7.516648189186454
+    },
+    {
+      "cell": "lstm",
+      "n_seeds": 5,
+      "n_params": 489084,
+      "hidden_size_rnn": 103,
+      "val_icbhi_mean": 0.5166833558274195,
+      "val_icbhi_sd": 0.01447194952223402,
+      "val_auc_mean": 0.6644586181374896,
+      "val_auc_sd": 0.028618303149516477,
+      "test_icbhi_mean": 0.3526066488370564,
+      "test_icbhi_sd": 0.032848551483278934,
+      "test_se_off_mean": 0.3329310344827586,
+      "test_se_off_sd": 0.07046431704216531,
+      "test_sp_off_mean": 0.3722822631913541,
+      "test_sp_off_sd": 0.10664759632419316,
+      "test_auc_mean": 0.47854275818225656,
+      "test_auc_sd": 0.017513750493978048,
+      "test_se_Wheeze_mean": 0.32519893899204244,
+      "test_se_Wheeze_sd": 0.05402291615109164,
+      "test_se_Both_mean": 0.1856115107913669,
+      "test_se_Both_sd": 0.0456140071486255,
+      "best_epoch_mean": 55.0,
+      "best_epoch_sd": 4.358898943540674
+    }
+  ],
+  "paired_vs_reference": [
+    {
+      "cell": "cfcpure",
+      "vs": "CfC-Hybrid (mmRNN)",
+      "metric": "icbhi",
+      "n": 5,
+      "diff_mean": 0.14879841944888966,
+      "ci90_lo": 0.11985412614409809,
+      "ci90_hi": 0.17774271275368123,
+      "p_ttest": 0.00039378314687410634,
+      "p_wilcoxon": 0.0625
+    },
+    {
+      "cell": "cfcpure",
+      "vs": "CfC-Hybrid (mmRNN)",
+      "metric": "auc",
+      "n": 5,
+      "diff_mean": -0.0024911217309336433,
+      "ci90_lo": -0.02235221783326594,
+      "ci90_hi": 0.017369974371398655,
+      "p_ttest": 0.8023884969462569,
+      "p_wilcoxon": 1.0
+    },
+    {
+      "cell": "cfcpure",
+      "vs": "CNN-RespiratoryNet",
+      "metric": "icbhi",
+      "n": 5,
+      "diff_mean": 0.040213242869982645,
+      "ci90_lo": 0.02403759573593971,
+      "ci90_hi": 0.05638889000402558,
+      "p_ttest": 0.006087798630957454,
+      "p_wilcoxon": 0.0625
+    },
+    {
+      "cell": "cfcpure",
+      "vs": "CNN-RespiratoryNet",
+      "metric": "auc",
+      "n": 5,
+      "diff_mean": -0.07331301926913213,
+      "ci90_lo": -0.09938819743403728,
+      "ci90_hi": -0.04723784110422698,
+      "p_ttest": 0.0038970271932524288,
+      "p_wilcoxon": 0.0625
+    },
+    {
+      "cell": "gru",
+      "vs": "CfC-Hybrid (mmRNN)",
+      "metric": "icbhi",
+      "n": 5,
+      "diff_mean": -0.05639503913014885,
+      "ci90_lo": -0.08861155631384313,
+      "ci90_hi": -0.024178521946454583,
+      "p_ttest": 0.020265105115560025,
+      "p_wilcoxon": 0.0625
+    },
+    {
+      "cell": "gru",
+      "vs": "CfC-Hybrid (mmRNN)",
+      "metric": "auc",
+      "n": 5,
+      "diff_mean": -0.04573327925992503,
+      "ci90_lo": -0.07799655214156138,
+      "ci90_hi": -0.013470006378288671,
+      "p_ttest": 0.03909023741701592,
+      "p_wilcoxon": 0.125
+    },
+    {
+      "cell": "gru",
+      "vs": "CNN-RespiratoryNet",
+      "metric": "icbhi",
+      "n": 5,
+      "diff_mean": -0.16498021570905586,
+      "ci90_lo": -0.18512187830214505,
+      "ci90_hi": -0.14483855311596666,
+      "p_ttest": 6.314587498697134e-05,
+      "p_wilcoxon": 0.0625
+    },
+    {
+      "cell": "gru",
+      "vs": "CNN-RespiratoryNet",
+      "metric": "auc",
+      "n": 5,
+      "diff_mean": -0.11655517679812352,
+      "ci90_lo": -0.1480956711086151,
+      "ci90_hi": -0.08501468248763196,
+      "p_ttest": 0.001403483619797173,
+      "p_wilcoxon": 0.0625
+    },
+    {
+      "cell": "lstm",
+      "vs": "CfC-Hybrid (mmRNN)",
+      "metric": "icbhi",
+      "n": 5,
+      "diff_mean": 0.0015957866584825787,
+      "ci90_lo": -0.005194282932372743,
+      "ci90_hi": 0.0083858562493379,
+      "p_ttest": 0.6426716085501563,
+      "p_wilcoxon": 1.0
+    },
+    {
+      "cell": "lstm",
+      "vs": "CfC-Hybrid (mmRNN)",
+      "metric": "auc",
+      "n": 5,
+      "diff_mean": -0.022373676480259563,
+      "ci90_lo": -0.029466007612112502,
+      "ci90_hi": -0.015281345348406625,
+      "p_ttest": 0.002546150226593544,
+      "p_wilcoxon": 0.0625
+    },
+    {
+      "cell": "lstm",
+      "vs": "CNN-RespiratoryNet",
+      "metric": "icbhi",
+      "n": 5,
+      "diff_mean": -0.10698938992042444,
+      "ci90_lo": -0.14071896652690344,
+      "ci90_hi": -0.07325981331394543,
+      "p_ttest": 0.0024946072576082856,
+      "p_wilcoxon": 0.0625
+    },
+    {
+      "cell": "lstm",
+      "vs": "CNN-RespiratoryNet",
+      "metric": "auc",
+      "n": 5,
+      "diff_mean": -0.09319557401845804,
+      "ci90_lo": -0.11671140360698731,
+      "ci90_hi": -0.06967974442992877,
+      "p_ttest": 0.0010751694596844478,
+      "p_wilcoxon": 0.0625
+    }
+  ],
+  "reference": {
+    "CfC-Hybrid (mmRNN)": {
+      "seeds": [
+        123,
+        314,
+        42,
+        7,
+        99
+      ],
+      "icbhi": [
+        0.3925537628515685,
+        0.34798101584935437,
+        0.3109375342525813,
+        0.3386478725036719,
+        0.3649341254356928
+      ],
+      "auc": [
+        0.5148486309928316,
+        0.478043273341079,
+        0.5256993006993007,
+        0.480594953635706,
+        0.5053960146436636
+      ],
+      "n_params": 491492
+    },
+    "CNN-RespiratoryNet": {
+      "seeds": [
+        123,
+        314,
+        42,
+        7,
+        99
+      ],
+      "icbhi": [
+        0.44290423526316947,
+        0.4772157309774865,
+        0.4523278054234167,
+        0.4473699497994169,
+        0.47816247232391434
+      ],
+      "auc": [
+        0.5450939342788873,
+        0.5688230265032773,
+        0.6045827213538812,
+        0.548021022864283,
+        0.5921709560032444
+      ],
+      "n_params": 556500
+    }
+  }
+}

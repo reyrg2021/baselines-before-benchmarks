@@ -1,0 +1,131 @@
+00:25:20 | INFO    | ==========================================================================
+00:25:20 | INFO    |   SCRIPT 40 - ROBUSTNESS TO ADDITIVE NOISE
+00:25:20 | INFO    | ==========================================================================
+00:25:20 | INFO    |   Date:     2026-09-18 00:25:20
+00:25:20 | INFO    |   BASE_DIR:  D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP
+00:25:20 | INFO    |   Device:    cuda
+00:25:20 | INFO    |   Levels:   ['clean', '20 dB', '10 dB', '5 dB', '0 dB']
+00:25:20 | INFO    |   Log:       D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\noise_robustness_log.txt
+00:25:20 | INFO    | 
+00:25:20 | INFO    | ==========================================================================
+00:25:20 | INFO    |   TEST PARTITION
+00:25:20 | INFO    | ==========================================================================
+00:25:20 | INFO    |   Cycles: 2733
+00:25:20 | INFO    |       Normal:  1573
+00:25:20 | INFO    |      Crackle:   644
+00:25:20 | INFO    |       Wheeze:   377
+00:25:20 | INFO    |         Both:   139
+00:25:20 | INFO    | 
+00:25:20 | INFO    | ==========================================================================
+00:25:20 | INFO    |   CHECKPOINTS
+00:25:20 | INFO    | ==========================================================================
+00:25:20 | INFO    |   Seed  42: loaded (556,500 parameters)
+00:25:20 | INFO    |   Seed 123: loaded (556,500 parameters)
+00:25:20 | INFO    |   Seed   7: loaded (556,500 parameters)
+00:25:20 | INFO    |   Seed  99: loaded (556,500 parameters)
+00:25:20 | INFO    |   Seed 314: loaded (556,500 parameters)
+00:25:20 | INFO    | 
+00:25:20 | INFO    | ==========================================================================
+00:25:20 | INFO    |   CONDITION: clean
+00:25:20 | INFO    | ==========================================================================
+00:25:20 | INFO    |   Building inputs (clean) ...
+00:25:26 | INFO    |     500 / 2733 cycles
+00:25:32 | INFO    |     1000 / 2733 cycles
+00:25:38 | INFO    |     1500 / 2733 cycles
+00:25:43 | INFO    |     2000 / 2733 cycles
+00:25:49 | INFO    |     2500 / 2733 cycles
+00:25:53 | INFO    |     seed  42: ICBHI 0.452  Se 0.482  Sp 0.423  AUC 0.605
+00:25:54 | INFO    |     seed 123: ICBHI 0.443  Se 0.318  Sp 0.568  AUC 0.545
+00:25:55 | INFO    |     seed   7: ICBHI 0.447  Se 0.447  Sp 0.448  AUC 0.548
+00:25:56 | INFO    |     seed  99: ICBHI 0.478  Se 0.378  Sp 0.578  AUC 0.592
+00:25:57 | INFO    |     seed 314: ICBHI 0.477  Se 0.417  Sp 0.537  AUC 0.569
+00:25:57 | INFO    |     MEAN: ICBHI 0.460 +/- 0.017   AUC 0.572 +/- 0.026
+00:25:57 | INFO    | 
+00:25:57 | INFO    | ==========================================================================
+00:25:57 | INFO    |   SANITY CHECK (clean condition vs Table 4)
+00:25:57 | INFO    | ==========================================================================
+00:25:57 | INFO    |   ICBHI: 0.4596 vs 0.4600 official (delta 0.0004)
+00:25:57 | INFO    |   AUC:   0.5717 vs 0.5720 official (delta 0.0003)
+00:25:57 | INFO    |   PASSED. The mel reconstruction reproduces the paper.
+00:25:57 | INFO    |   The noise curves rest on a verified clean condition.
+00:25:57 | INFO    | 
+00:25:57 | INFO    | ==========================================================================
+00:25:57 | INFO    |   CONDITION: 20
+00:25:57 | INFO    | ==========================================================================
+00:25:57 | INFO    |   Building inputs (20 dB) ...
+00:26:04 | INFO    |     500 / 2733 cycles
+00:26:12 | INFO    |     1000 / 2733 cycles
+00:26:22 | INFO    |     1500 / 2733 cycles
+00:26:32 | INFO    |     2000 / 2733 cycles
+00:26:42 | INFO    |     2500 / 2733 cycles
+00:26:47 | INFO    |     Effective SNR: 20.00 +/- 0.00 dB
+00:26:48 | INFO    |     seed  42: ICBHI 0.482  Se 0.018  Sp 0.946  AUC 0.560
+00:26:49 | INFO    |     seed 123: ICBHI 0.451  Se 0.085  Sp 0.818  AUC 0.586
+00:26:49 | INFO    |     seed   7: ICBHI 0.482  Se 0.098  Sp 0.865  AUC 0.585
+00:26:50 | INFO    |     seed  99: ICBHI 0.484  Se 0.047  Sp 0.921  AUC 0.567
+00:26:51 | INFO    |     seed 314: ICBHI 0.514  Se 0.316  Sp 0.712  AUC 0.636
+00:26:51 | INFO    |     MEAN: ICBHI 0.483 +/- 0.022   AUC 0.587 +/- 0.030
+00:26:51 | INFO    | 
+00:26:51 | INFO    | ==========================================================================
+00:26:51 | INFO    |   CONDITION: 10
+00:26:51 | INFO    | ==========================================================================
+00:26:51 | INFO    |   Building inputs (10 dB) ...
+00:27:00 | INFO    |     500 / 2733 cycles
+00:27:09 | INFO    |     1000 / 2733 cycles
+00:27:17 | INFO    |     1500 / 2733 cycles
+00:27:25 | INFO    |     2000 / 2733 cycles
+00:27:34 | INFO    |     2500 / 2733 cycles
+00:27:38 | INFO    |     Effective SNR: 10.00 +/- 0.00 dB
+00:27:39 | INFO    |     seed  42: ICBHI 0.499  Se 0.001  Sp 0.998  AUC 0.629
+00:27:40 | INFO    |     seed 123: ICBHI 0.464  Se 0.030  Sp 0.898  AUC 0.573
+00:27:41 | INFO    |     seed   7: ICBHI 0.477  Se 0.009  Sp 0.945  AUC 0.568
+00:27:42 | INFO    |     seed  99: ICBHI 0.487  Se 0.020  Sp 0.954  AUC 0.521
+00:27:43 | INFO    |     seed 314: ICBHI 0.499  Se 0.234  Sp 0.763  AUC 0.587
+00:27:43 | INFO    |     MEAN: ICBHI 0.485 +/- 0.015   AUC 0.576 +/- 0.039
+00:27:43 | INFO    | 
+00:27:43 | INFO    | ==========================================================================
+00:27:43 | INFO    |   CONDITION: 5
+00:27:43 | INFO    | ==========================================================================
+00:27:43 | INFO    |   Building inputs (5 dB) ...
+00:27:50 | INFO    |     500 / 2733 cycles
+00:27:58 | INFO    |     1000 / 2733 cycles
+00:28:07 | INFO    |     1500 / 2733 cycles
+00:28:15 | INFO    |     2000 / 2733 cycles
+00:28:24 | INFO    |     2500 / 2733 cycles
+00:28:28 | INFO    |     Effective SNR: 5.00 +/- 0.00 dB
+00:28:29 | INFO    |     seed  42: ICBHI 0.500  Se 0.000  Sp 1.000  AUC 0.613
+00:28:30 | INFO    |     seed 123: ICBHI 0.475  Se 0.011  Sp 0.939  AUC 0.585
+00:28:31 | INFO    |     seed   7: ICBHI 0.484  Se 0.004  Sp 0.963  AUC 0.544
+00:28:32 | INFO    |     seed  99: ICBHI 0.489  Se 0.005  Sp 0.972  AUC 0.469
+00:28:33 | INFO    |     seed 314: ICBHI 0.488  Se 0.125  Sp 0.852  AUC 0.566
+00:28:33 | INFO    |     MEAN: ICBHI 0.487 +/- 0.009   AUC 0.556 +/- 0.054
+00:28:33 | INFO    | 
+00:28:33 | INFO    | ==========================================================================
+00:28:33 | INFO    |   CONDITION: 0
+00:28:33 | INFO    | ==========================================================================
+00:28:33 | INFO    |   Building inputs (0 dB) ...
+00:28:41 | INFO    |     500 / 2733 cycles
+00:28:49 | INFO    |     1000 / 2733 cycles
+00:28:57 | INFO    |     1500 / 2733 cycles
+00:29:06 | INFO    |     2000 / 2733 cycles
+00:29:14 | INFO    |     2500 / 2733 cycles
+00:29:19 | INFO    |     Effective SNR: 0.00 +/- 0.00 dB
+00:29:20 | INFO    |     seed  42: ICBHI 0.500  Se 0.000  Sp 1.000  AUC 0.546
+00:29:21 | INFO    |     seed 123: ICBHI 0.488  Se 0.003  Sp 0.972  AUC 0.555
+00:29:22 | INFO    |     seed   7: ICBHI 0.490  Se 0.002  Sp 0.979  AUC 0.549
+00:29:22 | INFO    |     seed  99: ICBHI 0.495  Se 0.002  Sp 0.987  AUC 0.463
+00:29:23 | INFO    |     seed 314: ICBHI 0.478  Se 0.042  Sp 0.914  AUC 0.568
+00:29:23 | INFO    |     MEAN: ICBHI 0.490 +/- 0.008   AUC 0.536 +/- 0.042
+00:29:23 | INFO    | 
+00:29:23 | INFO    | ==========================================================================
+00:29:23 | INFO    |   OUTPUTS
+00:29:23 | INFO    | ==========================================================================
+00:29:23 | INFO    |   noise_robustness.json
+00:29:23 | INFO    |   noise_robustness_perclass.csv
+00:29:23 | INFO    |   noise_robustness_runs.csv
+00:29:23 | INFO    |   noise_robustness_summary.csv
+00:29:23 | INFO    |   S16_noise_robustness_summary.md
+00:29:23 | INFO    | 
+00:29:23 | INFO    | ==========================================================================
+00:29:23 | INFO    |   END OF SCRIPT 40
+00:29:23 | INFO    | ==========================================================================

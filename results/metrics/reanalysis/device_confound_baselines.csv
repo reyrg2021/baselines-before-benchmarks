@@ -1,0 +1,5 @@
+baseline,display,auc,auc_ci_lo,auc_ci_hi,oracle
+B1_train_prior,Device prior (train),0.4938356314531863,0.4321568016946291,0.5609335266036033,False
+B2_train_prior_shrunk,"Device prior (train, n<50 -> global)",0.5807829318017406,0.503791470792397,0.6686916538789918,False
+B3_majority_device,Indicator: AKGC417L,0.581994377096258,0.5056846418226328,0.6691205397923439,False
+B4_oracle_test_prev,ORACLE: test prevalence per device,0.5832058223907753,0.5060922708798785,0.6719302563258394,True

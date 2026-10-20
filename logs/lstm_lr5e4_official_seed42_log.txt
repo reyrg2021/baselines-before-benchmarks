@@ -1,0 +1,166 @@
+2026-09-07 07:04:28,425 - INFO -   TensorBoard logs: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\results\tensorboard\lstm_lr5e4_official_seed42_20260907_070428
+2026-09-07 07:04:28,426 - INFO - 
+======================================================================
+2026-09-07 07:04:28,426 - INFO - STARTING TRAINING: lstm_lr5e4_official_seed42
+2026-09-07 07:04:28,426 - INFO - ======================================================================
+2026-09-07 07:04:28,426 - INFO -   Device: cuda
+2026-09-07 07:04:28,426 - INFO -   Max epochs: 80
+2026-09-07 07:04:28,428 - INFO -   Batch size: 64
+2026-09-07 07:04:28,428 - INFO -   Base LR: 0.0005 (decay 0.97/epoch)
+2026-09-07 07:04:28,428 - INFO -   Early stopping patience: 20
+2026-09-07 07:04:28,428 - INFO - ======================================================================
+
+2026-09-07 07:04:54,993 - INFO - Epoch   1/ 80 ( 26.6s) | Train: loss=1.3974 acc= 25.4% | Val: loss=1.4453 acc= 21.9% | ICBHI=0.5061 (Se=0.261 Sp=0.751) | lr=5.00e-04
+2026-09-07 07:04:55,025 - INFO -   ✅ New best model saved (val_loss=1.445275, ICBHI=0.5061)
+2026-09-07 07:05:04,556 - INFO - Epoch   2/ 80 (  9.5s) | Train: loss=1.3926 acc= 25.1% | Val: loss=1.4038 acc= 25.4% | ICBHI=0.5101 (Se=0.261 Sp=0.759) | lr=4.85e-04
+2026-09-07 07:05:04,576 - INFO -   ✅ New best model saved (val_loss=1.403785, ICBHI=0.5101)
+2026-09-07 07:05:10,895 - INFO - Epoch   3/ 80 (  6.3s) | Train: loss=1.3871 acc= 26.1% | Val: loss=1.3771 acc=  9.6% | ICBHI=0.5128 (Se=0.263 Sp=0.763) | lr=4.70e-04
+2026-09-07 07:05:10,916 - INFO -   ✅ New best model saved (val_loss=1.377082, ICBHI=0.5128)
+2026-09-07 07:05:15,586 - INFO - Epoch   4/ 80 (  4.7s) | Train: loss=1.3868 acc= 26.1% | Val: loss=1.3567 acc= 64.9% | ICBHI=0.5000 (Se=0.250 Sp=0.750) | lr=4.56e-04
+2026-09-07 07:05:15,606 - INFO -   ✅ New best model saved (val_loss=1.356694, ICBHI=0.5000)
+2026-09-07 07:05:19,857 - INFO - Epoch   5/ 80 (  4.2s) | Train: loss=1.3874 acc= 25.0% | Val: loss=1.4021 acc= 26.3% | ICBHI=0.5135 (Se=0.265 Sp=0.762) | lr=4.43e-04
+2026-09-07 07:05:19,857 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.356694 at epoch 4)
+2026-09-07 07:05:23,529 - INFO - Epoch   6/ 80 (  3.7s) | Train: loss=1.3871 acc= 25.2% | Val: loss=1.4082 acc=  6.5% | ICBHI=0.5038 (Se=0.251 Sp=0.757) | lr=4.29e-04
+2026-09-07 07:05:23,529 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.356694 at epoch 4)
+2026-09-07 07:05:26,877 - INFO - Epoch   7/ 80 (  3.3s) | Train: loss=1.3860 acc= 26.0% | Val: loss=1.3679 acc= 11.2% | ICBHI=0.5098 (Se=0.256 Sp=0.763) | lr=4.16e-04
+2026-09-07 07:05:26,877 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.356694 at epoch 4)
+2026-09-07 07:05:30,034 - INFO - Epoch   8/ 80 (  3.2s) | Train: loss=1.3840 acc= 26.9% | Val: loss=1.3951 acc= 10.1% | ICBHI=0.5141 (Se=0.265 Sp=0.763) | lr=4.04e-04
+2026-09-07 07:05:30,035 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.356694 at epoch 4)
+2026-09-07 07:05:33,129 - INFO - Epoch   9/ 80 (  3.1s) | Train: loss=1.3863 acc= 25.2% | Val: loss=1.3572 acc= 11.8% | ICBHI=0.5104 (Se=0.259 Sp=0.762) | lr=3.92e-04
+2026-09-07 07:05:33,129 - INFO -   EarlyStopping: 5/20 (best val_loss: 1.356694 at epoch 4)
+2026-09-07 07:05:36,241 - INFO - Epoch  10/ 80 (  3.1s) | Train: loss=1.3835 acc= 26.4% | Val: loss=1.4045 acc= 27.2% | ICBHI=0.5168 (Se=0.268 Sp=0.765) | lr=3.80e-04
+2026-09-07 07:05:36,241 - INFO -   EarlyStopping: 6/20 (best val_loss: 1.356694 at epoch 4)
+2026-09-07 07:05:39,371 - INFO - Epoch  11/ 80 (  3.1s) | Train: loss=1.3835 acc= 27.6% | Val: loss=1.3565 acc= 41.3% | ICBHI=0.5751 (Se=0.377 Sp=0.773) | lr=3.69e-04
+2026-09-07 07:05:39,390 - INFO -   ✅ New best model saved (val_loss=1.356482, ICBHI=0.5751)
+2026-09-07 07:05:42,798 - INFO - Epoch  12/ 80 (  3.4s) | Train: loss=1.3814 acc= 26.5% | Val: loss=1.3633 acc= 27.1% | ICBHI=0.5557 (Se=0.337 Sp=0.774) | lr=3.58e-04
+2026-09-07 07:05:42,799 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.356482 at epoch 11)
+2026-09-07 07:05:46,217 - INFO - Epoch  13/ 80 (  3.4s) | Train: loss=1.3776 acc= 28.7% | Val: loss=1.3712 acc= 28.7% | ICBHI=0.5963 (Se=0.418 Sp=0.775) | lr=3.47e-04
+2026-09-07 07:05:46,217 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.356482 at epoch 11)
+2026-09-07 07:05:49,592 - INFO - Epoch  14/ 80 (  3.4s) | Train: loss=1.3740 acc= 30.1% | Val: loss=1.3151 acc= 53.2% | ICBHI=0.5570 (Se=0.339 Sp=0.775) | lr=3.37e-04
+2026-09-07 07:05:49,621 - INFO -   ✅ New best model saved (val_loss=1.315056, ICBHI=0.5570)
+2026-09-07 07:05:52,965 - INFO - Epoch  15/ 80 (  3.3s) | Train: loss=1.3711 acc= 30.0% | Val: loss=1.3301 acc= 51.2% | ICBHI=0.5756 (Se=0.359 Sp=0.792) | lr=3.26e-04
+2026-09-07 07:05:52,966 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.315056 at epoch 14)
+2026-09-07 07:05:56,345 - INFO - Epoch  16/ 80 (  3.4s) | Train: loss=1.3665 acc= 30.3% | Val: loss=1.4210 acc= 19.8% | ICBHI=0.5698 (Se=0.375 Sp=0.765) | lr=3.17e-04
+2026-09-07 07:05:56,346 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.315056 at epoch 14)
+2026-09-07 07:05:59,704 - INFO - Epoch  17/ 80 (  3.4s) | Train: loss=1.3617 acc= 32.1% | Val: loss=1.3771 acc= 26.3% | ICBHI=0.6122 (Se=0.450 Sp=0.775) | lr=3.07e-04
+2026-09-07 07:05:59,705 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.315056 at epoch 14)
+2026-09-07 07:06:03,056 - INFO - Epoch  18/ 80 (  3.4s) | Train: loss=1.3602 acc= 31.1% | Val: loss=1.3565 acc= 32.6% | ICBHI=0.6112 (Se=0.439 Sp=0.784) | lr=2.98e-04
+2026-09-07 07:06:03,057 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.315056 at epoch 14)
+2026-09-07 07:06:06,451 - INFO - Epoch  19/ 80 (  3.4s) | Train: loss=1.3481 acc= 33.3% | Val: loss=1.3107 acc= 46.1% | ICBHI=0.6302 (Se=0.462 Sp=0.798) | lr=2.89e-04
+2026-09-07 07:06:06,478 - INFO -   ✅ New best model saved (val_loss=1.310663, ICBHI=0.6302)
+2026-09-07 07:06:09,839 - INFO - Epoch  20/ 80 (  3.4s) | Train: loss=1.3308 acc= 35.0% | Val: loss=1.3397 acc= 37.6% | ICBHI=0.6224 (Se=0.446 Sp=0.799) | lr=2.80e-04
+2026-09-07 07:06:09,840 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.310663 at epoch 19)
+2026-09-07 07:06:13,177 - INFO - Epoch  21/ 80 (  3.3s) | Train: loss=1.3376 acc= 35.5% | Val: loss=1.2050 acc= 52.8% | ICBHI=0.6596 (Se=0.503 Sp=0.816) | lr=2.72e-04
+2026-09-07 07:06:13,201 - INFO -   ✅ New best model saved (val_loss=1.205009, ICBHI=0.6596)
+2026-09-07 07:06:16,574 - INFO - Epoch  22/ 80 (  3.4s) | Train: loss=1.3304 acc= 35.2% | Val: loss=1.2586 acc= 42.5% | ICBHI=0.6358 (Se=0.470 Sp=0.802) | lr=2.64e-04
+2026-09-07 07:06:16,575 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.205009 at epoch 21)
+2026-09-07 07:06:19,929 - INFO - Epoch  23/ 80 (  3.4s) | Train: loss=1.3175 acc= 36.1% | Val: loss=1.2402 acc= 47.9% | ICBHI=0.6484 (Se=0.482 Sp=0.815) | lr=2.56e-04
+2026-09-07 07:06:19,929 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.205009 at epoch 21)
+2026-09-07 07:06:23,141 - INFO - Epoch  24/ 80 (  3.2s) | Train: loss=1.3146 acc= 35.8% | Val: loss=1.1823 acc= 49.0% | ICBHI=0.6043 (Se=0.394 Sp=0.815) | lr=2.48e-04
+2026-09-07 07:06:23,164 - INFO -   ✅ New best model saved (val_loss=1.182270, ICBHI=0.6043)
+2026-09-07 07:06:26,404 - INFO - Epoch  25/ 80 (  3.2s) | Train: loss=1.3070 acc= 36.5% | Val: loss=1.2455 acc= 49.0% | ICBHI=0.6538 (Se=0.492 Sp=0.816) | lr=2.41e-04
+2026-09-07 07:06:26,404 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.182270 at epoch 24)
+2026-09-07 07:06:29,630 - INFO - Epoch  26/ 80 (  3.2s) | Train: loss=1.2996 acc= 37.3% | Val: loss=1.2511 acc= 44.9% | ICBHI=0.6229 (Se=0.441 Sp=0.805) | lr=2.33e-04
+2026-09-07 07:06:29,631 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.182270 at epoch 24)
+2026-09-07 07:06:32,982 - INFO - Epoch  27/ 80 (  3.4s) | Train: loss=1.2892 acc= 38.0% | Val: loss=1.2783 acc= 44.7% | ICBHI=0.6510 (Se=0.491 Sp=0.811) | lr=2.26e-04
+2026-09-07 07:06:32,983 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.182270 at epoch 24)
+2026-09-07 07:06:36,335 - INFO - Epoch  28/ 80 (  3.4s) | Train: loss=1.2738 acc= 39.7% | Val: loss=1.2147 acc= 49.4% | ICBHI=0.6505 (Se=0.488 Sp=0.813) | lr=2.20e-04
+2026-09-07 07:06:36,336 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.182270 at epoch 24)
+2026-09-07 07:06:39,618 - INFO - Epoch  29/ 80 (  3.3s) | Train: loss=1.2814 acc= 38.1% | Val: loss=1.1781 acc= 53.2% | ICBHI=0.6582 (Se=0.491 Sp=0.825) | lr=2.13e-04
+2026-09-07 07:06:39,643 - INFO -   ✅ New best model saved (val_loss=1.178143, ICBHI=0.6582)
+2026-09-07 07:06:42,997 - INFO - Epoch  30/ 80 (  3.4s) | Train: loss=1.2820 acc= 38.8% | Val: loss=1.1276 acc= 54.0% | ICBHI=0.6516 (Se=0.486 Sp=0.817) | lr=2.07e-04
+2026-09-07 07:06:43,020 - INFO -   ✅ New best model saved (val_loss=1.127571, ICBHI=0.6516)
+2026-09-07 07:06:46,384 - INFO - Epoch  31/ 80 (  3.4s) | Train: loss=1.2605 acc= 40.1% | Val: loss=1.1743 acc= 51.0% | ICBHI=0.6661 (Se=0.513 Sp=0.819) | lr=2.01e-04
+2026-09-07 07:06:46,385 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:06:49,737 - INFO - Epoch  32/ 80 (  3.4s) | Train: loss=1.2445 acc= 40.6% | Val: loss=1.1964 acc= 49.1% | ICBHI=0.6486 (Se=0.478 Sp=0.819) | lr=1.94e-04
+2026-09-07 07:06:49,737 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:06:53,038 - INFO - Epoch  33/ 80 (  3.3s) | Train: loss=1.2417 acc= 40.7% | Val: loss=1.1395 acc= 53.4% | ICBHI=0.6629 (Se=0.508 Sp=0.817) | lr=1.89e-04
+2026-09-07 07:06:53,038 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:06:56,351 - INFO - Epoch  34/ 80 (  3.3s) | Train: loss=1.2519 acc= 39.7% | Val: loss=1.1948 acc= 50.7% | ICBHI=0.6599 (Se=0.500 Sp=0.820) | lr=1.83e-04
+2026-09-07 07:06:56,351 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:06:59,676 - INFO - Epoch  35/ 80 (  3.3s) | Train: loss=1.2655 acc= 39.7% | Val: loss=1.1809 acc= 50.7% | ICBHI=0.6729 (Se=0.525 Sp=0.821) | lr=1.78e-04
+2026-09-07 07:06:59,677 - INFO -   EarlyStopping: 5/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:07:03,011 - INFO - Epoch  36/ 80 (  3.3s) | Train: loss=1.2428 acc= 40.6% | Val: loss=1.1959 acc= 45.4% | ICBHI=0.6481 (Se=0.489 Sp=0.807) | lr=1.72e-04
+2026-09-07 07:07:03,011 - INFO -   EarlyStopping: 6/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:07:06,335 - INFO - Epoch  37/ 80 (  3.3s) | Train: loss=1.2450 acc= 40.0% | Val: loss=1.2765 acc= 41.7% | ICBHI=0.6421 (Se=0.479 Sp=0.805) | lr=1.67e-04
+2026-09-07 07:07:06,336 - INFO -   EarlyStopping: 7/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:07:09,650 - INFO - Epoch  38/ 80 (  3.3s) | Train: loss=1.2393 acc= 42.4% | Val: loss=1.1430 acc= 56.9% | ICBHI=0.6774 (Se=0.520 Sp=0.834) | lr=1.62e-04
+2026-09-07 07:07:09,651 - INFO -   EarlyStopping: 8/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:07:12,912 - INFO - Epoch  39/ 80 (  3.3s) | Train: loss=1.2276 acc= 40.7% | Val: loss=1.1425 acc= 55.9% | ICBHI=0.6744 (Se=0.516 Sp=0.833) | lr=1.57e-04
+2026-09-07 07:07:12,913 - INFO -   EarlyStopping: 9/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:07:16,355 - INFO - Epoch  40/ 80 (  3.4s) | Train: loss=1.2208 acc= 42.4% | Val: loss=1.1763 acc= 50.7% | ICBHI=0.6478 (Se=0.477 Sp=0.819) | lr=1.52e-04
+2026-09-07 07:07:16,356 - INFO -   EarlyStopping: 10/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:07:19,652 - INFO - Epoch  41/ 80 (  3.3s) | Train: loss=1.2103 acc= 44.6% | Val: loss=1.2159 acc= 48.5% | ICBHI=0.6513 (Se=0.481 Sp=0.822) | lr=1.48e-04
+2026-09-07 07:07:19,653 - INFO -   EarlyStopping: 11/20 (best val_loss: 1.127571 at epoch 30)
+2026-09-07 07:07:22,978 - INFO - Epoch  42/ 80 (  3.3s) | Train: loss=1.1988 acc= 44.7% | Val: loss=1.1256 acc= 55.4% | ICBHI=0.6772 (Se=0.520 Sp=0.834) | lr=1.43e-04
+2026-09-07 07:07:23,003 - INFO -   ✅ New best model saved (val_loss=1.125554, ICBHI=0.6772)
+2026-09-07 07:07:26,358 - INFO - Epoch  43/ 80 (  3.4s) | Train: loss=1.2261 acc= 41.4% | Val: loss=1.1328 acc= 54.3% | ICBHI=0.6693 (Se=0.508 Sp=0.831) | lr=1.39e-04
+2026-09-07 07:07:26,359 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:29,659 - INFO - Epoch  44/ 80 (  3.3s) | Train: loss=1.1954 acc= 44.1% | Val: loss=1.1503 acc= 50.4% | ICBHI=0.6641 (Se=0.506 Sp=0.822) | lr=1.35e-04
+2026-09-07 07:07:29,660 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:32,920 - INFO - Epoch  45/ 80 (  3.3s) | Train: loss=1.1857 acc= 44.7% | Val: loss=1.2643 acc= 46.6% | ICBHI=0.6479 (Se=0.477 Sp=0.819) | lr=1.31e-04
+2026-09-07 07:07:32,921 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:36,297 - INFO - Epoch  46/ 80 (  3.4s) | Train: loss=1.1657 acc= 46.0% | Val: loss=1.1457 acc= 53.4% | ICBHI=0.6683 (Se=0.506 Sp=0.830) | lr=1.27e-04
+2026-09-07 07:07:36,298 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:39,589 - INFO - Epoch  47/ 80 (  3.3s) | Train: loss=1.1701 acc= 44.5% | Val: loss=1.1956 acc= 49.8% | ICBHI=0.6448 (Se=0.471 Sp=0.818) | lr=1.23e-04
+2026-09-07 07:07:39,590 - INFO -   EarlyStopping: 5/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:43,204 - INFO - Epoch  48/ 80 (  3.6s) | Train: loss=1.1646 acc= 47.1% | Val: loss=1.2238 acc= 49.3% | ICBHI=0.6521 (Se=0.481 Sp=0.823) | lr=1.19e-04
+2026-09-07 07:07:43,204 - INFO -   EarlyStopping: 6/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:46,780 - INFO - Epoch  49/ 80 (  3.6s) | Train: loss=1.1629 acc= 46.9% | Val: loss=1.2697 acc= 45.4% | ICBHI=0.6384 (Se=0.461 Sp=0.816) | lr=1.16e-04
+2026-09-07 07:07:46,781 - INFO -   EarlyStopping: 7/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:50,297 - INFO - Epoch  50/ 80 (  3.5s) | Train: loss=1.1674 acc= 46.3% | Val: loss=1.1537 acc= 49.0% | ICBHI=0.6527 (Se=0.487 Sp=0.819) | lr=1.12e-04
+2026-09-07 07:07:50,298 - INFO -   EarlyStopping: 8/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:53,767 - INFO - Epoch  51/ 80 (  3.5s) | Train: loss=1.1411 acc= 48.5% | Val: loss=1.1918 acc= 46.5% | ICBHI=0.6474 (Se=0.476 Sp=0.819) | lr=1.09e-04
+2026-09-07 07:07:53,768 - INFO -   EarlyStopping: 9/20 (best val_loss: 1.125554 at epoch 42)
+2026-09-07 07:07:57,333 - INFO - Epoch  52/ 80 (  3.6s) | Train: loss=1.1472 acc= 46.9% | Val: loss=1.1101 acc= 55.1% | ICBHI=0.6511 (Se=0.478 Sp=0.824) | lr=1.06e-04
+2026-09-07 07:07:57,360 - INFO -   ✅ New best model saved (val_loss=1.110111, ICBHI=0.6511)
+2026-09-07 07:08:00,866 - INFO - Epoch  53/ 80 (  3.5s) | Train: loss=1.1491 acc= 47.1% | Val: loss=1.2049 acc= 49.6% | ICBHI=0.6449 (Se=0.471 Sp=0.819) | lr=1.03e-04
+2026-09-07 07:08:00,866 - INFO -   EarlyStopping: 1/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:04,406 - INFO - Epoch  54/ 80 (  3.5s) | Train: loss=1.1327 acc= 49.2% | Val: loss=1.1459 acc= 52.3% | ICBHI=0.6531 (Se=0.484 Sp=0.822) | lr=9.95e-05
+2026-09-07 07:08:04,407 - INFO -   EarlyStopping: 2/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:07,919 - INFO - Epoch  55/ 80 (  3.5s) | Train: loss=1.1359 acc= 48.9% | Val: loss=1.1926 acc= 50.9% | ICBHI=0.6576 (Se=0.489 Sp=0.827) | lr=9.65e-05
+2026-09-07 07:08:07,920 - INFO -   EarlyStopping: 3/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:11,423 - INFO - Epoch  56/ 80 (  3.5s) | Train: loss=1.1286 acc= 48.5% | Val: loss=1.2548 acc= 45.7% | ICBHI=0.6386 (Se=0.461 Sp=0.816) | lr=9.36e-05
+2026-09-07 07:08:11,424 - INFO -   EarlyStopping: 4/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:14,868 - INFO - Epoch  57/ 80 (  3.4s) | Train: loss=1.1000 acc= 50.1% | Val: loss=1.2541 acc= 46.6% | ICBHI=0.6351 (Se=0.454 Sp=0.816) | lr=9.08e-05
+2026-09-07 07:08:14,868 - INFO -   EarlyStopping: 5/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:18,395 - INFO - Epoch  58/ 80 (  3.5s) | Train: loss=1.1147 acc= 50.9% | Val: loss=1.1641 acc= 50.2% | ICBHI=0.6564 (Se=0.488 Sp=0.825) | lr=8.81e-05
+2026-09-07 07:08:18,396 - INFO -   EarlyStopping: 6/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:21,933 - INFO - Epoch  59/ 80 (  3.5s) | Train: loss=1.1070 acc= 49.3% | Val: loss=1.2289 acc= 46.0% | ICBHI=0.6352 (Se=0.458 Sp=0.812) | lr=8.55e-05
+2026-09-07 07:08:21,934 - INFO -   EarlyStopping: 7/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:25,376 - INFO - Epoch  60/ 80 (  3.4s) | Train: loss=1.1018 acc= 50.4% | Val: loss=1.1285 acc= 55.6% | ICBHI=0.6755 (Se=0.515 Sp=0.836) | lr=8.29e-05
+2026-09-07 07:08:25,376 - INFO -   EarlyStopping: 8/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:28,953 - INFO - Epoch  61/ 80 (  3.6s) | Train: loss=1.0738 acc= 51.3% | Val: loss=1.2857 acc= 45.5% | ICBHI=0.6486 (Se=0.478 Sp=0.819) | lr=8.04e-05
+2026-09-07 07:08:28,954 - INFO -   EarlyStopping: 9/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:32,464 - INFO - Epoch  62/ 80 (  3.5s) | Train: loss=1.1226 acc= 48.2% | Val: loss=1.2168 acc= 45.0% | ICBHI=0.6489 (Se=0.480 Sp=0.818) | lr=7.80e-05
+2026-09-07 07:08:32,464 - INFO -   EarlyStopping: 10/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:35,901 - INFO - Epoch  63/ 80 (  3.4s) | Train: loss=1.0995 acc= 49.6% | Val: loss=1.1682 acc= 47.6% | ICBHI=0.6597 (Se=0.495 Sp=0.824) | lr=7.57e-05
+2026-09-07 07:08:35,903 - INFO -   EarlyStopping: 11/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:39,396 - INFO - Epoch  64/ 80 (  3.5s) | Train: loss=1.1058 acc= 49.3% | Val: loss=1.2276 acc= 46.5% | ICBHI=0.6412 (Se=0.470 Sp=0.813) | lr=7.34e-05
+2026-09-07 07:08:39,397 - INFO -   EarlyStopping: 12/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:42,939 - INFO - Epoch  65/ 80 (  3.5s) | Train: loss=1.0779 acc= 52.6% | Val: loss=1.1840 acc= 47.4% | ICBHI=0.6518 (Se=0.483 Sp=0.821) | lr=7.12e-05
+2026-09-07 07:08:42,939 - INFO -   EarlyStopping: 13/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:46,413 - INFO - Epoch  66/ 80 (  3.5s) | Train: loss=1.0668 acc= 52.2% | Val: loss=1.2229 acc= 43.8% | ICBHI=0.6335 (Se=0.458 Sp=0.809) | lr=6.90e-05
+2026-09-07 07:08:46,414 - INFO -   EarlyStopping: 14/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:49,913 - INFO - Epoch  67/ 80 (  3.5s) | Train: loss=1.0731 acc= 53.1% | Val: loss=1.2213 acc= 46.3% | ICBHI=0.6401 (Se=0.467 Sp=0.814) | lr=6.70e-05
+2026-09-07 07:08:49,914 - INFO -   EarlyStopping: 15/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:53,428 - INFO - Epoch  68/ 80 (  3.5s) | Train: loss=1.0428 acc= 54.3% | Val: loss=1.2344 acc= 47.6% | ICBHI=0.6529 (Se=0.485 Sp=0.820) | lr=6.50e-05
+2026-09-07 07:08:53,428 - INFO -   EarlyStopping: 16/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:08:56,873 - INFO - Epoch  69/ 80 (  3.4s) | Train: loss=1.0495 acc= 53.1% | Val: loss=1.2153 acc= 46.1% | ICBHI=0.6420 (Se=0.471 Sp=0.813) | lr=6.30e-05
+2026-09-07 07:08:56,873 - INFO -   EarlyStopping: 17/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:09:00,532 - INFO - Epoch  70/ 80 (  3.7s) | Train: loss=1.0486 acc= 52.7% | Val: loss=1.2132 acc= 45.8% | ICBHI=0.6407 (Se=0.469 Sp=0.813) | lr=6.11e-05
+2026-09-07 07:09:00,533 - INFO -   EarlyStopping: 18/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:09:04,116 - INFO - Epoch  71/ 80 (  3.6s) | Train: loss=1.0411 acc= 52.5% | Val: loss=1.2011 acc= 46.3% | ICBHI=0.6517 (Se=0.488 Sp=0.816) | lr=5.93e-05
+2026-09-07 07:09:04,118 - INFO -   EarlyStopping: 19/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:09:07,591 - INFO - Epoch  72/ 80 (  3.5s) | Train: loss=1.0575 acc= 52.0% | Val: loss=1.1891 acc= 45.7% | ICBHI=0.6469 (Se=0.481 Sp=0.812) | lr=5.75e-05
+2026-09-07 07:09:07,592 - INFO -   EarlyStopping: 20/20 (best val_loss: 1.110111 at epoch 52)
+2026-09-07 07:09:07,592 - INFO - 
+  ⏹ Early stopping at epoch 72 (best: epoch 52)
+2026-09-07 07:09:07,592 - INFO - 
+======================================================================
+2026-09-07 07:09:07,592 - INFO - TRAINING COMPLETED (4.7 min)
+2026-09-07 07:09:07,593 - INFO -   Best epoch: 52
+2026-09-07 07:09:07,593 - INFO -   Best val_loss: 1.110111
+2026-09-07 07:09:07,593 - INFO -   Best val_ICBHI: 0.6511
+2026-09-07 07:09:07,594 - INFO -   Checkpoint: D:\UNIVERSIDAD\PAPERS\1.PAPER_FONIS_1_2027\FONIS_MVP\models\checkpoints\best_lstm_lr5e4_official_seed42.pth
+2026-09-07 07:09:07,594 - INFO - ======================================================================
