@@ -15,7 +15,7 @@ baselines that read no audio. The configurations are a compact CNN trained from 
 two fine-tuning regimes). Every configuration is profiled on a Raspberry Pi 5.
 
 The archived release of this repository is available on Zenodo:
-**DOI: [to be added after the first release]**
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23511524.svg)](https://doi.org/10.5281/zenodo.23511524)
 
 ---
 
