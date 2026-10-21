@@ -1,6 +1,6 @@
 # Statistical reanalysis of the test probabilities (Script 29)
 
-_2026-10-20T12:02:18 · 2733 cycles · 49 patients · TOST delta = 0.02 (pre-specified) · B = 2000_
+_2026-10-20T22:23:21 · 2733 cycles · 49 patients · TOST delta = 0.02 (pre-specified) · B = 2000_
 
 
 ## Section 2. Models and trivial baselines
@@ -114,16 +114,16 @@ _2026-10-20T12:02:18 · 2733 cycles · 49 patients · TOST delta = 0.02 (pre-spe
 
 | Model | n patients | Patient AUC (cycles >50 % def.) | Patient AUC (diagnosis def.) | Patient Se | Patient Sp |
 |---|---|---|---|---|---|
-| CNN-RespiratoryNet (FP32) | 49 | 0.641 ± 0.103 | n/a | 0.62 ± 0.16 | 0.55 ± 0.13 |
-| CNN-RespiratoryNet (INT8, FP32 classifier) | 49 | 0.638 ± 0.103 | n/a | 0.66 ± 0.17 | 0.55 ± 0.14 |
-| MobileNetV3-Small (ImageNet) | 49 | 0.453 ± 0.084 | n/a | 0.26 ± 0.15 | 0.68 ± 0.13 |
-| MobileNetV3-Small (scratch) | 49 | 0.580 ± 0.160 | n/a | 0.64 ± 0.16 | 0.44 ± 0.18 |
-| PANNs CNN6 (AudioSet) | 49 | 0.631 ± 0.029 | n/a | 0.61 ± 0.39 | 0.60 ± 0.29 |
-| PANNs CNN6 (AudioSet, tune) | 49 | 0.543 ± 0.056 | n/a | 0.54 ± 0.49 | 0.55 ± 0.44 |
-| CfC-Hybrid (mmRNN) | 49 | 0.523 ± 0.035 | n/a | 0.54 ± 0.14 | 0.38 ± 0.13 |
-| LSTM-Hybrid (h=103) | 49 | 0.459 ± 0.051 | n/a | 0.51 ± 0.16 | 0.38 ± 0.19 |
-| GRU-Hybrid (h=134) | 49 | 0.438 ± 0.039 | n/a | 0.65 ± 0.18 | 0.10 ± 0.13 |
-| CfC without mixed memory | 49 | 0.454 ± 0.052 | n/a | 0.00 ± 0.00 | 1.00 ± 0.00 |
+| CNN-RespiratoryNet (FP32) | 49 | 0.641 ± 0.103 | 0.678 ± 0.064 | 0.62 ± 0.16 | 0.55 ± 0.13 |
+| CNN-RespiratoryNet (INT8, FP32 classifier) | 49 | 0.638 ± 0.103 | 0.673 ± 0.063 | 0.66 ± 0.17 | 0.55 ± 0.14 |
+| MobileNetV3-Small (ImageNet) | 49 | 0.453 ± 0.084 | 0.507 ± 0.052 | 0.26 ± 0.15 | 0.68 ± 0.13 |
+| MobileNetV3-Small (scratch) | 49 | 0.580 ± 0.160 | 0.598 ± 0.103 | 0.64 ± 0.16 | 0.44 ± 0.18 |
+| PANNs CNN6 (AudioSet) | 49 | 0.631 ± 0.029 | 0.827 ± 0.076 | 0.61 ± 0.39 | 0.60 ± 0.29 |
+| PANNs CNN6 (AudioSet, tune) | 49 | 0.543 ± 0.056 | 0.718 ± 0.164 | 0.54 ± 0.49 | 0.55 ± 0.44 |
+| CfC-Hybrid (mmRNN) | 49 | 0.523 ± 0.035 | 0.651 ± 0.073 | 0.54 ± 0.14 | 0.38 ± 0.13 |
+| LSTM-Hybrid (h=103) | 49 | 0.459 ± 0.051 | 0.555 ± 0.103 | 0.51 ± 0.16 | 0.38 ± 0.19 |
+| GRU-Hybrid (h=134) | 49 | 0.438 ± 0.039 | 0.569 ± 0.118 | 0.65 ± 0.18 | 0.10 ± 0.13 |
+| CfC without mixed memory | 49 | 0.454 ± 0.052 | 0.483 ± 0.026 | 0.00 ± 0.00 | 1.00 ± 0.00 |
 
 ## Section 6. Operating points on the binary ROC (threshold fixed on TEST: characterisation, not deployment)
 

@@ -25,3 +25,20 @@ Signal power is measured over the non-padded samples of each cycle. Values are t
 | 0 | 0.970 | 0.001 | 0.028 | 0.001 |
 
 The clean condition rebuilds the log-mel from the segmented WAV instead of reading the precomputed array, and reproduces the figures of Table 4, which validates the reconstruction.
+
+
+## Paired contrasts against the clean condition (n = 5 seeds)
+
+| SNR | ΔICBHI | p | ΔSe | p | ΔAUC | p |
+|---|---|---|---|---|---|---|
+| 20 dB | +0.023 | 0.025 | −0.296 | 0.008 | +0.015 | 0.517 |
+| 10 dB | +0.026 | 0.016 | −0.349 | 0.003 | +0.004 | 0.843 |
+| 5 dB | +0.028 | 0.019 | −0.379 | 0.0005 | −0.016 | 0.593 |
+| 0 dB | +0.031 | 0.031 | −0.399 | 0.0002 | −0.036 | 0.251 |
+
+Two-sided paired t-test over the five seeds. The rise in the ICBHI score and the
+fall in sensitivity are supported at every level; no AUC difference is detected.
+
+Seed 42 reaches Se = 0.000 and Sp = 1.000 at 5 and at 0 dB, that is, it becomes
+the always-Normal classifier and obtains an ICBHI score of exactly 0.500, while
+its binary AUC at 5 dB, 0.613, is the highest of the five runs.
