@@ -15,7 +15,24 @@ baselines that read no audio. The configurations are a compact CNN trained from 
 two fine-tuning regimes). Every configuration is profiled on a Raspberry Pi 5.
 
 The archived release of this repository is available on Zenodo:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23511524.svg)](https://doi.org/10.5281/zenodo.23511524)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23511523.svg)](https://doi.org/10.5281/zenodo.23511523)
+
+---
+
+## Overview for reviewers
+
+| Item | Where in this README |
+|---|---|
+| **Title** | Baselines Before Benchmarks (code and data for the article cited above). |
+| **Description** | The paragraph above and *Contents*. |
+| **Dataset information** | ICBHI 2017 (https://bhichallenge.med.auth.gr/ICBHI_2017_Challenge) and SPRSound (https://github.com/SJTU-YONGFU-RESEARCH-GRP/SPRSound) are third-party databases, not redistributed here (*Not included*, `data/README.md`). The cycle-level split is in `data/splits/strategy1_official/`. The meaning of every coded categorical variable is given in Supplemental Data S17 (codebook) of the article. |
+| **Code information** | *Contents* and *Map of tables and figures*: `scripts/` holds the pipeline numbered in execution order, `events/` the event study of the CfC. |
+| **Usage instructions** | *Three levels of reproduction* and the sections *Level A*, *Level B*, *Level C*, and *Event representation of the CfC*. |
+| **Requirements** | *Installation*, `requirements.txt`, `requirements-events.txt`, and `requirements-pi5.txt`. |
+| **Methodology** | *Level B: from audio* (data processing and training steps) and *Provenance notes*; the full method is in Section 3 of the article. |
+| **Citations** | *Citation*. |
+| **License and contributions** | *License* (MIT, with two third-party files under their own licenses). Questions and corrections can be reported through GitHub issues. |
+
 
 ---
 

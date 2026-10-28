@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.2
+
+Documentation only; no change to code or results.
+
+- `README.md`: the DOI badge pointed to the superseded v1.0.0 record and now points to the
+  concept DOI, which resolves to the latest version. Adds an overview table that maps the
+  README items requested by PeerJ to the sections of this file.
+
 ## v1.0.1
 
 Result files only; no script changes.
